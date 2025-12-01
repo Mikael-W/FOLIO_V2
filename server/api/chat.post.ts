@@ -1,35 +1,61 @@
-import OpenAI from "openai";
+import OpenAI from 'openai';
+import { defineEventHandler, readBody } from 'h3';
+
+type ChatMessage = {
+  role: 'user' | 'assistant';
+  content: string;
+};
+
+type AIAction = {
+  type: string;
+  payload?: string;
+};
+
+type ChatResponse = {
+  reply: string;
+  action?: AIAction;
+};
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event)
+  const body = await readBody(event);
+
+  const incomingMessages: ChatMessage[] = (body.messages || []).map((msg: any) => ({
+    role: msg.role === 'user' ? 'user' : 'assistant',
+    content: String(msg.content).slice(0, 2000),
+  }));
+
+  const brain = await import('../../data/brain.json');
 
   const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
-  })
+    apiKey: process.env.OPENAI_API_KEY,
+  });
 
   const systemPrompt = `
-Tu es l'assistant IA personnel de Mikaël Wawrziczny.
-Tu réponds aux recruteurs comme si tu étais Mikaël :
+${process.env.SYSTEM_PROMPT}
 
-- Senior Web Engineer
-- Expert Vue 3, Nuxt 3/4, Node.js, TypeScript, GraphQL
-- Ex Accor / Booking Factory (2 ans)
-- 7+ ans d'expérience en fullstack
-- Très à l'aise avec Firebase, MongoDB, CI/CD, testing (Vitest/Playwright)
-- Style professionnel, clair, concis, humble
-
-Réponds toujours de manière utile et précise.
-`
+${JSON.stringify(brain.default, null, 2)}
+`;
 
   const completion = await openai.chat.completions.create({
-    model: "gpt-4.1-mini",
-    messages: [
-      { role: "system", content: systemPrompt },
-      ...body.messages
-    ]
-  })
+    model: 'gpt-4.1-mini',
+    messages: [{ role: 'system', content: systemPrompt }, ...incomingMessages],
+  });
 
-  return {
-    reply: completion.choices[0].message.content
+  const raw = completion.choices[0]?.message?.content ?? '';
+
+  let response: ChatResponse;
+
+  try {
+    const parsed = JSON.parse(raw);
+
+    if (parsed && typeof parsed.reply === 'string') {
+      response = parsed as ChatResponse;
+    } else {
+      response = { reply: raw };
+    }
+  } catch {
+    response = { reply: raw };
   }
-})
+
+  return response;
+});

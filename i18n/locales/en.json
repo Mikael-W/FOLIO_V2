@@ -1,0 +1,96 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "toggle_dark": "Enable dark mode",
+    "toggle_light": "Enable light mode",
+    "menu_open": "Open navigation menu",
+    "menu_close": "Close navigation menu"
+  },
+
+  "hero": {
+    "alt_img": "Photo of Mikaël Wawrziczny",
+    "title": "Senior Freelance Web Engineer",
+    "subtitle": "Expert in Vue 3, Nuxt 3, Node.js & AI",
+    "description": "I design modern, high-performance and scalable interfaces for French and international companies. Specialist in Vue.js, Nuxt.js, Node.js, TypeScript, E2E testing and AI integration.",
+    "download_cv": "Download my CV",
+    "aria_download": "Download my CV as PDF",
+    "contact_me": "Contact me",
+    "aria_contact": "Go to the contact section"
+  },
+
+  "ai_chat": {
+    "title": "AI Assistant – Ask your questions",
+    "placeholder": "Ask your question…",
+    "sending": "Sending…",
+    "typing": "The assistant is typing…",
+    "send_button": "Send",
+
+    "greeting": "Hello 👋 I'm Mikaël’s AI assistant. Ask me anything about his experience, background, or technical skills.",
+
+    "actions": {
+      "switchThemeDark": "Switch to dark mode",
+      "switchThemeLight": "Switch to light mode",
+      "switchLanguage": "Change language",
+      "downloadCV": "Download CV"
+    }
+  },
+
+  "about": {
+    "title": "About me",
+    "p1": "I am a Senior Web Engineer specialized in Vue 3, Nuxt 3, and Node.js/TypeScript. I architect scalable frontend ecosystems, design performant APIs, and deliver robust international applications.",
+    "p2": "My expertise includes GraphQL (Apollo), Firebase, MongoDB, SSR optimization, automated testing workflows (Vitest, Playwright), and modern CI/CD pipelines.",
+    "p3": "I also integrate AI-powered features: custom chatbots, RAG assistants, and intelligent automation systems."
+  },
+
+  "skills": {
+    "title": "Skills & Expertise",
+    "frontend": {
+      "title": "Frontend",
+      "text": "Vue 3, Nuxt 3/4, TypeScript, Tailwind CSS"
+    },
+    "backend": {
+      "title": "Backend",
+      "text": "Node.js, Fastify, REST, GraphQL, MongoDB"
+    },
+    "testing": {
+      "title": "Testing",
+      "text": "Vitest, Jest, Playwright"
+    },
+    "cloud": {
+      "title": "Cloud",
+      "text": "Firebase, Firestore, Vercel, Docker"
+    },
+    "ai": {
+      "title": "AI / RAG",
+      "text": "LangChain, Pinecone, vector search"
+    },
+    "tools": {
+      "title": "Tools",
+      "text": "Git, GitLab CI, DevOps"
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "case_study": "View case study"
+  },
+  "experience": {
+    "title": "Experience Timeline"
+  },
+  "contact": {
+    "title": "Send Me a Message",
+    "subtitle": "I'll get back to you quickly.",
+    "email_label": "Email Address",
+    "email_placeholder": "your.email@example.com",
+    "message_label": "Message",
+    "message_placeholder": "Tell me about your project...",
+    "send_button": "Send Message",
+    "sending": "Sending…",
+    "success_title": "Message sent successfully!",
+    "success_sub": "I'll reply within 24 hours."
+  }
+}

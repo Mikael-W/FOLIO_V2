@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "contact": "Contact",
+    "toggle_dark": "Activer le mode sombre",
+    "toggle_light": "Activer le mode clair",
+    "menu_open": "Ouvrir le menu de navigation",
+    "menu_close": "Fermer le menu de navigation"
+  },
+  "hero": {
+    "alt_img": "Photo de Mikaël Wawrziczny",
+    "title": "Développeur Web Senior Freelance",
+    "subtitle": "Expert Vue 3, Nuxt 3, Node.js & IA",
+    "description": "Je conçois des interfaces modernes, performantes et scalables pour des entreprises françaises et internationales. Spécialiste en Vue.js, Nuxt.js, Node.js, TypeScript, tests E2E et intégration IA.",
+    "download_cv": "Télécharger mon CV",
+    "aria_download": "Télécharger mon CV en PDF",
+    "contact_me": "Me contacter",
+    "aria_contact": "Aller à la section contact"
+  },
+  "ai_chat": {
+    "title": "Assistant IA – Posez vos questions",
+    "placeholder": "Posez votre question…",
+    "sending": "Envoi…",
+    "typing": "L’assistant écrit…",
+    "send_button": "Envoyer",
+
+    "greeting": "Bonjour 👋 Je suis l'IA de Mikaël. Posez-moi vos questions concernant son expérience, son parcours ou ses compétences techniques.",
+
+    "actions": {
+      "switchThemeDark": "Passer en mode sombre",
+      "switchThemeLight": "Passer en mode clair",
+      "switchLanguage": "Changer de langue",
+      "downloadCV": "Télécharger le CV"
+    }
+  },
+  "about": {
+    "title": "À propos de moi",
+    "p1": "Je suis Senior Web Engineer, spécialisé en Vue 3, Nuxt 3 et Node.js/TypeScript. J’architecture des écosystèmes front-end scalables, conçois des API performantes et livre des applications robustes utilisées à l’international.",
+    "p2": "Mon expertise couvre GraphQL (Apollo), Firebase, MongoDB, l’optimisation SSR, les workflows de tests (Vitest, Playwright) et les pipelines CI/CD modernes.",
+    "p3": "J’intègre également des fonctionnalités propulsées par l’IA : chatbots personnalisés, assistants RAG et systèmes d’automatisation intelligente."
+  },
+  "skills": {
+    "title": "Compétences & Expertise",
+    "frontend": {
+      "title": "Frontend",
+      "text": "Vue 3, Nuxt 3/4, TypeScript, Tailwind CSS"
+    },
+    "backend": {
+      "title": "Backend",
+      "text": "Node.js, Fastify, REST, GraphQL, MongoDB"
+    },
+    "testing": {
+      "title": "Tests",
+      "text": "Vitest, Jest, Playwright"
+    },
+    "cloud": {
+      "title": "Cloud",
+      "text": "Firebase, Firestore, Vercel, Docker"
+    },
+    "ai": {
+      "title": "IA / RAG",
+      "text": "LangChain, Pinecone, recherche vectorielle"
+    },
+    "tools": {
+      "title": "Outils",
+      "text": "Git, GitLab CI, DevOps"
+    }
+  },
+  "projects": {
+    "title": "Projets mis en avant",
+    "case_study": "Voir l'étude de cas"
+  },
+  "experience": {
+    "title": "Parcours professionnel"
+  },
+  "contact": {
+    "title": "Envoyer un message",
+    "subtitle": "Je vous répondrai rapidement.",
+    "email_label": "Adresse email",
+    "email_placeholder": "votre.email@example.com",
+    "message_label": "Message",
+    "message_placeholder": "Parlez-moi de votre projet...",
+    "send_button": "Envoyer le message",
+    "sending": "Envoi en cours…",
+    "success_title": "Message envoyé avec succès !",
+    "success_sub": "Je vous répondrai sous 24h."
+  }
+}
