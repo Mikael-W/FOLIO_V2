@@ -85,7 +85,7 @@
     "title": "Send Me a Message",
     "subtitle": "I'll get back to you quickly.",
     "email_label": "Email Address",
-    "email_placeholder": "your.email@example.com",
+    "email_placeholder": "your email address",
     "message_label": "Message",
     "message_placeholder": "Tell me about your project...",
     "send_button": "Send Message",

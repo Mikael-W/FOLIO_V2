@@ -2,7 +2,7 @@
   "profile": {
     "name": "Mikaël Wawrziczny",
     "title": "Senior Web Engineer",
-    "about": "Développeur web freelance spécialisé en Vue.js, Nuxt, Node.js et TypeScript depuis 2021. 10 ans d'expérience commerciale avant le développement, ce qui apporte une forte capacité de communication, pédagogie et compréhension des enjeux business. Expert en front-end, backend JavaScript, tests automatisés, architectures modulaires et projets à fort trafic.",
+    "about": "Développeur web freelance spécialisé en Vue.js, Nuxt, Node.js et TypeScript depuis 2017. 10 ans d'expérience commerciale avant le développement, ce qui apporte une forte capacité de communication, pédagogie et compréhension des enjeux business. Expert en front-end, backend JavaScript, tests automatisés, architectures modulaires et projets à fort trafic.",
     "personal": {
       "maritalStatus": "Marié",
       "children": 4,
@@ -20,7 +20,7 @@
 
   "availability": {
     "status": "Disponible",
-    "freelanceSince": 2021,
+    "freelanceSince": 2017,
     "remote": true,
     "hybridMinDays": 3,
     "travel": "Europe entière"
@@ -146,7 +146,7 @@
       "name": "Portfolio — Mikaël Wawrziczny",
       "description": "Portfolio personnel réalisé en Nuxt 3, entièrement typé TypeScript, avec SEO avancé, i18n, mode sombre automatique, animations, projet AI intégré et design system personnalisé.",
       "stack": ["Nuxt 3", "TypeScript", "Tailwind CSS", "i18n", "SSR", "AI"],
-      "icon": "fa-solid fa-laptop-code text-iosBlue",
+      "logo": "/projects_logo/logo-mw.png",
       "gradient": "from-orange-400 to-orange-600",
       "slug": "portfolio",
       "problemsSolved": [
@@ -161,7 +161,7 @@
       "name": "Chasse en Cours",
       "description": "Application mobile Flutter (en cours de refonte vers React Native) permettant aux chasseurs et aux promeneurs de déclarer une zone de chasse sur une carte, afin d’informer les personnes à proximité.",
       "stack": ["Flutter", "React Native (refonte en cours)", "Firebase", "Firestore", "Google Maps"],
-      "icon": "fa-solid fa-paw text-iosBlue",
+      "logo": "/projects_logo/chasse_en_cours.png",
       "gradient": "from-yellow-400 to-yellow-600",
       "slug": "chasse-en-cours",
       "problemsSolved": [
@@ -176,7 +176,7 @@
       "name": "OSS Nation",
       "description": "International BJJ events platform with geolocation, Firebase, Firestore, advanced filters and i18n.",
       "stack": ["Nuxt 3", "Firebase", "Geolocation"],
-      "icon": "fa-solid fa-globe text-iosBlue",
+      "logo": "/projects_logo/oss-nation_logo.png",
       "gradient": "from-blue-400 to-blue-600",
       "slug": "oss-nation",
       "problemsSolved": [
@@ -191,7 +191,7 @@
       "name": "GhostLock",
       "description": "Web content protection platform with Node.js, Bun, SQLite, Stripe and AI.",
       "stack": ["Node.js", "Bun", "AI"],
-      "icon": "fa-solid fa-lock text-iosBlue",
+      "logo": "/projects_logo/ghostlock_logo.png",
       "gradient": "from-purple-400 to-purple-600",
       "slug": "ghostlock",
       "problemsSolved": [
@@ -206,7 +206,7 @@
       "name": "MCI",
       "description": "Application mobile Flutter accompagnée d’un espace administrateur Nuxt 3 permettant aux commerçants de fidéliser leur clientèle et de gérer facilement leurs services.",
       "stack": ["Flutter", "Nuxt 3", "Firebase", "Firestore", "API"],
-      "icon": "fa-solid fa-suitcase text-iosBlue",
+      "logo": "/projects_logo/logo_mci.png",
       "gradient": "from-green-400 to-green-600",
       "slug": "mci",
       "problemsSolved": [
@@ -221,7 +221,7 @@
       "name": "JOYS LAB Website",
       "description": "Site vitrine professionnel pour la SASU JOYS LAB, conçu pour renforcer l’image de marque, présenter les services et améliorer la visibilité en ligne.",
       "stack": ["Nuxt 3", "Tailwind CSS", "SEO", "Reusable Components"],
-      "icon": "fa-solid fa-briefcase text-iosBlue",
+      "logo": "/projects_logo/joys_logo.png",
       "gradient": "from-pink-400 to-pink-600",
       "slug": "joys-lab",
       "problemsSolved": [

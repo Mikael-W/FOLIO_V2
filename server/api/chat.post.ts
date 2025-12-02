@@ -1,5 +1,6 @@
 import OpenAI from 'openai';
 import { defineEventHandler, readBody } from 'h3';
+import { SYSTEM_PROMPT } from '../prompts/prompt';
 
 type ChatMessage = {
   role: 'user' | 'assistant';
@@ -7,13 +8,13 @@ type ChatMessage = {
 };
 
 type AIAction = {
-  type: string;
-  payload?: string;
+  type: string | null;
+  payload?: string | null;
 };
 
 type ChatResponse = {
   reply: string;
-  action?: AIAction;
+  action: AIAction;
 };
 
 export default defineEventHandler(async (event) => {
@@ -24,38 +25,48 @@ export default defineEventHandler(async (event) => {
     content: String(msg.content).slice(0, 2000),
   }));
 
-  const brain = await import('../../data/brain.json');
+  const lastMessage = incomingMessages[incomingMessages.length - 1]?.content || '';
 
-  const openai = new OpenAI({
+  const requestedLang =
+    lastMessage.toLowerCase().includes('english') || lastMessage.includes('"payload":"en"') ? 'en' : 'fr';
+
+  const brain =
+    requestedLang === 'en'
+      ? await import('../../data/brain/brain.en.json')
+      : await import('../../data/brain/brain.fr.json');
+
+  const systemPrompt = `
+    ${SYSTEM_PROMPT}
+    You MUST always answer in: ${requestedLang === 'en' ? 'English' : 'French'}.
+    Here is your knowledge base in ${requestedLang}:
+    ${JSON.stringify(brain.default, null, 2)}
+`;
+
+  const client = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
   });
 
-  const systemPrompt = `
-${process.env.SYSTEM_PROMPT}
-
-${JSON.stringify(brain.default, null, 2)}
-`;
-
-  const completion = await openai.chat.completions.create({
-    model: 'gpt-4.1-mini',
+  const completion = await client.chat.completions.create({
+    model: 'gpt-4o-mini',
+    response_format: { type: 'json_object' },
     messages: [{ role: 'system', content: systemPrompt }, ...incomingMessages],
   });
 
   const raw = completion.choices[0]?.message?.content ?? '';
 
-  let response: ChatResponse;
+  let final: ChatResponse = {
+    reply: '',
+    action: { type: null, payload: null },
+  };
 
   try {
     const parsed = JSON.parse(raw);
 
-    if (parsed && typeof parsed.reply === 'string') {
-      response = parsed as ChatResponse;
-    } else {
-      response = { reply: raw };
-    }
-  } catch {
-    response = { reply: raw };
+    final.reply = parsed.reply ?? '';
+    final.action = parsed.action ?? { type: null, payload: null };
+  } catch (e) {
+    final.reply = raw;
   }
 
-  return response;
+  return final;
 });

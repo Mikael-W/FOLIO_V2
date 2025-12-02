@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useContact } from '~/composables/useContact';
-import { VueReCaptcha } from 'vue-recaptcha-v3';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
@@ -9,7 +8,6 @@ const { loading, success, error, sendContactForm } = useContact();
 
 const email = ref('');
 const message = ref('');
-const runtimeConfig = useRuntimeConfig();
 
 async function submit() {
   await sendContactForm({
@@ -20,8 +18,6 @@ async function submit() {
 </script>
 
 <template>
-  <VueReCaptcha :siteKey="runtimeConfig.public.recaptchaSiteKey" />
-
   <section id="contact" class="pb-20 px-6">
     <div class="max-w-2xl mx-auto">
       <div class="bg-white dark:bg-[#1c1c1e] rounded-2xl p-8 apple-shadow animate-fade-in">
@@ -29,18 +25,17 @@ async function submit() {
           <h2 class="text-2xl font-semibold mb-2 dark:text-white">
             {{ t('contact.title') }}
           </h2>
-
           <p class="text-[#3A3A3C] dark:text-gray-300">
             {{ t('contact.subtitle') }}
           </p>
         </div>
+
         <form @submit.prevent="submit" class="space-y-6">
           <div>
             <label for="email" class="block text-sm font-medium mb-2 dark:text-white">
               <i class="fa-solid fa-envelope text-iosBlue mr-2"></i>
               {{ t('contact.email_label') }}
             </label>
-
             <input
               v-model="email"
               type="email"
@@ -50,6 +45,7 @@ async function submit() {
               :placeholder="t('contact.email_placeholder')"
             />
           </div>
+
           <div>
             <label for="message" class="block text-sm font-medium mb-2 dark:text-white">
               <i class="fa-solid fa-message text-iosBlue mr-2"></i>
@@ -65,6 +61,7 @@ async function submit() {
               :placeholder="t('contact.message_placeholder')"
             ></textarea>
           </div>
+
           <div class="pt-4">
             <button
               type="submit"
@@ -76,6 +73,7 @@ async function submit() {
             </button>
           </div>
         </form>
+
         <div
           v-if="success"
           class="mt-6 p-4 bg-green-50 dark:bg-green-900 border border-green-200 dark:border-green-700 rounded-xl"

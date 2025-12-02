@@ -3,7 +3,7 @@ import { defineNuxtConfig } from 'nuxt/config';
 export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
-  modules: ['nuxt-simple-sitemap'],
+  modules: ['nuxt-simple-sitemap', '@nuxtjs/color-mode'],
 
   postcss: {
     plugins: {
@@ -45,7 +45,11 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: 'https://mikaelw.com/og-image.png' },
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico',
+        },
         {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap',
@@ -56,6 +60,13 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+
+  colorMode: {
+    preference: 'light',
+    fallback: 'light',
+    classSuffix: '',
+    storage: 'mw-color-mode',
   },
 
   runtimeConfig: {

@@ -29,8 +29,7 @@ export function useContact() {
       });
 
       if (!result.success) {
-        error.value = result?.error?.issues?.[0]?.message || 'Validation error';
-        loading.value = false;
+        error.value = result.error.issues[0]?.message || 'Validation error';
         return;
       }
 

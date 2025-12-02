@@ -21,7 +21,7 @@ const { t } = useI18n();
       :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'"
     >
       <img
-        src="/assets/img/mw_profil.png"
+        src="/assets/mw_img/mw_profil.png"
         :alt="t('hero.alt_img')"
         class="w-40 h-40 rounded-full mx-auto object-cover shadow-xl mb-8 ring-2 ring-white dark:ring-black"
       />

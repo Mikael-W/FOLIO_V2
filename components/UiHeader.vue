@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { useColorMode, usePreferredDark } from '@vueuse/core';
+import { usePreferredDark } from '@vueuse/core';
 import { ref, computed } from 'vue';
 
 const { locale, t } = useI18n();
@@ -32,7 +32,7 @@ function toggleTheme() {
   setTimeout(() => (rotating.value = false), 300);
 
   const newTheme = actualTheme.value === 'dark' ? 'light' : 'dark';
-  colorMode.value = newTheme;
+  colorMode.preference = newTheme;
 }
 </script>
 
@@ -41,7 +41,7 @@ function toggleTheme() {
     class="fixed top-0 w-full z-50 backdrop-blur-md bg-white/70 dark:bg-black/70 border-b border-gray-200/70 dark:border-gray-800 transition-colors"
   >
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <img src="/assets/img/logo_MW.png" alt="MW" class="h-8" />
+      <img src="/projects_logo/logo-mw.png" alt="MW" class="h-12" />
 
       <div class="hidden md:flex space-x-8 text-sm font-medium">
         <NuxtLink class="hover:text-iosBlue transition text-black dark:text-white" to="/">

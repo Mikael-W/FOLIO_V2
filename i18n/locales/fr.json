@@ -81,7 +81,7 @@
     "title": "Envoyer un message",
     "subtitle": "Je vous répondrai rapidement.",
     "email_label": "Adresse email",
-    "email_placeholder": "votre.email@example.com",
+    "email_placeholder": "votre adresse email",
     "message_label": "Message",
     "message_placeholder": "Parlez-moi de votre projet...",
     "send_button": "Envoyer le message",

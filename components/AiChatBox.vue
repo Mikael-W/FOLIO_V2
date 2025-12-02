@@ -2,10 +2,13 @@
 import { ref, nextTick, watch, onMounted } from 'vue';
 import { useColorMode } from '@vueuse/core';
 import { useI18n } from 'vue-i18n';
-import type { ChatMessage, AIAction, AIResponse } from '@/types/chat';
+import type { ChatMessage, AIResponse } from '@/types/chat';
+import { useAIAction } from '@/composables/useAIAction';
+import { renderMarkdown } from '@/composables/useMarkdown';
 
 const { t, locale } = useI18n();
 const colorMode = useColorMode();
+const { handleAIAction } = useAIAction();
 
 const messages = ref<ChatMessage[]>([
   {
@@ -37,29 +40,6 @@ watch(
   },
 );
 
-function handleAIAction(action: AIAction) {
-  if (!action?.type) return;
-
-  switch (action.type) {
-    case 'switchTheme':
-      if (action.payload === 'dark' || action.payload === 'light') {
-        colorMode.value = action.payload;
-      }
-      break;
-
-    case 'switchLanguage':
-      if (action.payload === 'fr' || action.payload === 'en') {
-        locale.value = action.payload;
-      }
-      break;
-
-    case 'downloadCV':
-      if (action.payload === 'fr') window.open('/CV_MW_FR.pdf', '_blank');
-      if (action.payload === 'en') window.open('/CV_MW_EN.pdf', '_blank');
-      break;
-  }
-}
-
 async function sendMessage() {
   const content = userInput.value.trim();
   if (!content) return;
@@ -69,24 +49,28 @@ async function sendMessage() {
 
   const safeMessages = JSON.parse(JSON.stringify(messages.value));
 
-  const { data } = await useFetch<AIResponse>('/api/chat', {
+  const response = await $fetch<AIResponse>('/api/chat', {
     method: 'POST',
-    body: { messages: safeMessages },
+    body: {
+      messages: safeMessages,
+      locale: locale.value,
+      colorMode: colorMode.value,
+    },
   });
 
   loading.value = false;
 
-  if (data.value?.reply) {
-    messages.value.push({
-      role: 'assistant',
-      content: data.value.reply,
-    });
-
-    liveMessage.value = data.value.reply;
+  if (response.action) {
+    handleAIAction(response.action);
   }
 
-  if (data.value?.action) {
-    handleAIAction(data.value.action);
+  if (response.reply) {
+    messages.value.push({
+      role: 'assistant',
+      content: response.reply,
+    });
+
+    liveMessage.value = response.reply;
   }
 
   userInput.value = '';
@@ -125,11 +109,10 @@ async function sendMessage() {
         :class="msg.role === 'user' ? 'justify-end' : 'justify-start'"
       >
         <p
+          v-html="renderMarkdown(msg.content)"
           class="px-4 py-2 rounded-lg max-w-[75%] whitespace-pre-wrap text-sm transition-colors bg-gray-100 text-gray-800 dark:bg-[#2C2C2E] dark:text-[#F5F5F7]"
           :class="msg.role === 'user' ? 'bg-iosBlue text-white' : ''"
-        >
-          {{ msg.content }}
-        </p>
+        />
       </div>
 
       <p v-if="loading" class="text-gray-500 dark:text-gray-400 text-sm animate-pulse">
@@ -152,6 +135,7 @@ async function sendMessage() {
 
       <button
         class="px-6 py-2 rounded-lg text-sm font-medium bg-iosBlue text-white transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-[#1C1C1E]"
+        :disabled="loading"
         aria-label="Envoyer le message"
       >
         {{ loading ? t('ai_chat.sending') : t('ai_chat.send_button') }}
