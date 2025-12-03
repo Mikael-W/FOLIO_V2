@@ -1,6 +1,9 @@
 import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
+  nitro: {
+    compatibilityDate: '2025-12-03',
+  },
   css: ['~/assets/css/main.css'],
 
   modules: ['nuxt-simple-sitemap', '@nuxtjs/color-mode'],
@@ -63,10 +66,12 @@ export default defineNuxtConfig({
   },
 
   colorMode: {
-    preference: 'light',
-    fallback: 'light',
+    preference: 'dark',
+    fallback: 'dark',
     classSuffix: '',
-    storage: 'mw-color-mode',
+    storageKey: 'theme',
+    disableTransition: true,
+    global: false,
   },
 
   runtimeConfig: {

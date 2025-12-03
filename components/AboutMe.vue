@@ -1,7 +1,4 @@
-<script setup>
-import { useI18n } from 'vue-i18n';
-const { t } = useI18n();
-</script>
+<script setup></script>
 
 <template>
   <section id="about" class="py-20 px-6">
@@ -12,15 +9,12 @@ const { t } = useI18n();
         <h2 class="text-3xl font-bold mb-6 tracking-tight">
           {{ $t('about.title') }}
         </h2>
-
         <p class="text-[#3A3A3C] dark:text-[#D1D1D6] leading-relaxed text-lg mb-4">
           {{ $t('about.p1') }}
         </p>
-
         <p class="text-[#3A3A3C] dark:text-[#D1D1D6] leading-relaxed text-lg mb-4">
           {{ $t('about.p2') }}
         </p>
-
         <p class="text-[#3A3A3C] dark:text-[#D1D1D6] leading-relaxed text-lg">
           {{ $t('about.p3') }}
         </p>

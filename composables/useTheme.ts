@@ -1,36 +1,54 @@
-export const useTheme = () => {
-  const isDark = useState('isDark', () => false)
+import { ref, computed, onMounted } from 'vue';
+import { useColorMode, usePreferredDark } from '@vueuse/core';
 
-  const applyTheme = () => {
-    if (!import.meta.client) return
+export function useTheme() {
+  const colorMode = useColorMode();
+  const preferredDark = usePreferredDark();
 
-    const root = document.documentElement
-    root.classList.toggle('dark', isDark.value)
-    root.style.backgroundColor = isDark.value ? '#000000' : '#F5F5F7'
-  }
-
-  const toggleTheme = () => {
-    isDark.value = !isDark.value
-    if (import.meta.client) {
-      localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
-    }
-    applyTheme()
-  }
+  const rotating = ref(false);
+  const mounted = ref(false);
 
   onMounted(() => {
-    if (!import.meta.client) return
+    mounted.value = true;
+  });
 
-    const stored = localStorage.getItem('theme')
+  const actualTheme = computed(() => {
+    if (colorMode.value === 'auto') {
+      return preferredDark.value ? 'dark' : 'light';
+    }
+    return colorMode.value;
+  });
 
-    if (stored) {
-      isDark.value = stored === 'dark'
-    } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-      isDark.value = prefersDark
+  const safeIconClass = computed(() => {
+    if (!mounted.value) {
+      return 'opacity-0 pointer-events-none';
     }
 
-    applyTheme()
-  })
+    return actualTheme.value === 'dark' ? 'fa-sun' : 'fa-moon text-iosBlue';
+  });
 
-  return { isDark, toggleTheme }
+  const iconStyle = computed(() => {
+    if (!mounted.value) return {};
+
+    if (actualTheme.value === 'dark') {
+      return { color: '#FFD43B' };
+    }
+
+    return {};
+  });
+
+  function toggleTheme() {
+    rotating.value = true;
+    setTimeout(() => (rotating.value = false), 300);
+
+    colorMode.value = actualTheme.value === 'dark' ? 'light' : 'dark';
+  }
+
+  return {
+    rotating,
+    actualTheme,
+    safeIconClass,
+    iconStyle,
+    toggleTheme,
+  };
 }

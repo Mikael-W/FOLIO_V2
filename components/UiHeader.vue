@@ -1,39 +1,10 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n';
-import { usePreferredDark } from '@vueuse/core';
-import { ref, computed } from 'vue';
+import { useTheme } from '@/composables/useTheme';
+import { useLanguage } from '@/composables/useLanguage';
+import UiNav from '@/components/UiNav.vue';
 
-const { locale, t } = useI18n();
-const colorMode = useColorMode();
-const preferredDark = usePreferredDark();
-const rotating = ref(false);
-
-const lang = computed<'fr' | 'en'>({
-  get: () => locale.value as 'fr' | 'en',
-  set: (val) => {
-    locale.value = val;
-    useHead({ htmlAttrs: { lang: val } });
-  },
-});
-
-const actualTheme = computed(() => {
-  if (colorMode.value === 'auto') {
-    return preferredDark.value ? 'dark' : 'light';
-  }
-  return colorMode.value;
-});
-
-const iconClass = computed(() => {
-  return actualTheme.value === 'dark' ? 'fa-sun text-yellow-400' : 'fa-moon text-iosBlue';
-});
-
-function toggleTheme() {
-  rotating.value = true;
-  setTimeout(() => (rotating.value = false), 300);
-
-  const newTheme = actualTheme.value === 'dark' ? 'light' : 'dark';
-  colorMode.preference = newTheme;
-}
+const { rotating, safeIconClass, iconStyle, toggleTheme } = useTheme();
+const { lang } = useLanguage();
 </script>
 
 <template>
@@ -43,26 +14,7 @@ function toggleTheme() {
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <img src="/projects_logo/logo-mw.png" alt="MW" class="h-12" />
 
-      <div class="hidden md:flex space-x-8 text-sm font-medium">
-        <NuxtLink class="hover:text-iosBlue transition text-black dark:text-white" to="/">
-          {{ t('nav.home') }}
-        </NuxtLink>
-        <NuxtLink class="hover:text-iosBlue transition text-black dark:text-white" to="/#about">
-          {{ t('nav.about') }}
-        </NuxtLink>
-        <NuxtLink class="hover:text-iosBlue transition text-black dark:text-white" to="/#skills">
-          {{ t('nav.skills') }}
-        </NuxtLink>
-        <NuxtLink class="hover:text-iosBlue transition text-black dark:text-white" to="/#experience">
-          {{ t('nav.experience') }}
-        </NuxtLink>
-        <NuxtLink class="hover:text-iosBlue transition text-black dark:text-white" to="/#projects">
-          {{ t('nav.projects') }}
-        </NuxtLink>
-        <NuxtLink class="hover:text-iosBlue transition text-black dark:text-white" to="/#contact">
-          {{ t('nav.contact') }}
-        </NuxtLink>
-      </div>
+      <UiNav />
 
       <div class="flex items-center space-x-4">
         <button
@@ -71,7 +23,8 @@ function toggleTheme() {
         >
           <i
             class="fa-solid transition-all duration-300 transform"
-            :class="[iconClass, rotating ? 'rotate-180 scale-110' : '']"
+            :class="[safeIconClass, rotating ? 'rotate-180 scale-110' : '']"
+            :style="iconStyle"
           />
         </button>
 
@@ -87,9 +40,3 @@ function toggleTheme() {
     </div>
   </nav>
 </template>
-
-<style scoped>
-.rotate-180 {
-  transform: rotate(180deg);
-}
-</style>
