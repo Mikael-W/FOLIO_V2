@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useContact } from '~/composables/useContact';
+import { useContact } from '@/composables/useContact';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();

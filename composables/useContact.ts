@@ -1,55 +1,33 @@
 import { ref } from 'vue';
 import { useReCaptcha } from 'vue-recaptcha-v3';
-import { z } from 'zod';
-
-const ContactSchema = z.object({
-  email: z.string().email('Email invalide.'),
-  message: z.string().min(10, 'Message trop court.'),
-  token: z.string().min(1, 'Captcha manquant.'),
-});
 
 export function useContact() {
   const loading = ref(false);
   const success = ref(false);
-  const error = ref<string | null>(null);
+  const error = ref('');
 
-  const recaptcha = useReCaptcha();
-
-  async function sendContactForm(payload: { email: string; message: string }) {
+  const sendContactForm = async ({ email, message }: { email: string; message: string }) => {
     loading.value = true;
-    error.value = null;
+    success.value = false;
+    error.value = '';
 
     try {
-      await recaptcha?.recaptchaLoaded();
-      const token = await recaptcha?.executeRecaptcha('contact_form');
+      const recaptcha = useReCaptcha();
 
-      const result = ContactSchema.safeParse({
-        ...payload,
-        token,
-      });
+      const token = await recaptcha?.execute('contact_form');
 
-      if (!result.success) {
-        error.value = result.error.issues[0]?.message || 'Validation error';
-        return;
-      }
-
-      await $fetch('/api/contact', {
+      const response = await $fetch('/api/contact', {
         method: 'POST',
-        body: result.data,
+        body: { email, message, token },
       });
 
       success.value = true;
     } catch (err: any) {
-      error.value = err?.data?.message || 'Erreur lors de l’envoi.';
+      error.value = err?.message || 'Erreur inconnue';
     } finally {
       loading.value = false;
     }
-  }
-
-  return {
-    loading,
-    success,
-    error,
-    sendContactForm,
   };
+
+  return { loading, success, error, sendContactForm };
 }

@@ -75,7 +75,12 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
+    recaptchaSecretKey: process.env.RECAPTCHA_SECRET_KEY,
+    resendApiKey: process.env.RESEND_API_KEY,
+    contactTo: process.env.CONTACT_TO,
+    contactFrom: process.env.CONTACT_FROM,
     public: {
+      recaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY,
       sitemap: {
         siteUrl: 'https://mikaelw.com',
         autoLastmod: true,

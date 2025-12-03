@@ -1,46 +1,41 @@
-import { google } from 'googleapis';
+import { Resend } from 'resend';
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event);
+  const config = useRuntimeConfig();
 
-  if (!body.email || !body.message) {
-    throw createError({ statusCode: 400, statusMessage: 'Missing fields' });
+  const { email, message, token } = await readBody(event);
+
+  if (!email || !message || !token) {
+    throw createError({
+      statusCode: 400,
+      message: 'Missing fields',
+    });
   }
 
-  const oAuth2Client = new google.auth.OAuth2(
-    process.env.GMAIL_CLIENT_ID,
-    process.env.GMAIL_CLIENT_SECRET,
-    process.env.GMAIL_REDIRECT_URI,
-  );
+  const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${config.recaptchaSecretKey}&response=${token}`;
 
-  oAuth2Client.setCredentials({
-    refresh_token: process.env.GMAIL_REFRESH_TOKEN,
-  });
+  const recaptchaRes = await fetch(verifyURL, { method: 'POST' });
+  const recaptchaJson = await recaptchaRes.json();
 
-  const gmail = google.gmail({ version: 'v1', auth: oAuth2Client });
+  if (!recaptchaJson.success || recaptchaJson.score < 0.5) {
+    throw createError({
+      statusCode: 403,
+      message: 'Recaptcha failed',
+    });
+  }
 
-  const emailContent = `
-From: "${body.email}"
-To: ${process.env.CONTACT_EMAIL}
-Subject: Nouveau message portfolio - ${body.email}
+  const resend = new Resend(config.resendApiKey);
 
-Email: ${body.email}
-LinkedIn: ${body.linkedin || 'N/A'}
-GitHub: ${body.github || 'N/A'}
-
-Message:
-${body.message}
-  `;
-
-  const encodedMessage = Buffer.from(emailContent)
-    .toString('base64')
-    .replace(/\+/g, '-')
-    .replace(/\//g, '_')
-    .replace(/=+$/, '');
-
-  await gmail.users.messages.send({
-    userId: 'me',
-    requestBody: { raw: encodedMessage },
+  await resend.emails.send({
+    from: config.contactFrom,
+    to: config.contactTo,
+    subject: '📩 Nouveau lead depuis ton portfolio',
+    html: `
+      <h2>Nouveau message</h2>
+      <p><strong>Email :</strong> ${email}</p>
+      <p><strong>Message :</strong></p>
+      <p>${message.replace(/\n/g, '<br>')}</p>
+    `,
   });
 
   return { ok: true };
