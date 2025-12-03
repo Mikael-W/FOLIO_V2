@@ -2,6 +2,18 @@ import { ref, computed, onMounted } from 'vue';
 import { useColorMode, usePreferredDark } from '@vueuse/core';
 
 export function useTheme() {
+  if (import.meta.server) {
+    const rotating = ref(false);
+
+    return {
+      rotating,
+      actualTheme: ref<'light' | 'dark'>('light'),
+      safeIconClass: ref('opacity-0 pointer-events-none'),
+      iconStyle: ref({}),
+      toggleTheme: () => {},
+    };
+  }
+
   const colorMode = useColorMode();
   const preferredDark = usePreferredDark();
 
