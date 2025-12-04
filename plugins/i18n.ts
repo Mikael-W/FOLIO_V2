@@ -1,4 +1,3 @@
-// plugins/i18n.ts
 import { defineNuxtPlugin } from '#imports';
 import { createI18n } from 'vue-i18n';
 import fr from '../locales/fr-FR.json';
