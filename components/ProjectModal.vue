@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted } from '#imports';
 import { useProjectModal } from '~/composables/useProjectModal';
 
 const { isOpen, project, closeProject } = useProjectModal();

@@ -12,18 +12,18 @@ export function useContact() {
     error.value = '';
 
     try {
-      const recaptcha = useReCaptcha();
+      if (!import.meta.client) {
+        throw new Error('ReCAPTCHA unavailable in SSR');
+      }
 
+      const recaptcha = useReCaptcha();
       const token = await recaptcha?.execute('contact_form');
 
-      const response = await $fetch('/api/contact', {
-        method: 'POST',
-        body: { email, message, token },
-      });
-
-      success.value = true;
-    } catch (err: any) {
-      error.value = err?.message || 'Erreur inconnue';
+      if (!token) {
+        throw new Error('Impossible de générer le jeton reCAPTCHA');
+      }
+    } catch (err) {
+      console.error(err);
     } finally {
       loading.value = false;
     }

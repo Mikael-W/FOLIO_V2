@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { useBrain } from '~/composables/useBrain';
-import { useI18n } from 'vue-i18n';
 
-const { t } = useI18n();
 const { getExperience } = useBrain();
 const experiences = getExperience();
 </script>
@@ -11,7 +9,7 @@ const experiences = getExperience();
   <section id="experience" class="py-16 px-6">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-3xl font-semibold text-center mb-12">
-        {{ t('experience.title') }}
+        {{ $t('experience.title') }}
       </h2>
 
       <div class="relative">

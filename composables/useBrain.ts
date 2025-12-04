@@ -1,6 +1,8 @@
-import { useI18n } from 'vue-i18n';
+import { computed } from 'vue';
+
 import brainFr from '../data/brain/brain.fr.json';
 import brainEn from '../data/brain/brain.en.json';
+import { useI18n } from 'vue-i18n';
 
 export function useBrain() {
   const { locale } = useI18n();

@@ -1,10 +1,29 @@
 <script setup lang="ts">
+import { computed, onMounted } from 'vue';
+import { useHead } from '#imports';
 import { useTheme } from '@/composables/useTheme';
-import { useLanguage } from '@/composables/useLanguage';
 import UiNav from '@/components/UiNav.vue';
+import { useI18n } from 'vue-i18n';
 
+const { locale } = useI18n();
 const { rotating, safeIconClass, iconStyle, toggleTheme } = useTheme();
-const { lang } = useLanguage();
+
+const lang = computed<'fr' | 'en'>({
+  get: () => locale.value as 'fr' | 'en',
+  set: (val) => {
+    locale.value = val;
+
+    useHead({
+      htmlAttrs: { lang: val },
+    });
+  },
+});
+
+onMounted(() => {
+  useHead({
+    htmlAttrs: { lang: locale.value },
+  });
+});
 </script>
 
 <template>

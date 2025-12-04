@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import { useBrain } from '@/composables/useBrain';
 import { useProjectModal } from '@/composables/useProjectModal';
-import { useI18n } from 'vue-i18n';
 
 const { getProjects } = useBrain();
 const { openProject } = useProjectModal();
 const projects = getProjects();
-
-const { t } = useI18n();
 </script>
 
 <template>
@@ -18,7 +15,7 @@ const { t } = useI18n();
   >
     <div class="max-w-8xl mx-auto">
       <h2 id="projects-title" class="text-3xl font-semibold text-center mb-12">
-        {{ t('projects.title') }}
+        {{ $t('projects.title') }}
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
@@ -57,7 +54,7 @@ const { t } = useI18n();
               @click="openProject(p)"
               class="text-iosBlue text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-[#0A84FF]"
             >
-              {{ t('projects.case_study') }}
+              {{ $t('projects.case_study') }}
               <i class="fa-solid fa-arrow-right ml-1"></i>
             </button>
           </div>

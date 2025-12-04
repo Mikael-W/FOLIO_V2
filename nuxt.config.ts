@@ -1,11 +1,18 @@
 import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
+  devtools: { enabled: false },
+  ssr: true,
+
   nitro: {
     compatibilityDate: '2025-12-03',
   },
-  css: ['~/assets/css/main.css'],
 
+  build: {
+    transpile: ['vue'],
+  },
+
+  css: ['~/assets/css/main.css'],
   modules: ['nuxt-simple-sitemap', '@nuxtjs/color-mode'],
 
   postcss: {
@@ -29,7 +36,6 @@ export default defineNuxtConfig({
         },
         { name: 'robots', content: 'index, follow' },
         { name: 'author', content: 'Mikaël Wawrziczny' },
-
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: 'Mikaël Wawrziczny – Senior Web Engineer' },
         {
@@ -38,7 +44,6 @@ export default defineNuxtConfig({
         },
         { property: 'og:url', content: 'https://mikaelw.com' },
         { property: 'og:image', content: 'https://mikaelw.com/og-image.png' },
-
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Mikaël Wawrziczny – Senior Web Engineer' },
         {
@@ -48,30 +53,14 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: 'https://mikaelw.com/og-image.png' },
       ],
       link: [
-        {
-          rel: 'icon',
-          type: 'image/x-icon',
-          href: '/favicon.ico',
-        },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap',
         },
-        {
-          rel: 'stylesheet',
-          href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
-        },
+        { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' },
       ],
     },
-  },
-
-  colorMode: {
-    preference: 'dark',
-    fallback: 'dark',
-    classSuffix: '',
-    storageKey: 'theme',
-    disableTransition: true,
-    global: false,
   },
 
   runtimeConfig: {
@@ -90,4 +79,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  compatibilityDate: '2025-12-04',
 });

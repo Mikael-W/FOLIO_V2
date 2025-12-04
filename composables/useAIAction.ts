@@ -1,44 +1,32 @@
+import type { AIAction } from '@/types/chat';
 import { useColorMode } from '@vueuse/core';
 import { useI18n } from 'vue-i18n';
 
-export interface AIAction {
-  type: string | null;
-  payload?: string | null;
-}
-
-export function useAIAction() {
+export async function useAIAction() {
   if (import.meta.server) {
-    return {
-      handleAIAction: (_action: AIAction) => {},
-    };
+    return { handleAIAction: () => {} };
   }
 
   const colorMode = useColorMode();
   const { locale } = useI18n();
 
-  function normalizeThemePayload(raw: string | undefined | null): 'dark' | 'light' | null {
+  function normalizeThemePayload(raw?: string | null): 'dark' | 'light' | null {
     if (!raw) return null;
-
     const txt = raw.toLowerCase();
 
-    const DARK_KEYWORDS = ['dark', 'sombre', 'noir', 'nuit'];
-    const LIGHT_KEYWORDS = ['light', 'clair', 'lumineux', 'jour'];
-
-    if (DARK_KEYWORDS.some((k) => txt.includes(k))) return 'dark';
-    if (LIGHT_KEYWORDS.some((k) => txt.includes(k))) return 'light';
+    if (['dark', 'sombre', 'noir', 'nuit'].some((k) => txt.includes(k))) return 'dark';
+    if (['light', 'clair', 'lumineux', 'jour'].some((k) => txt.includes(k))) return 'light';
 
     return null;
   }
 
   function handleAIAction(action: AIAction) {
-    if (!action || !action.type) return;
+    if (!action?.type) return;
 
     switch (action.type) {
       case 'switchTheme': {
-        const theme = normalizeThemePayload(action.payload ?? null);
-        if (theme) {
-          colorMode.value = theme;
-        }
+        const theme = normalizeThemePayload(action.payload);
+        if (theme) colorMode.value = theme;
         break;
       }
 
@@ -50,8 +38,9 @@ export function useAIAction() {
       }
 
       case 'downloadCV': {
-        if (action.payload === 'fr') window.open('/CV_MW_FR.pdf', '_blank');
-        if (action.payload === 'en') window.open('/CV_MW_EN.pdf', '_blank');
+        const file = action.payload === 'fr' ? '/CV_MW_FR.pdf' : action.payload === 'en' ? '/CV_MW_EN.pdf' : null;
+
+        if (file) window.open(file, '_blank');
         break;
       }
     }

@@ -1,21 +1,27 @@
 <script setup lang="ts">
 import { ref, nextTick, watch, onMounted } from 'vue';
-import { useColorMode } from '@vueuse/core';
-import { useI18n } from 'vue-i18n';
 import type { ChatMessage, AIResponse } from '@/types/chat';
-import { useAIAction } from '@/composables/useAIAction';
-import { renderMarkdown } from '@/composables/useMarkdown';
+import { useI18n } from 'vue-i18n';
+
+const isClient = import.meta.client;
+
+let colorMode: any = null;
+let handleAIAction: any = () => {};
+let renderMarkdownSafe: any = (txt: string) => txt;
 
 const { t, locale } = useI18n();
-const colorMode = useColorMode();
-const { handleAIAction } = useAIAction();
 
-const messages = ref<ChatMessage[]>([
-  {
-    role: 'assistant',
-    content: '',
-  },
-]);
+if (isClient) {
+  const { useColorMode } = await import('@vueuse/core');
+  const { useAIAction } = await import('@/composables/useAIAction');
+  const { renderMarkdown } = await import('@/composables/useMarkdown');
+
+  colorMode = useColorMode();
+  handleAIAction = (await useAIAction()).handleAIAction;
+  renderMarkdownSafe = renderMarkdown;
+}
+
+const messages = ref<ChatMessage[]>([{ role: 'assistant', content: '' }]);
 
 const userInput = ref('');
 const loading = ref(false);
@@ -23,24 +29,18 @@ const chatContainer = ref<HTMLElement | null>(null);
 const liveMessage = ref('');
 
 function updateGreeting() {
-  const first = messages.value[0];
-  if (!first || first.role !== 'assistant') return;
-
-  first.content = t('ai_chat.greeting');
+  messages.value[0].content = t('ai_chat.greeting');
 }
 
 onMounted(() => {
   updateGreeting();
 });
 
-watch(
-  () => locale.value,
-  () => {
-    updateGreeting();
-  },
-);
+watch(() => locale.value, updateGreeting);
 
 async function sendMessage() {
+  if (!isClient) return;
+
   const content = userInput.value.trim();
   if (!content) return;
 
@@ -54,22 +54,16 @@ async function sendMessage() {
     body: {
       messages: safeMessages,
       locale: locale.value,
-      colorMode: colorMode.value,
+      colorMode: colorMode?.value,
     },
   });
 
   loading.value = false;
 
-  if (response.action) {
-    handleAIAction(response.action);
-  }
+  if (response.action) handleAIAction(response.action);
 
   if (response.reply) {
-    messages.value.push({
-      role: 'assistant',
-      content: response.reply,
-    });
-
+    messages.value.push({ role: 'assistant', content: response.reply });
     liveMessage.value = response.reply;
   }
 
@@ -89,7 +83,7 @@ async function sendMessage() {
   >
     <h2 class="text-2xl font-semibold mb-4 flex items-center text-[#1C1C1E] dark:text-white" id="chat-title">
       <i class="fa-solid fa-robot text-iosBlue text-2xl mr-3"></i>
-      {{ t('ai_chat.title') }}
+      {{ $t('ai_chat.title') }}
     </h2>
 
     <div aria-live="polite" class="sr-only">
@@ -109,27 +103,27 @@ async function sendMessage() {
         :class="msg.role === 'user' ? 'justify-end' : 'justify-start'"
       >
         <p
-          v-html="renderMarkdown(msg.content)"
+          v-html="renderMarkdownSafe(msg.content)"
           class="px-4 py-2 rounded-lg max-w-[75%] whitespace-pre-wrap text-sm transition-colors bg-gray-100 text-gray-800 dark:bg-[#2C2C2E] dark:text-[#F5F5F7]"
           :class="msg.role === 'user' ? 'bg-iosBlue text-white' : ''"
         />
       </div>
 
       <p v-if="loading" class="text-gray-500 dark:text-gray-400 text-sm animate-pulse">
-        {{ t('ai_chat.typing') }}
+        {{ $t('ai_chat.typing') }}
       </p>
     </div>
 
     <form @submit.prevent="sendMessage" class="flex gap-3" aria-label="Envoyer un message à l'assistant">
       <label for="chat-input" class="sr-only">
-        {{ t('ai_chat.placeholder') }}
+        {{ $t('ai_chat.placeholder') }}
       </label>
 
       <input
         id="chat-input"
         v-model="userInput"
         type="text"
-        :placeholder="t('ai_chat.placeholder')"
+        :placeholder="$t('ai_chat.placeholder')"
         class="flex-1 border rounded-lg px-4 py-2 text-sm border-gray-300 text-[#1C1C1E] bg-white focus:ring-2 focus:ring-iosBlue focus:outline-none dark:bg-[#2C2C2E] dark:border-[#3A3A3C] dark:text-[#F5F5F7]"
       />
 
@@ -138,7 +132,7 @@ async function sendMessage() {
         :disabled="loading"
         aria-label="Envoyer le message"
       >
-        {{ loading ? t('ai_chat.sending') : t('ai_chat.send_button') }}
+        {{ loading ? $t('ai_chat.sending') : $t('ai_chat.send_button') }}
       </button>
     </form>
   </div>

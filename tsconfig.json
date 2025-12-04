@@ -1,13 +1,3 @@
 {
-  "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-    "types": ["@types/node"],
-    "allowJs": true,
-    "strict": true,
-    "skipLibCheck": true
-  },
-  "vueCompilerOptions": {
-    "globalTypesPath": "./types/vue-global.d.ts"
-  },
-  "exclude": ["node_modules", "dist"]
+  "extends": "./.nuxt/tsconfig.json"
 }

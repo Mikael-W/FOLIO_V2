@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useContact } from '@/composables/useContact';
-import { useI18n } from 'vue-i18n';
 
-const { t } = useI18n();
 const { loading, success, error, sendContactForm } = useContact();
 
 const email = ref('');
@@ -23,10 +21,10 @@ async function submit() {
       <div class="bg-white dark:bg-[#1c1c1e] rounded-2xl p-8 apple-shadow animate-fade-in">
         <div class="mb-8">
           <h2 class="text-2xl font-semibold mb-2 dark:text-white">
-            {{ t('contact.title') }}
+            {{ $t('contact.title') }}
           </h2>
           <p class="text-[#3A3A3C] dark:text-gray-300">
-            {{ t('contact.subtitle') }}
+            {{ $t('contact.subtitle') }}
           </p>
         </div>
 
@@ -34,7 +32,7 @@ async function submit() {
           <div>
             <label for="email" class="block text-sm font-medium mb-2 dark:text-white">
               <i class="fa-solid fa-envelope text-iosBlue mr-2"></i>
-              {{ t('contact.email_label') }}
+              {{ $t('contact.email_label') }}
             </label>
             <input
               v-model="email"
@@ -42,14 +40,14 @@ async function submit() {
               id="email"
               required
               class="form-input w-full px-4 py-3 bg-[#F5F5F7] dark:bg-[#2c2c2e] rounded-xl border focus:border-[#0A84FF] transition-all"
-              :placeholder="t('contact.email_placeholder')"
+              :placeholder="$t('contact.email_placeholder')"
             />
           </div>
 
           <div>
             <label for="message" class="block text-sm font-medium mb-2 dark:text-white">
               <i class="fa-solid fa-message text-iosBlue mr-2"></i>
-              {{ t('contact.message_label') }}
+              {{ $t('contact.message_label') }}
             </label>
 
             <textarea
@@ -58,7 +56,7 @@ async function submit() {
               rows="5"
               required
               class="form-input w-full px-4 py-3 bg-[#F5F5F7] dark:bg-[#2c2c2e] rounded-xl border focus:border-[#0A84FF] transition-all resize-none"
-              :placeholder="t('contact.message_placeholder')"
+              :placeholder="$t('contact.message_placeholder')"
             ></textarea>
           </div>
 
@@ -69,7 +67,7 @@ async function submit() {
               class="w-full px-8 py-4 bg-iosBlue text-white rounded-xl transition-colors apple-shadow disabled:opacity-50"
             >
               <i class="fa-solid fa-paper-plane mr-2"></i>
-              {{ loading ? t('contact.sending') : t('contact.send_button') }}
+              {{ loading ? $t('contact.sending') : $t('contact.send_button') }}
             </button>
           </div>
         </form>
@@ -82,10 +80,10 @@ async function submit() {
             <i class="fa-solid fa-check-circle text-green-500 text-xl mr-3"></i>
             <div>
               <p class="font-medium text-green-800 dark:text-green-200">
-                {{ t('contact.success_title') }}
+                {{ $t('contact.success_title') }}
               </p>
               <p class="text-sm text-green-600 dark:text-green-300">
-                {{ t('contact.success_sub') }}
+                {{ $t('contact.success_sub') }}
               </p>
             </div>
           </div>

@@ -1,17 +1,16 @@
+// plugins/i18n.ts
+import { defineNuxtPlugin } from '#imports';
 import { createI18n } from 'vue-i18n';
-import fr from '../i18n/locales/fr.json';
-import en from '../i18n/locales/en.json';
+import fr from '../locales/fr-FR.json';
+import en from '../locales/en-US.json';
 
-export default defineNuxtPlugin(({ vueApp }) => {
+export default defineNuxtPlugin((nuxtApp) => {
   const i18n = createI18n({
     legacy: false,
-    globalInjection: true,
     locale: 'fr',
-    fallbackLocale: 'en',
-    messages: {
-      fr,
-      en,
-    },
+    fallbackLocale: 'fr',
+    messages: { fr, en },
+    globalInjection: true,
   });
-  vueApp.use(i18n);
+  nuxtApp.vueApp.use(i18n);
 });
