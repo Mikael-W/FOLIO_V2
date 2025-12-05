@@ -88,5 +88,14 @@
     "sending": "Envoi en cours…",
     "success_title": "Message envoyé avec succès !",
     "success_sub": "Je vous répondrai sous 24h."
+  },
+  "modal": {
+    "overview": "Aperçu",
+    "problemsSolved": "Problèmes résolus",
+    "problem": "Problème",
+    "solution": "Solution",
+    "impact": "Impact",
+    "techStack": "Technologies utilisées",
+    "close": "Fermer"
   }
 }

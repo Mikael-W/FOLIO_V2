@@ -1,111 +1,93 @@
 <script setup lang="ts">
-import { onMounted } from '#imports';
+import { onMounted, onBeforeUnmount } from '#imports';
 import { useProjectModal } from '~/composables/useProjectModal';
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n();
 const { isOpen, project, closeProject } = useProjectModal();
 
-onMounted(() => {
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeProject();
-  });
-});
+function handleKeydown(e: KeyboardEvent) {
+  if (e.key === 'Escape') closeProject();
+}
+
+onMounted(() => window.addEventListener('keydown', handleKeydown));
+onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown));
 </script>
 
 <template>
   <Teleport to="body">
-    <div
-      v-if="isOpen"
-      class="fixed inset-0 z-50 flex items-center justify-center p-4"
-      aria-modal="true"
-      role="dialog"
-      aria-labelledby="project-title"
-    >
-      <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" @click="closeProject" aria-hidden="true"></div>
+    <div v-if="isOpen" class="fixed inset-0 z-50" role="dialog" aria-modal="true">
+      <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" @click="closeProject"></div>
 
-      <div
-        class="relative max-w-4xl w-full rounded-2xl overflow-hidden shadow-xl bg-white text-[#1C1C1E] dark:bg-[#1C1C1E] dark:text-[#F5F5F7]"
-      >
-        <div class="p-8 text-white" :class="`bg-gradient-to-r ${project.gradient}`">
-          <div class="flex items-start justify-between">
+      <div class="relative w-full h-[calc(100vh-4rem)] flex justify-center py-[4rem] px-4 my-16">
+        <div
+          class="relative w-full max-w-4xl bg-white dark:bg-[#1C1C1E] rounded-2xl shadow-xl flex flex-col overflow-hidden max-h-[calc(100vh-4rem)]"
+        >
+          <div class="p-6 text-white shrink-0" :class="`bg-gradient-to-r ${project.gradient}`">
+            <div class="flex items-start justify-between">
+              <div>
+                <h2 class="text-2xl font-bold">{{ project.name }}</h2>
+                <p class="opacity-90 text-sm">
+                  {{ project.stack.join(' • ') }}
+                </p>
+              </div>
+              <button
+                @click="closeProject"
+                class="p-2 bg-white/20 hover:bg-white/30 backdrop-blur rounded-xl transition"
+                :aria-label="t('modal.close')"
+              >
+                <i class="fa-solid fa-xmark text-xl text-white"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="p-6 space-y-8 overflow-y-auto">
             <div>
-              <h2 id="project-title" class="text-3xl font-bold mb-2">
-                {{ project.name }}
-              </h2>
-              <p class="opacity-90 text-sm">
-                {{ project.stack.join(' • ') }}
+              <h3 class="text-xl font-semibold mb-2 dark:text-white">
+                {{ t('modal.overview') }}
+              </h3>
+              <p class="opacity-90 leading-relaxed dark:text-white">
+                {{ project.description }}
               </p>
             </div>
 
-            <button
-              @click="closeProject"
-              aria-label="Fermer"
-              class="p-2 bg-white/20 hover:bg-white/30 backdrop-blur rounded-xl transition"
-            >
-              <i class="fa-solid fa-xmark text-white text-xl"></i>
-            </button>
-          </div>
-        </div>
+            <div v-if="project.problemsSolved?.length">
+              <h3 class="text-xl font-semibold mb-3 dark:text-white">
+                {{ t('modal.problemsSolved') }}
+              </h3>
 
-        <div class="p-8 space-y-10">
-          <div>
-            <h3 class="text-xl font-semibold mb-3">Overview</h3>
-            <p class="opacity-90 leading-relaxed">
-              {{ project.description }}
-            </p>
-          </div>
+              <div class="space-y-4">
+                <div
+                  v-for="(item, idx) in project.problemsSolved"
+                  :key="idx"
+                  class="p-4 rounded-xl border bg-[#F5F5F7] dark:bg-[#2C2C2E] dark:border-[#3A3A3C]"
+                >
+                  <p class="font-semibold text-red-500">⚠️ {{ t('modal.problem') }}</p>
+                  <p class="ml-4 mb-2 opacity-90 dark:text-white">{{ item.problem }}</p>
 
-          <div v-if="project.problemsSolved?.length">
-            <h3 class="text-xl font-semibold mb-4">Problems Solved</h3>
+                  <p class="font-semibold text-blue-500">💡 {{ t('modal.solution') }}</p>
+                  <p class="ml-4 mb-2 opacity-90 dark:text-white">{{ item.solution }}</p>
 
-            <div class="space-y-6">
-              <div
-                v-for="(item, idx) in project.problemsSolved"
-                :key="idx"
-                class="p-4 rounded-xl border bg-[#F5F5F7] border-[#E5E5EA] dark:bg-[#2C2C2E] dark:border-[#3A3A3C]"
-              >
-                <div class="mb-2">
-                  <p class="font-semibold text-[#d32f2f] dark:text-red-400">
-                    <i class="fa-solid fa-triangle-exclamation mr-2"></i>
-                    Problem
-                  </p>
-                  <p class="opacity-90 ml-6">
-                    {{ item.problem }}
-                  </p>
-                </div>
-
-                <div class="mb-2">
-                  <p class="font-semibold text-[#0A84FF] dark:text-blue-400">
-                    <i class="fa-solid fa-lightbulb mr-2"></i>
-                    Solution
-                  </p>
-                  <p class="opacity-90 ml-6">
-                    {{ item.solution }}
-                  </p>
-                </div>
-
-                <div>
-                  <p class="font-semibold text-green-600 dark:text-green-400">
-                    <i class="fa-solid fa-chart-line mr-2"></i>
-                    Impact
-                  </p>
-                  <p class="opacity-90 ml-6">
-                    {{ item.impact }}
-                  </p>
+                  <p class="font-semibold text-green-500">📈 {{ t('modal.impact') }}</p>
+                  <p class="ml-4 opacity-90 dark:text-white">{{ item.impact }}</p>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div>
-            <h3 class="text-xl font-semibold mb-3">Tech Stack</h3>
-            <div class="flex flex-wrap gap-2">
-              <span
-                v-for="tag in project.stack"
-                :key="tag"
-                class="px-3 py-1 rounded-lg text-sm font-medium bg-[#F5F5F7] text-[#1C1C1E] dark:bg-[#2C2C2E] dark:text-[#F5F5F7]"
-              >
-                {{ tag }}
-              </span>
+            <div>
+              <h3 class="text-xl font-semibold mb-3 dark:text-white">
+                {{ t('modal.techStack') }}
+              </h3>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  v-for="tag in project.stack"
+                  :key="tag"
+                  class="px-3 py-1 rounded-lg text-sm bg-iosBlue text-white"
+                >
+                  {{ tag }}
+                </span>
+              </div>
             </div>
           </div>
         </div>

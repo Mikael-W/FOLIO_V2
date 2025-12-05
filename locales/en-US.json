@@ -92,5 +92,15 @@
     "sending": "Sending…",
     "success_title": "Message sent successfully!",
     "success_sub": "I'll reply within 24 hours."
+  },
+
+  "modal": {
+    "overview": "Overview",
+    "problemsSolved": "Problems Solved",
+    "problem": "Problem",
+    "solution": "Solution",
+    "impact": "Impact",
+    "techStack": "Tech Stack",
+    "close": "Close"
   }
 }
