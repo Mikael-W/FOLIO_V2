@@ -3,23 +3,20 @@ import { VueReCaptcha } from 'vue-recaptcha-v3';
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig();
-  const siteKey = config.public.recaptchaSiteKey as string | undefined;
+  const siteKey = config.public.recaptchaSiteKey;
 
   if (!siteKey) {
-    console.warn('[reCAPTCHA] Missing runtimeConfig.public.recaptchaSiteKey');
+    console.warn('[reCAPTCHA] Missing siteKey');
     return;
   }
 
-  console.info('[reCAPTCHA] Plugin loaded on client with siteKey:', siteKey);
+  console.log('[reCAPTCHA] plugin loaded with siteKey:', siteKey);
 
   nuxtApp.vueApp.use(VueReCaptcha, {
     siteKey,
     loaderOptions: {
       autoHideBadge: true,
-      useRecaptchaNet: true,
-      renderParameters: {
-        hl: 'fr',
-      },
+      renderParameters: { hl: 'fr' },
     },
   });
 });

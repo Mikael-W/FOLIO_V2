@@ -1,17 +1,37 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useReCaptcha } from 'vue-recaptcha-v3';
 import { useContact } from '@/composables/useContact';
-
-const { loading, success, error, sendContactForm } = useContact();
 
 const email = ref('');
 const message = ref('');
 
+const { loading, success, error, sendContactForm } = useContact();
+const recaptcha = useReCaptcha();
+
 async function submit() {
-  await sendContactForm({
-    email: email.value,
-    message: message.value,
-  });
+  try {
+    if (!recaptcha) {
+      console.error('[reCAPTCHA] instance not available');
+      throw new Error('ReCAPTCHA unavailable');
+    }
+
+    await recaptcha.recaptchaLoaded();
+
+    const token = await recaptcha.executeRecaptcha('contact_form');
+
+    if (!token) {
+      throw new Error('Unable to get reCAPTCHA token');
+    }
+
+    await sendContactForm({
+      email: email.value,
+      message: message.value,
+      token,
+    });
+  } catch (err) {
+    console.error('[CONTACT ERROR]', err);
+  }
 }
 </script>
 

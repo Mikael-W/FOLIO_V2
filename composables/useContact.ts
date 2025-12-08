@@ -1,59 +1,44 @@
 import { ref } from 'vue';
-import { useReCaptcha } from 'vue-recaptcha-v3';
 
-interface ContactPayload {
-  email: string;
-  message: string;
+interface ContactResponse {
+  status: 'ok' | 'error';
+  message?: string;
 }
 
 export function useContact() {
   const loading = ref(false);
   const success = ref(false);
-  const error = ref<string | null>(null);
+  const error = ref('');
 
-  const sendContactForm = async ({ email, message }: ContactPayload) => {
-    if (!import.meta.client) {
-      error.value = 'Formulaire indisponible côté serveur.';
-      return;
-    }
+  async function sendContactForm(params: { email: string; message: string; token: string }) {
+    const { email, message, token } = params;
 
     loading.value = true;
     success.value = false;
-    error.value = null;
+    error.value = '';
 
     try {
-      const recaptcha = useReCaptcha();
-
-      if (!recaptcha) {
-        throw new Error('reCAPTCHA non initialisé.');
-      }
-
-      const { executeRecaptcha, recaptchaLoaded } = recaptcha;
-
-      await recaptchaLoaded();
-      const token = await executeRecaptcha('contact_form');
-
       if (!token) {
-        throw new Error('Impossible de générer le jeton reCAPTCHA');
+        throw new Error('ReCAPTCHA token missing');
       }
 
-      await $fetch('/api/contact', {
+      const response = await $fetch<ContactResponse>('/api/contact', {
         method: 'POST',
-        body: {
-          email,
-          message,
-          recaptchaToken: token,
-        },
+        body: { email, message, token },
       });
+
+      if (response.status !== 'ok') {
+        throw new Error(response.message || 'Unable to send email');
+      }
 
       success.value = true;
     } catch (err: any) {
-      console.error(err);
-      error.value = err?.message ?? 'Une erreur est survenue lors de l’envoi du message.';
+      console.error('[CONTACT ERROR]', err);
+      error.value = err?.message ?? 'An unexpected error occurred';
     } finally {
       loading.value = false;
     }
-  };
+  }
 
   return { loading, success, error, sendContactForm };
 }
