@@ -2,7 +2,6 @@ import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  ssr: true,
 
   nitro: {
     compatibilityDate: '2025-12-03',
