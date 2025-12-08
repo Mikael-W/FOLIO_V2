@@ -14,10 +14,14 @@ module.exports = {
     extend: {
       colors: {
         iosBlue: '#3B85A6',
-        lightBg: '#F5F5F7',
-        lightText: '#1C1C1E',
+        lightWhite: '#F5F5F7',
+        lightBorder: '#E5E5EA',
+        lightDark: '#1C1C1E',
+        darkGray: '#3A3A3C',
+        lightGray: '#D1D1D6',
         darkBg: '#000000',
         darkText: '#FFFFFF',
+        intenseBlue: '#0A84FF',
       },
       boxShadow: {
         apple: '0 4px 16px rgba(0,0,0,0.08)',

@@ -10,7 +10,7 @@ const projects = getProjects();
 <template>
   <section
     id="projects"
-    class="py-16 px-6 md:px-16 transition-colors duration-300 bg-[#F5F5F7] text-[#1C1C1E] dark:bg-[#1C1C1E] dark:text-[#F5F5F7]"
+    class="py-16 px-6 md:px-16 transition-colors duration-300 bg-lightWhite text-lightDark dark:bg-lightDark dark:text-lightWhite"
     aria-labelledby="projects-title"
   >
     <div class="max-w-8xl mx-auto">
@@ -23,10 +23,10 @@ const projects = getProjects();
           v-for="(p, i) in projects"
           :key="i"
           role="listitem"
-          class="rounded-2xl overflow-hidden transition-shadow apple-shadow bg-white border border-[#E5E5EA] hover:shadow-lg dark:bg-[#2C2C2E] dark:border-[#3A3A3C]"
+          class="rounded-2xl overflow-hidden transition-shadow apple-shadow bg-white border border-lightBorder hover:shadow-lg dark:bg-darkGray dark:border-darkGray"
         >
           <div
-            class="h-40 bg-[#F1F1F3] dark:bg-[#3A3A3C] flex items-center justify-center p-6 border-b border-black/5 dark:border-white/10"
+            class="h-40 bg-[#F1F1F3] dark:bg-darkGray flex items-center justify-center p-6 border-b border-black/5 dark:border-white/10"
           >
             <img :src="p.logo" alt="" class="max-h-full max-w-full object-contain drop-shadow-sm" />
           </div>
@@ -36,7 +36,7 @@ const projects = getProjects();
               {{ p.name }}
             </h3>
 
-            <p class="text-sm mb-3 text-[#3A3A3C] dark:text-gray-300 leading-relaxed">
+            <p class="text-sm mb-3 text-grayText dark:text-gray-300 leading-relaxed">
               {{ p.description }}
             </p>
 
@@ -44,7 +44,7 @@ const projects = getProjects();
               <span
                 v-for="tag in p.stack"
                 :key="tag"
-                class="px-2 py-1 rounded text-xs bg-[#F5F5F7] text-[#1C1C1E] dark:bg-[#3A3A3C] dark:text-[#F5F5F7]"
+                class="px-2 py-1 rounded text-xs bg-lightWhite text-lightDark dark:bg-darkGray dark:text-lightWhite"
               >
                 {{ tag }}
               </span>
@@ -52,7 +52,7 @@ const projects = getProjects();
 
             <button
               @click="openProject(p)"
-              class="text-iosBlue text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-[#0A84FF]"
+              class="text-iosBlue text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-intenseBlue"
             >
               {{ $t('projects.case_study') }}
               <i class="fa-solid fa-arrow-right ml-1"></i>

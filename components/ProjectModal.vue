@@ -21,7 +21,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown));
 
       <div class="relative w-full h-[calc(100vh-4rem)] flex justify-center py-[4rem] px-4 my-16">
         <div
-          class="relative w-full max-w-4xl bg-white dark:bg-[#1C1C1E] rounded-2xl shadow-xl flex flex-col overflow-hidden max-h-[calc(100vh-4rem)]"
+          class="relative w-full max-w-4xl bg-white dark:bg-lightDark rounded-2xl shadow-xl flex flex-col overflow-hidden max-h-[calc(100vh-4rem)]"
         >
           <div class="p-6 text-white shrink-0" :class="`bg-gradient-to-r ${project.gradient}`">
             <div class="flex items-start justify-between">
@@ -60,7 +60,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown));
                 <div
                   v-for="(item, idx) in project.problemsSolved"
                   :key="idx"
-                  class="p-4 rounded-xl border bg-[#F5F5F7] dark:bg-[#2C2C2E] dark:border-[#3A3A3C]"
+                  class="p-4 rounded-xl border bg-lightWhite dark:bg-darkGray dark:border-darkGray"
                 >
                   <p class="font-semibold text-red-500">⚠️ {{ t('modal.problem') }}</p>
                   <p class="ml-4 mb-2 opacity-90 dark:text-white">{{ item.problem }}</p>

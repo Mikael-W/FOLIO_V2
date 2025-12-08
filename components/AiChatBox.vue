@@ -79,9 +79,9 @@ async function sendMessage() {
 
 <template>
   <div
-    class="rounded-2xl p-8 shadow-xl border max-w-4xl mx-auto px-6 bg-white border-gray-200 dark:bg-[#1C1C1E] dark:border-[#3A3A3C]"
+    class="rounded-2xl p-8 shadow-xl border max-w-4xl mx-auto px-6 bg-white border-gray-200 dark:bg-lightDark dark:border-darkGray"
   >
-    <h2 class="text-2xl font-semibold mb-4 flex items-center text-[#1C1C1E] dark:text-white" id="chat-title">
+    <h2 class="text-2xl font-semibold mb-4 flex items-center text-lightDark dark:text-white" id="chat-title">
       <i class="fa-solid fa-robot text-iosBlue text-2xl mr-3"></i>
       {{ $t('ai_chat.title') }}
     </h2>
@@ -94,7 +94,7 @@ async function sendMessage() {
       ref="chatContainer"
       role="log"
       aria-labelledby="chat-title"
-      class="space-y-3 mb-4 max-h-[400px] overflow-y-auto pr-2 text-[#1C1C1E] dark:text-[#F5F5F7]"
+      class="space-y-3 mb-4 max-h-[400px] overflow-y-auto pr-2 text-lightDark dark:text-lightWhite"
     >
       <div
         v-for="(msg, i) in messages"
@@ -104,7 +104,7 @@ async function sendMessage() {
       >
         <p
           v-html="renderMarkdownSafe(msg.content)"
-          class="px-4 py-2 rounded-lg max-w-[75%] whitespace-pre-wrap text-sm transition-colors bg-gray-100 text-gray-800 dark:bg-[#2C2C2E] dark:text-[#F5F5F7]"
+          class="px-4 py-2 rounded-lg max-w-[75%] whitespace-pre-wrap text-sm transition-colors bg-gray-100 text-gray-800 dark:bg-darkGray dark:text-lightWhite"
           :class="msg.role === 'user' ? 'bg-iosBlue text-white' : ''"
         />
       </div>
@@ -114,7 +114,7 @@ async function sendMessage() {
       </p>
     </div>
 
-    <form @submit.prevent="sendMessage" class="flex gap-3" aria-label="Envoyer un message à l'assistant">
+    <form @submit.prevent="sendMessage" class="flex gap-3 items-center" aria-label="Envoyer un message à l'assistant">
       <label for="chat-input" class="sr-only">
         {{ $t('ai_chat.placeholder') }}
       </label>
@@ -124,14 +124,24 @@ async function sendMessage() {
         v-model="userInput"
         type="text"
         :placeholder="$t('ai_chat.placeholder')"
-        class="flex-1 border rounded-lg px-4 py-2 text-sm border-gray-300 text-[#1C1C1E] bg-white focus:ring-2 focus:ring-iosBlue focus:outline-none dark:bg-[#2C2C2E] dark:border-[#3A3A3C] dark:text-[#F5F5F7]"
+        class="flex-1 border rounded-lg px-4 py-2 text-sm border-gray-300 text-lightDark bg-white focus:ring-2 focus:ring-iosBlue focus:outline-none dark:bg-darkGray dark:border-darkGray dark:text-lightWhite"
       />
 
       <button
-        class="px-6 py-2 rounded-lg text-sm font-medium bg-iosBlue text-white transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-[#1C1C1E]"
+        type="submit"
+        class="sm:hidden flex items-center justify-center w-10 h-10 rounded-full bg-iosBlue text-white transition active:scale-90 disabled:opacity-40"
         :disabled="loading"
         aria-label="Envoyer le message"
       >
+        <i class="fa-solid fa-paper-plane text-lg"></i>
+      </button>
+
+      <button
+        type="submit"
+        class="hidden sm:flex items-center gap-2 px-6 py-2 rounded-lg text-sm font-medium bg-iosBlue text-white transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-lightDark disabled:opacity-40"
+        :disabled="loading"
+      >
+        <i class="fa-solid fa-paper-plane"></i>
         {{ loading ? $t('ai_chat.sending') : $t('ai_chat.send_button') }}
       </button>
     </form>

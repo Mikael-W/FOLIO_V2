@@ -14,7 +14,7 @@ const experiences = getExperience();
 
       <div class="relative">
         <div
-          class="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-[#D1D1D6] dark:bg-gray-700"
+          class="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-lightGray dark:bg-gray-700"
           aria-hidden="true"
         ></div>
 
@@ -26,19 +26,19 @@ const experiences = getExperience();
 
             <div
               :class="[
-                'w-full md:w-[45%] p-6 rounded-xl apple-shadow bg-white dark:bg-[#1c1c1e] border border-gray-200 dark:border-gray-700',
+                'w-full md:w-[45%] p-6 rounded-xl apple-shadow bg-white dark:bg-lightDark border border-gray-200 dark:border-gray-700',
                 index % 2 === 0 ? 'ml-auto md:text-right md:mr-8' : 'mr-auto md:ml-8',
               ]"
             >
               <div class="flex justify-between items-start mb-2" :class="index % 2 === 0 ? 'flex-row-reverse' : ''">
                 <h3 class="font-semibold dark:text-white">{{ exp.company }}</h3>
 
-                <span class="text-sm text-[#3A3A3C] dark:text-gray-400">
+                <span class="text-sm text-darkGray dark:text-gray-400">
                   {{ exp.period.start }} → {{ exp.period.end }}
                 </span>
               </div>
 
-              <p class="text-[#3A3A3C] dark:text-gray-300 text-sm mb-4">
+              <p class="text-darkGray dark:text-gray-300 text-sm mb-4">
                 {{ exp.role }}
               </p>
 

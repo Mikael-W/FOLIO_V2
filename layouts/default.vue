@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen flex flex-col transition-colors duration-300 bg-[#F5F5F7] text-[#1C1C1E] dark:bg-[#1C1C1E] dark:text-[#F5F5F7]"
+    class="min-h-screen flex flex-col transition-colors duration-300 bg-lightWhite text-lightDark dark:bg-lightDark dark:text-lightWhite"
     aria-label="Contenu principal du site"
   >
     <UiHeader />

@@ -50,7 +50,7 @@ onMounted(() => {
         <select
           v-model="lang"
           aria-label="Langue"
-          class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#1C1C1E] text-sm dark:text-white"
+          class="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-lightDark text-sm dark:text-white"
         >
           <option value="fr">FR</option>
           <option value="en">EN</option>

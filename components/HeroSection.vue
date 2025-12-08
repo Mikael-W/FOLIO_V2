@@ -10,7 +10,7 @@ const { cvUrl, fileName } = useCV();
 
 <template>
   <section
-    class="pt-32 pb-20 px-6 bg-lightBg dark:bg-[#1C1C1E] text-lightText dark:text-[#F5F5F7] transition-all"
+    class="pt-32 pb-20 px-6 bg-lightBg dark:bg-lightDark text-lightDark dark:text-lightWhite transition-all"
     aria-labelledby="hero-title"
   >
     <div
@@ -26,11 +26,11 @@ const { cvUrl, fileName } = useCV();
       <h1 id="hero-title" class="text-4xl md:text-5xl font-bold tracking-tight">
         {{ $t('hero.title') }}
       </h1>
-      <p class="text-lg md:text-xl mt-3 text-[#3A3A3C] dark:text-gray-300 font-light">
+      <p class="text-lg md:text-xl mt-3 text-grayText dark:text-gray-300 font-light">
         {{ $t('hero.subtitle') }}
       </p>
 
-      <p class="max-w-2xl mx-auto mt-6 text-[#3A3A3C] dark:text-gray-400 text-base md:text-lg leading-relaxed">
+      <p class="max-w-2xl mx-auto mt-6 text-grayText dark:text-gray-400 text-base md:text-lg leading-relaxed">
         {{ $t('hero.description') }}
       </p>
 
@@ -39,7 +39,7 @@ const { cvUrl, fileName } = useCV();
           :href="cvUrl"
           :download="fileName"
           :aria-label="$t('hero.aria_download')"
-          class="px-8 py-3 bg-iosBlue text-white rounded-full font-medium shadow-sm transition-colors focus:ring-2 focus:ring-[#0A84FF] focus:ring-offset-2 dark:focus:ring-offset-black"
+          class="px-8 py-3 bg-iosBlue text-white rounded-full font-medium shadow-sm transition-colors focus:ring-2 focus:ring-intenseBlue focus:ring-offset-2 dark:focus:ring-offset-black"
         >
           {{ $t('hero.download_cv') }}
         </a>
@@ -47,7 +47,7 @@ const { cvUrl, fileName } = useCV();
         <NuxtLink
           to="/#contact"
           :aria-label="$t('hero.aria_contact')"
-          class="px-8 py-3 bg-white dark:bg-[#2C2C2E] text-[#1C1C1E] dark:text-[#F5F5F7] rounded-full font-medium shadow-sm hover:bg-[#f0f0f0] dark:hover:bg-[#3A3A3C] border border-[#d7d7d7] dark:border-[#3A3A3C] transition-colors focus:ring-2 focus:ring-[#0A84FF] focus:ring-offset-2 dark:focus:ring-offset-black"
+          class="px-8 py-3 bg-white dark:bg-darkGray text-lightDark dark:text-lightWhite rounded-full font-medium shadow-sm hover:bg-[#f0f0f0] dark:hover:bg-darkGray border border-[#d7d7d7] dark:border-darkGray transition-colors focus:ring-2 focus:ring-intenseBlue focus:ring-offset-2 dark:focus:ring-offset-black"
         >
           {{ $t('hero.contact_me') }}
         </NuxtLink>

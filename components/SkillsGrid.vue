@@ -13,7 +13,7 @@ import { skills } from '@/constants/skills';
         v-for="(s, i) in skills"
         :key="i"
         role="listitem"
-        class="bg-white dark:bg-[#1C1C1E] rounded-2xl p-6 shadow hover:shadow-lg border border-gray-200 dark:border-white/10 transition shadow-sm focus-within:outline focus-within:outline-iosBlue"
+        class="bg-white dark:bg-lightDark rounded-2xl p-6 shadow hover:shadow-lg border border-gray-200 dark:border-white/10 transition shadow-sm focus-within:outline focus-within:outline-iosBlue"
       >
         <div class="text-iosBlue dark:text-iosBlue mb-3">
           <i :class="`fa-solid ${s.icon} text-2xl`" aria-hidden="true"></i>

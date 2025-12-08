@@ -38,12 +38,12 @@ async function submit() {
 <template>
   <section id="contact" class="pb-20 px-6">
     <div class="max-w-2xl mx-auto">
-      <div class="bg-white dark:bg-[#1c1c1e] rounded-2xl p-8 apple-shadow animate-fade-in">
+      <div class="bg-white dark:bg-lightDark rounded-2xl p-8 apple-shadow animate-fade-in">
         <div class="mb-8">
           <h2 class="text-2xl font-semibold mb-2 dark:text-white">
             {{ $t('contact.title') }}
           </h2>
-          <p class="text-[#3A3A3C] dark:text-gray-300">
+          <p class="text-grayText dark:text-gray-300">
             {{ $t('contact.subtitle') }}
           </p>
         </div>
@@ -59,7 +59,7 @@ async function submit() {
               type="email"
               id="email"
               required
-              class="form-input w-full px-4 py-3 bg-[#F5F5F7] dark:bg-[#2c2c2e] rounded-xl border focus:border-[#0A84FF] transition-all"
+              class="form-input w-full px-4 py-3 bg-lightWhite dark:bg-darkGray rounded-xl border focus:border-intenseBlue transition-all"
               :placeholder="$t('contact.email_placeholder')"
             />
           </div>
@@ -75,7 +75,7 @@ async function submit() {
               id="message"
               rows="5"
               required
-              class="form-input w-full px-4 py-3 bg-[#F5F5F7] dark:bg-[#2c2c2e] rounded-xl border focus:border-[#0A84FF] transition-all resize-none"
+              class="form-input w-full px-4 py-3 bg-lightWhite dark:bg-darkGray rounded-xl border focus:border-intenseBlue transition-all resize-none"
               :placeholder="$t('contact.message_placeholder')"
             ></textarea>
           </div>
