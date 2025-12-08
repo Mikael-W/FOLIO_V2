@@ -10,8 +10,6 @@ export default defineNuxtPlugin((nuxtApp) => {
     return;
   }
 
-  console.log('[reCAPTCHA] plugin loaded with siteKey:', siteKey);
-
   nuxtApp.vueApp.use(VueReCaptcha, {
     siteKey,
     loaderOptions: {

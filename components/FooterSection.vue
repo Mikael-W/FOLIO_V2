@@ -8,7 +8,7 @@ const year = new Date().getFullYear();
     aria-label="Pied de page du site"
   >
     <div class="max-w-6xl mx-auto px-6 text-center text-sm">
-      <p class="leading-relaxed">© {{ year }} Mikaël Wawrziczny — Tous droits réservés.</p>
+      <p class="leading-relaxed">© {{ year }} {{ $t('legal.rights') }}</p>
     </div>
   </footer>
 </template>

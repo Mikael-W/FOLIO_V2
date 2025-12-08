@@ -102,5 +102,9 @@
     "impact": "Impact",
     "techStack": "Tech Stack",
     "close": "Close"
+  },
+
+  "legal": {
+    "rights": "Mikaël Wawrziczny — All rights reserved."
   }
 }
