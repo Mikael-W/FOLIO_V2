@@ -1,30 +1,16 @@
 import OpenAI from 'openai';
 import { defineEventHandler, readBody } from 'h3';
-
-type ChatMessage = {
-  role: 'user' | 'assistant';
-  content: string;
-};
-
-type AIAction = {
-  type: string | null;
-  payload?: string | null;
-};
-
-type ChatResponse = {
-  reply: string;
-  action: AIAction;
-};
+import type { ChatMessage, ChatRequestBody, AIResponse } from '~/types/chat';
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event);
+  const body = (await readBody(event)) as ChatRequestBody;
 
-  const incomingMessages: ChatMessage[] = (body.messages || []).map((msg: any) => ({
+  const incomingMessages: ChatMessage[] = (body.messages || []).map((msg) => ({
     role: msg.role === 'user' ? 'user' : 'assistant',
     content: String(msg.content).slice(0, 2000),
   }));
 
-  const lastMessage = (incomingMessages[incomingMessages.length - 1]?.content || '').toLowerCase();
+  const lastMessage = incomingMessages.at(-1)?.content.toLowerCase() || '';
 
   const requestedLang = lastMessage.includes('english') || lastMessage.includes('"payload":"en"') ? 'en' : 'fr';
 
@@ -42,12 +28,7 @@ export default defineEventHandler(async (event) => {
   const aliases = aliasesEnv
     .split(',')
     .map((a) => a.trim().toLowerCase())
-    .filter((a) => a.length > 0);
-
-  const refersToMika =
-    lastMessage.includes('mikaël') ||
-    lastMessage.includes('mikael') ||
-    aliases.some((alias) => lastMessage.includes(alias));
+    .filter(Boolean);
 
   const systemPrompt = `
     You are Mikael Wawrziczny's professional AI assistant.
@@ -64,11 +45,8 @@ export default defineEventHandler(async (event) => {
     OUT_OF_SCOPE_EN:
     "${outEn}"
 
-    ALIAS_LIST (names that refer to Mika):
+    ALIAS_LIST:
     ${aliases.join(', ')}
-
-    RULE:
-    If the user message refers to Mika (based on aliases), treat it as IN SCOPE.
 
     You must ALWAYS answer in: ${requestedLang === 'en' ? 'English' : 'French'}.
 
@@ -81,7 +59,7 @@ export default defineEventHandler(async (event) => {
       }
     }
 
-    Here is your knowledge base:
+    Knowledge base:
     ${JSON.stringify(brain.default)}
   `;
 
@@ -97,14 +75,13 @@ export default defineEventHandler(async (event) => {
 
   const raw = completion.choices[0]?.message?.content ?? '';
 
-  let final: ChatResponse = {
+  let final: AIResponse = {
     reply: '',
     action: { type: null, payload: null },
   };
 
   try {
     const parsed = JSON.parse(raw);
-
     final.reply = parsed.reply ?? '';
     final.action = parsed.action ?? { type: null, payload: null };
   } catch {

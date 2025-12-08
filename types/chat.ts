@@ -1,18 +1,24 @@
 export type ChatRole = 'user' | 'assistant';
 
-export type ChatMessage = {
+export interface ChatMessage {
   role: ChatRole;
   content: string;
-};
+}
 
-export type AIActionType = 'switchTheme' | 'switchLanguage' | 'downloadCV';
+export type AIActionType = 'switchTheme' | 'switchLanguage' | 'downloadCV' | null;
 
-export type AIAction = {
+export interface AIAction {
   type: AIActionType;
-  payload?: string;
-};
+  payload?: string | null;
+}
 
-export type AIResponse = {
-  reply?: string;
-  action?: AIAction;
-};
+export interface AIResponse {
+  reply: string;
+  action: AIAction;
+}
+
+export interface ChatRequestBody {
+  messages?: ChatMessage[];
+  locale?: string;
+  colorMode?: string;
+}
