@@ -13,9 +13,9 @@
   },
   "hero": {
     "alt_img": "Photo de Mikaël Wawrziczny",
-    "title": "Développeur Web Senior Freelance",
-    "subtitle": "Expert Vue 3, Nuxt 3, Node.js & IA",
-    "description": "Je conçois des interfaces modernes, performantes et scalables pour des entreprises françaises et internationales. Spécialiste en Vue.js, Nuxt.js, Node.js, TypeScript, tests E2E et intégration IA.",
+    "title": "Développeur Fullstack Senior Freelance",
+    "subtitle": "Node.js, Vue 3 & IA — Référent technique",
+    "description": "8 ans de développement, après 15 ans dans le commercial. Je conçois des applications fullstack performantes et scalables — front Vue/Nuxt & React/React Native, back Node.js, intégration IA — pour des grands comptes et des startups, en freelance via Joys Lab.",
     "download_cv": "Télécharger mon CV",
     "aria_download": "Télécharger mon CV en PDF",
     "contact_me": "Me contacter",
@@ -39,40 +39,42 @@
   },
   "about": {
     "title": "À propos de moi",
-    "p1": "Je suis Senior Web Engineer, spécialisé en Vue 3, Nuxt 3 et Node.js/TypeScript. J’architecture des écosystèmes front-end scalables, conçois des API performantes et livre des applications robustes utilisées à l’international.",
-    "p2": "Mon expertise couvre GraphQL (Apollo), Firebase, MongoDB, l’optimisation SSR, les workflows de tests (Vitest, Playwright) et les pipelines CI/CD modernes.",
-    "p3": "J’intègre également des fonctionnalités propulsées par l’IA : chatbots personnalisés, assistants RAG et systèmes d’automatisation intelligente."
+    "p1": "Je suis Senior Fullstack Engineer et fondateur du studio freelance Joys Lab (SASU). Je sors d’une mission de 30 mois chez Accor où j’ai piloté la refonte du couloir de réservation (Vue 2 → Vue 3 / Nuxt 3) et développé un BFF Node.js dédié, en tant que référent technique sur l’architecture front et la qualité de code.",
+    "p2": "Profil fullstack polyvalent : front Vue/Nuxt et React/React Native, mobile Flutter, back Node.js (Express, Fastify, NestJS) et Laravel. J’ai une expérience de tech lead sur des projets multi-stacks, avec une forte culture des tests (Vitest, Playwright), de la CI/CD et du design system.",
+    "p3": "J’intègre l’IA en production depuis 2024 : assistants RAG, embeddings, prompt engineering et microservices Python. J’opère plusieurs SaaS en production et publie trimly, un outil open source sur npm. 15 ans de commercial terrain en amont m’apportent un vrai sens business."
   },
   "skills": {
     "title": "Compétences & Expertise",
     "frontend": {
       "title": "Frontend",
-      "text": "Vue 3, Nuxt 3/4, TypeScript, Tailwind CSS"
+      "text": "Vue 3, Nuxt 3, React / React Native, Next.js, TypeScript, Tailwind"
     },
     "backend": {
       "title": "Backend",
-      "text": "Node.js, Fastify, REST, GraphQL, MongoDB"
+      "text": "Node.js, NestJS, Fastify, Express, Laravel, GraphQL, MongoDB"
     },
     "testing": {
       "title": "Tests",
-      "text": "Vitest, Jest, Playwright"
+      "text": "Vitest, Jest, Playwright, TDD"
     },
     "cloud": {
-      "title": "Cloud",
-      "text": "Firebase, Firestore, Vercel, Docker"
+      "title": "Cloud & Mobile",
+      "text": "Firebase, Firestore, Vercel, Netlify, EAS, Docker"
     },
     "ai": {
-      "title": "IA / RAG",
-      "text": "LangChain, Pinecone, recherche vectorielle"
+      "title": "IA / LLM",
+      "text": "OpenAI API, RAG / embeddings, prompt engineering"
     },
     "tools": {
-      "title": "Outils",
-      "text": "Git, GitLab CI, DevOps"
+      "title": "Qualité & Outils",
+      "text": "Git, GitLab CI/CD, Storybook, a11y (WCAG/RGAA), i18n"
     }
   },
   "projects": {
     "title": "Projets mis en avant",
-    "case_study": "Voir l'étude de cas"
+    "case_study": "Voir l'étude de cas",
+    "visit": "Visiter le site",
+    "featured": "Mis en avant"
   },
   "experience": {
     "title": "Parcours professionnel"
@@ -96,6 +98,7 @@
     "solution": "Solution",
     "impact": "Impact",
     "techStack": "Technologies utilisées",
+    "visit": "Visiter le site",
     "close": "Fermer"
   },
   "legal": {

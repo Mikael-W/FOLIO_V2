@@ -49,6 +49,17 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown));
               <p class="opacity-90 leading-relaxed dark:text-white">
                 {{ project.description }}
               </p>
+
+              <a
+                v-if="project.url"
+                :href="project.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-xl bg-iosBlue text-white text-sm font-medium hover:opacity-90 transition focus:outline-none focus:ring-2 focus:ring-intenseBlue"
+              >
+                {{ t('modal.visit') }}
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
             </div>
 
             <div v-if="project.problemsSolved?.length">

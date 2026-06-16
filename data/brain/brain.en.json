@@ -1,8 +1,8 @@
 {
   "profile": {
     "name": "Mikaël Wawrziczny aka Mika",
-    "title": "Senior Web Engineer",
-    "about": "Freelance web developer specialized in Vue.js, Nuxt, Node.js and TypeScript since 2017. Previously 10 years in sales, bringing excellent communication skills, pedagogy, and strong business understanding. Expert in front-end development, JavaScript backend, automated testing, modular architectures and high-traffic projects.",
+    "title": "Senior Fullstack Engineer — Node.js / Vue 3, Technical Lead",
+    "about": "Freelance fullstack developer with 8 years of experience, founder of the Joys Lab studio (SASU). Versatile profile: Vue/Nuxt and React/React Native front-end, Flutter mobile, Node.js back-end (Express, Fastify, NestJS) and Laravel, AI integration (OpenAI, RAG). Just wrapped up a 30-month mission at Accor as technical lead on front-end architecture and code quality. 15 years in field sales before development, bringing a rare business sense, pedagogy and genuine ease in enterprise environments.",
     "personal": {
       "maritalStatus": "Married",
       "children": 4,
@@ -12,9 +12,10 @@
     },
     "contact": {
       "email": "mikaelw@gmail.com",
-      "website": "https://mikaelw.com",
-      "linkedin": "https://linkedin.com/in/mikaelw",
-      "github": "https://github.com/MikaelW"
+      "website": "https://joys-lab.com",
+      "portfolio": "https://mikaelw.com",
+      "linkedin": "https://linkedin.com/in/mikael-w",
+      "github": "https://github.com/Mikael-W"
     }
   },
 
@@ -34,7 +35,7 @@
 
   "languages": {
     "french": "Native",
-    "english": "Professional",
+    "english": "Fluent (B2/C1)",
     "others": []
   },
 
@@ -42,37 +43,46 @@
     "technical": {
       "frontend": [
         "Vue 3",
-        "Nuxt 3/4",
+        "Nuxt 3",
         "React",
+        "Next.js",
         "Angular (as needed)",
         "TypeScript",
         "Tailwind CSS",
         "GraphQL/Apollo",
         "Pinia",
-        "Vuex (legacy)"
+        "Storybook",
+        "Design System"
       ],
       "backend": [
         "Node.js",
+        "NestJS",
         "Fastify",
         "Express",
+        "BFF",
+        "microservices",
+        "Laravel / PHP",
         "REST API",
         "GraphQL",
         "MongoDB",
-        "Firebase",
-        "Cloud Functions",
+        "SQL",
+        "Firebase / Firestore",
+        "Auth0",
         "Bun"
       ],
-      "mobile": ["Flutter", "React Native (Chasse en Cours rewrite in progress)"],
-      "devops_testing": ["Vitest", "Playwright", "Jest", "GitLab CI/CD", "Docker (basics)", "Netlify", "Vercel"],
+      "mobile": ["React Native / Expo", "Flutter / Dart", "EAS"],
+      "devops_testing": ["Vitest", "Playwright", "Jest", "TDD", "GitLab CI/CD", "Docker", "Netlify", "Vercel", "EAS"],
       "ai": [
-        "ChatGPT API",
-        "RAG",
+        "OpenAI API",
+        "Prompt engineering",
+        "RAG / embeddings",
+        "Python microservices",
         "Vector search",
-        "AI automation",
         "Intelligent chatbots",
         "OpenAI TTS / STT",
         "Autonomous agents"
-      ]
+      ],
+      "quality": ["Accessibility (a11y, WCAG/RGAA)", "i18n (vue-i18n)", "SSR/CSR", "SEO"]
     },
     "softSkills": [
       "Communication",
@@ -80,21 +90,26 @@
       "Team leadership",
       "Agile organisation",
       "Collaboration with product / QA / design",
-      "Business mindset (10 years in sales)",
+      "Business mindset (15 years in sales)",
       "Technical leadership"
     ]
   },
 
   "education": [
     {
-      "school": "Epitech / OpenClassrooms",
-      "degree": "Web & Mobile Development",
-      "year": "2019 - 2021"
+      "school": "RNCP Level 5",
+      "degree": "Web & Mobile Developer",
+      "year": "2021"
     },
     {
-      "school": "Sales Career Path",
-      "degree": "B2B negotiation, client relationship, product presentation",
-      "year": "2009 - 2019"
+      "school": "Bac pro NRC",
+      "degree": "Sales Negotiation & Client Relationship",
+      "year": "2005"
+    },
+    {
+      "school": "Sales career (15 years in the field)",
+      "degree": "Century 21, I@D sales rep, digital sector manager at Leboncoin (Agriaffaires & MachineryZone)",
+      "year": "2005 - 2020"
     }
   ],
 
@@ -116,15 +131,33 @@
 
   "sideProjects": [
     {
+      "name": "trimly",
+      "description": "Open-source tool (TypeScript/Node CLI) to track token consumption for Claude Code. @trimly/core & @trimly/cli published on npm under Apache-2.0.",
+      "tech": ["TypeScript", "Node.js", "CLI", "npm", "Apache-2.0"],
+      "slug": "trimly"
+    },
+    {
+      "name": "Forenlyst",
+      "description": "Deepfake detection and forensic certification SaaS: Next.js front-end, NestJS back-end with Python microservices and cryptographic signing.",
+      "tech": ["Next.js", "NestJS", "Python", "microservices", "Crypto"],
+      "slug": "forenlyst"
+    },
+    {
+      "name": "My Liste Chaude",
+      "description": "React Native / Expo mobile app (Firebase Auth/Firestore, geolocation, deep linking, CSV/Excel import, XP/levels gamification), full EAS pipeline.",
+      "tech": ["React Native", "Expo", "Firebase", "EAS"],
+      "slug": "my-liste-chaude"
+    },
+    {
       "name": "Chasse en Cours",
-      "description": "Safety app for hunters, initially built in Flutter and currently being fully rewritten in React Native.",
-      "tech": ["Flutter", "Firebase", "React Native", "Firestore"],
+      "description": "Flutter safety mobile app for hunters and hikers, published on the Play Store. V2 in development.",
+      "tech": ["Flutter", "Dart", "Firebase", "Firestore"],
       "slug": "chasse-en-cours"
     },
     {
       "name": "OSS Nation",
-      "description": "International BJJ platform for seminars & open mats with geolocation, advanced filters and full i18n.",
-      "tech": ["Nuxt 3", "Firebase", "Firestore", "Node.js"],
+      "description": "International BJJ platform for seminars & open mats with geolocation, AI analysis, advanced filters and full i18n.",
+      "tech": ["Nuxt 3", "Firebase", "Firestore", "Node.js", "OpenAI API"],
       "slug": "oss-nation"
     },
     {
@@ -132,22 +165,52 @@
       "description": "Worldwide cultural events API (geolocation, filters, country/region search).",
       "tech": ["Node.js", "Bun", "MongoDB", "REST API"],
       "slug": "discoverit"
-    },
-    {
-      "name": "Ghost Lock",
-      "description": "SaaS protecting online content (invisible JS script, copy tracking, alerts).",
-      "tech": ["Node.js", "MongoDB", "Nuxt"],
-      "slug": "ghostlock"
     }
   ],
 
   "projects": [
     {
+      "name": "trimly",
+      "description": "Open-source tool (TypeScript/Node CLI) to track token consumption for Claude Code. @trimly/core & @trimly/cli published on npm under the Apache-2.0 license.",
+      "stack": ["TypeScript", "Node.js", "CLI", "npm", "Apache-2.0"],
+      "logo": "",
+      "icon": "fa-brands fa-npm",
+      "gradient": "from-red-400 to-red-600",
+      "url": "https://www.npmjs.com/package/@trimly/core",
+      "featured": true,
+      "slug": "trimly",
+      "problemsSolved": [
+        {
+          "problem": "It is hard to track and control token consumption — and therefore costs — when using Claude Code daily.",
+          "solution": "Open-source CLI that measures, aggregates and displays token consumption in real time, with a reusable API (@trimly/core) and a command-line interface (@trimly/cli).",
+          "impact": "Immediate visibility on costs, adoption by the open-source community, published on npm under Apache-2.0."
+        }
+      ]
+    },
+    {
+      "name": "Forenlyst",
+      "description": "Deepfake detection and forensic certification SaaS: Next.js front-end, NestJS back-end with Python microservices and cryptographic signing.",
+      "stack": ["Next.js", "NestJS", "Python", "microservices", "Crypto"],
+      "logo": "/projects_logo/forenlyst.png",
+      "icon": "fa-solid fa-shield-halved",
+      "gradient": "from-indigo-400 to-indigo-600",
+      "url": "https://forenlyst.com/fr",
+      "slug": "forenlyst",
+      "problemsSolved": [
+        {
+          "problem": "The rise of deepfakes makes it hard to verify the authenticity of visual content.",
+          "solution": "A deepfake detection platform paired with forensic certification and cryptographic signing of the results.",
+          "impact": "Reliable media authentication and traceability of analyses for professional and legal use cases."
+        }
+      ]
+    },
+    {
       "name": "Portfolio — Mikaël Wawrziczny",
-      "description": "Personal portfolio built with Nuxt 3, fully typed with TypeScript, featuring advanced SEO, i18n, automatic dark mode, animations, integrated AI project and a custom design system.",
+      "description": "Personal portfolio built with Nuxt 3, fully typed with TypeScript, featuring advanced SEO, i18n, automatic dark mode, animations, an integrated AI assistant and a custom design system.",
       "stack": ["Nuxt 3", "TypeScript", "Tailwind CSS", "i18n", "SSR", "AI"],
-      "logo": "/assets/mw_img/logo_MW.png",
+      "logo": "/projects_logo/logo-mw.png",
       "gradient": "from-orange-400 to-orange-600",
+      "url": "https://github.com/Mikael-W/FOLIO_V2",
       "slug": "portfolio",
       "problemsSolved": [
         {
@@ -158,26 +221,12 @@
       ]
     },
     {
-      "name": "Chasse en Cours",
-      "description": "Flutter mobile app (currently being rewritten in React Native) allowing hunters and hikers to declare a hunting zone on a map to inform people nearby.",
-      "stack": ["Flutter", "React Native (rewrite ongoing)", "Firebase", "Firestore", "Google Maps"],
-      "logo": "/assets/projects_logo/chasse_en_cours.png",
-      "gradient": "from-yellow-400 to-yellow-600",
-      "slug": "chasse-en-cours",
-      "problemsSolved": [
-        {
-          "problem": "Hikers are often unaware of ongoing hunting activities in nearby areas.",
-          "solution": "Simple declaration system using Google Maps to mark hunting zones.",
-          "impact": "Helps avoid dangerous areas and reassures families, hikers and outdoor athletes."
-        }
-      ]
-    },
-    {
       "name": "OSS Nation",
-      "description": "International BJJ events platform with geolocation, Firebase, Firestore, advanced filters and multilingual support.",
-      "stack": ["Nuxt 3", "Firebase", "Geolocation"],
-      "logo": "/assets/projects_logo/oss-nation_logo.png",
+      "description": "International BJJ events platform with geolocation, AI analysis, advanced filters and multilingual support.",
+      "stack": ["Nuxt 3", "Firebase", "OpenAI API", "Geolocation"],
+      "logo": "/projects_logo/oss-nation_logo.png",
       "gradient": "from-blue-400 to-blue-600",
+      "url": "https://oss-nation.com/",
       "slug": "oss-nation",
       "problemsSolved": [
         {
@@ -188,45 +237,32 @@
       ]
     },
     {
-      "name": "GhostLock",
-      "description": "Web content protection platform powered by Node.js, Bun, SQLite, Stripe and AI.",
-      "stack": ["Node.js", "Bun", "AI"],
-      "logo": "/projects_logo/ghostlock_logo.png",
-      "gradient": "from-purple-400 to-purple-600",
-      "slug": "ghostlock",
+      "name": "Chasse en Cours",
+      "description": "Flutter mobile app allowing hunters and hikers to declare a hunting zone on a map to inform people nearby. V2 in development.",
+      "stack": ["Flutter", "Dart", "Firebase", "Firestore", "Google Maps"],
+      "logo": "/projects_logo/chasse_en_cours.png",
+      "gradient": "from-yellow-400 to-yellow-600",
+      "url": "https://play.google.com/store/apps/details?id=com.mw.chasse_en_cours&hl=fr",
+      "slug": "chasse-en-cours",
       "problemsSolved": [
         {
-          "problem": "Premium content is difficult to protect on the web.",
-          "solution": "Invisible JS snippet + smart copy detection + AI alerts.",
-          "impact": "Up to 80% reduction in detected copy attempts."
+          "problem": "Hikers are often unaware of ongoing hunting activities in nearby areas.",
+          "solution": "Simple declaration system using Google Maps to mark hunting zones.",
+          "impact": "Helps avoid dangerous areas and reassures families, hikers and outdoor athletes."
         }
       ]
     },
     {
-      "name": "MCI",
-      "description": "Flutter mobile app with a Nuxt 3 admin dashboard allowing retailers to build customer loyalty and easily manage their services.",
-      "stack": ["Flutter", "Nuxt 3", "Firebase", "Firestore", "API"],
-      "logo": "/projects_logo/logo_mci.png",
-      "gradient": "from-green-400 to-green-600",
-      "slug": "mci",
-      "problemsSolved": [
-        {
-          "problem": "Retailers lacked a simple tool to retain customers and promote their services.",
-          "solution": "Creation of a Flutter mobile app focusing on loyalty and communication.",
-          "impact": "Higher customer engagement and better visibility for offers."
-        }
-      ]
-    },
-    {
-      "name": "JOYS LAB Website",
-      "description": "Professional corporate website for the company JOYS LAB, designed to strengthen branding, showcase services and improve online visibility.",
+      "name": "Joys Agency",
+      "description": "Professional corporate website for Joys Agency, designed to strengthen branding, showcase services and improve online visibility.",
       "stack": ["Nuxt 3", "Tailwind CSS", "SEO", "Reusable Components"],
-      "logo": "/assets/projects_logo/joys_logo.png",
+      "logo": "/projects_logo/joys_logo.png",
       "gradient": "from-pink-400 to-pink-600",
-      "slug": "joys-lab",
+      "url": "https://www.joys-agency.com/",
+      "slug": "joys-agency",
       "problemsSolved": [
         {
-          "problem": "Lack of a professional digital presence for the company.",
+          "problem": "Lack of a professional digital presence for the agency.",
           "solution": "Creation of a modern, fast and elegant corporate website.",
           "impact": "Immediate improvement of brand perception and client trust."
         }
@@ -236,8 +272,27 @@
 
   "experience": [
     {
+      "company": "Joys Lab — SASU",
+      "role": "Founder & Lead Developer",
+      "period": {
+        "start": "2024",
+        "end": "present",
+        "duration": "Freelance studio"
+      },
+      "stack": ["Nuxt 3", "Next.js", "React Native", "NestJS", "Node.js", "OpenAI API", "RAG"],
+      "highlights": [
+        "Founder of the freelance development studio (SASU)",
+        "My Liste Chaude — React Native / Expo app (Firebase, geolocation, deep linking, CSV/Excel import, gamification), full EAS pipeline",
+        "Forenlyst — deepfake detection & forensic certification (Next.js, NestJS + Python microservices, crypto signing)",
+        "SaaS in production: portfolio + AI assistant, OSS-Nation (BJJ platform + AI analysis)",
+        "trimly — open-source tool published on npm (TypeScript / Node, Apache-2.0)",
+        "OpenAI API in production since 2024 (RAG, embeddings, prompt engineering)"
+      ],
+      "description": "Freelance development studio: SaaS, mobile apps and AI integration."
+    },
+    {
       "company": "Accor / all.accor.com",
-      "role": "Senior Front-end Engineer",
+      "role": "Senior Fullstack Engineer — Technical Lead",
       "period": {
         "start": "2023-09",
         "end": "2025-12",
@@ -245,78 +300,97 @@
       },
       "stack": ["Vue 3", "Nuxt 3", "Node.js", "TypeScript", "GraphQL", "Playwright", "Vitest"],
       "highlights": [
-        "Full rewrite of the booking engine (Vue 2 → Vue 3 / Nuxt 3)",
-        "Contributions to the internal design system",
-        "Implementation of the test strategy (Vitest, Playwright) + CI",
-        "Product / QA collaboration in an international environment",
-        "Back-for-Front development aligned with front-end needs",
-        "Advanced GraphQL integration, caching, hybrid SSR/CSR"
+        "Booking funnel rewrite (Vue 2 → Vue 3 / Nuxt 3)",
+        "Built a dedicated Node.js BFF for the booking funnel",
+        "Advanced GraphQL integration: caching, fragments, hybrid SSR/CSR",
+        "Active integration and contribution to the design system",
+        "Test strategy (Vitest + Playwright) and CI automation",
+        "Technical lead on front-end architecture and code quality — Convert team (12 people), 17 languages / countries"
       ],
-      "description": "Senior contribution on the refactor and optimization of Accor's booking flow."
+      "description": "Long-term mission on Accor's booking funnel in an international environment."
     },
     {
       "company": "Mon Commerce Interactif (MCI)",
-      "role": "Full-stack Engineer",
+      "role": "Full-Stack Engineer",
       "period": {
         "start": "2023-04",
         "end": "2023-09",
         "duration": "6 months"
       },
-      "stack": ["Nuxt 3", "Vue 3", "Flutter", "Firebase"],
+      "stack": ["Vue 3", "Nuxt 3", "Flutter", "Firebase"],
       "highlights": [
-        "Multi-profile Flutter mobile app",
-        "Nuxt 3 website + admin dashboard",
-        "Management of menus / wines / clients / uploads / agents",
-        "Firestore architecture",
-        "CI + versioning + beta tests"
+        "Vue / Nuxt 3 admin dashboard (menus, wines, clients, uploads, agents)",
+        "Flutter mobile app (iOS + Android): QR-code onboarding, multi-profile",
+        "Firebase architecture: Auth, Firestore, Cloud Storage, security rules",
+        "Refactor, industrialization, CI"
       ],
-      "description": "Built a complete mobile + web ecosystem for retailers."
+      "description": "Web + mobile ecosystem for retailers (fixed-price — MVP)."
     },
     {
       "company": "Gritchen",
-      "role": "Front-end Engineer",
+      "role": "Full-Stack Engineer",
       "period": {
         "start": "2023-01",
         "end": "2023-06",
         "duration": "6 months"
       },
-      "stack": ["Vue 3", "Pinia", "Node.js", "TypeScript", "Laravel"],
+      "stack": ["Vue 3", "Pinia", "TypeScript", "Laravel", "Node.js", "Fastify"],
       "highlights": [
-        "Advanced insurance interfaces",
-        "Complex business forms",
-        "Laravel API integration",
-        "Client dashboards"
+        "Insurtech platform — business dashboards (contracts, claims, client area)",
+        "Typed Vue 3 / Pinia front-end, complex multi-step forms",
+        "Laravel back-end + Node.js / Fastify microservices",
+        "Pinia state architecture and API integration"
       ],
-      "description": "Vue 3 development focused on insurance workflows."
+      "description": "Insurtech platform (fixed-price — MVP)."
+    },
+    {
+      "company": "Chasse en Cours",
+      "role": "Flutter mobile app — personal product (Play Store)",
+      "period": {
+        "start": "2023",
+        "end": "2023",
+        "duration": "Personal product"
+      },
+      "stack": ["Flutter", "Dart", "Geolocation", "Real-time map"],
+      "highlights": [
+        "Community app to report hunting activity (hunters / hikers), France-wide coverage",
+        "Geolocation, activity declaration and real-time map display",
+        "End-to-end design, development and Play Store publishing"
+      ],
+      "description": "Personal Flutter product published on the Play Store, V2 in progress."
     },
     {
       "company": "Place2Be",
-      "role": "Full-stack Engineer",
+      "role": "Mobile & Backend Engineer",
       "period": {
         "start": "2022-09",
         "end": "2022-12",
-        "duration": "6 months"
+        "duration": "4 months"
       },
-      "stack": ["Flutter", "Vue 3", "Pinia", "Node.js", "Fastify", "MongoDB"],
-      "highlights": ["Event mobile app", "Vue 3 admin dashboard", "Node.js/TS API", "UI/UX refactor"],
-      "description": "Mobile app + admin + Fastify backend."
+      "stack": ["Flutter", "TypeScript", "Node.js", "MongoDB", "DataTourisme"],
+      "highlights": [
+        "Flutter mobile app: geolocated events around the user",
+        "Ingestion and management of 300,000 events from the DataTourisme API",
+        "TypeScript / Node.js back-end, API architecture and security"
+      ],
+      "description": "Mobile app + event back-end (fixed-price — POC)."
     },
     {
-      "company": "Neuva",
-      "role": "Technical Project Manager & Developer",
+      "company": "NEUVA",
+      "role": "Tech Lead",
       "period": {
         "start": "2021-06",
         "end": "2022-09",
         "duration": "15 months"
       },
-      "stack": ["Vue", "Angular", "Node", "Express", "MongoDB", "SQL", "Flutter"],
+      "stack": ["Vue", "Nuxt", "React", "Laravel", "Node.js", "Flutter"],
       "highlights": [
-        "Technical leadership in SCRUM environments",
-        "Client mobile apps with geolocation",
-        "Fastify APIs",
-        "Technical documentation & architecture"
+        "Tech lead on a portfolio of diverse projects (web & mobile)",
+        "Multi-stack technical leadership: Vue / Nuxt, React, PHP / Laravel, Node.js, Flutter",
+        "SCRUM methodology, architecture, technical specifications",
+        "Refactoring and industrialization"
       ],
-      "description": "Full web/mobile project management and development."
+      "description": "Multi-stack tech lead (long-term mission)."
     },
     {
       "company": "Cactus Pharma",
@@ -326,25 +400,29 @@
         "end": "2021-06",
         "duration": "6 months"
       },
-      "stack": ["Angular", "Electron", "Flutter", "Firebase"],
-      "highlights": ["Desktop app for drug serialization", "Mobile loyalty app", "SQLite + Firebase sync"],
-      "description": "Pharma desktop & mobile tools."
+      "stack": ["Angular", "Electron", "Flutter", "Firebase", "SQLite"],
+      "highlights": [
+        "Angular / Electron desktop app for drug serialization",
+        "Flutter mobile loyalty app (receipt scanning + OCR)"
+      ],
+      "description": "Pharma desktop & mobile tools (fixed-price — MVP)."
     },
     {
       "company": "Streamaker",
-      "role": "Full-stack Engineer",
+      "role": "Full-Stack Engineer",
       "period": {
         "start": "2020-09",
         "end": "2020-12",
-        "duration": "6 months"
+        "duration": "4 months"
       },
-      "stack": ["Vue 2", "Vuex", "Node.js", "Express", "PayPal API"],
+      "stack": ["Vue 2", "Node.js", "Express"],
       "highlights": [
-        "Complete Vue.js e-commerce",
-        "Payments + subscriptions via PayPal",
-        "Automated dynamic contracts"
+        "E-commerce platform for rap beats (buying instrumentals, vocal recording)",
+        "Vue 2 front-end: catalog, checkout flow, subscriber area",
+        "Node.js / Express back-end: REST API, user management, security",
+        "Monetization and subscription system"
       ],
-      "description": "Full e-commerce platform (front + back)."
+      "description": "Complete e-commerce platform front + back (fixed-price — MVP)."
     }
   ],
 
@@ -354,21 +432,29 @@
   },
 
   "keywords": [
+    "Senior fullstack",
+    "Node.js",
+    "NestJS",
     "Vue.js",
     "Nuxt 3",
-    "Node.js",
-    "Senior freelance",
+    "React",
+    "React Native",
+    "Next.js",
+    "Laravel",
     "GraphQL",
+    "BFF",
     "Firebase",
     "SSR",
     "Playwright",
     "Vitest",
-    "Senior front-end",
-    "Fullstack",
     "TypeScript",
-    "BJJ",
-    "React Native",
-    "AI Engineering"
+    "OpenAI API",
+    "RAG",
+    "AI Engineering",
+    "trimly",
+    "Technical lead",
+    "Freelance",
+    "BJJ"
   ],
 
   "actions": {

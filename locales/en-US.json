@@ -14,9 +14,9 @@
 
   "hero": {
     "alt_img": "Photo of Mikaël Wawrziczny",
-    "title": "Senior Freelance Web Engineer",
-    "subtitle": "Expert in Vue 3, Nuxt 3, Node.js & AI",
-    "description": "I design modern, high-performance and scalable interfaces for French and international companies. Specialist in Vue.js, Nuxt.js, Node.js, TypeScript, E2E testing and AI integration.",
+    "title": "Senior Freelance Fullstack Engineer",
+    "subtitle": "Node.js, Vue 3 & AI — Technical Lead",
+    "description": "8 years in development, after 15 years in sales. I build high-performance, scalable fullstack applications — Vue/Nuxt & React/React Native front-end, Node.js back-end, AI integration — for enterprises and startups, freelancing through Joys Lab.",
     "download_cv": "Download my CV",
     "aria_download": "Download my CV as PDF",
     "contact_me": "Contact me",
@@ -42,41 +42,43 @@
 
   "about": {
     "title": "About me",
-    "p1": "I am a Senior Web Engineer specialized in Vue 3, Nuxt 3, and Node.js/TypeScript. I architect scalable frontend ecosystems, design performant APIs, and deliver robust international applications.",
-    "p2": "My expertise includes GraphQL (Apollo), Firebase, MongoDB, SSR optimization, automated testing workflows (Vitest, Playwright), and modern CI/CD pipelines.",
-    "p3": "I also integrate AI-powered features: custom chatbots, RAG assistants, and intelligent automation systems."
+    "p1": "I am a Senior Fullstack Engineer and founder of the freelance studio Joys Lab (SASU). I just wrapped up a 30-month mission at Accor where I led the rewrite of the booking funnel (Vue 2 → Vue 3 / Nuxt 3) and built a dedicated Node.js BFF, as technical lead on front-end architecture and code quality.",
+    "p2": "Versatile fullstack profile: Vue/Nuxt and React/React Native front-end, Flutter mobile, Node.js back-end (Express, Fastify, NestJS) and Laravel. I have tech-lead experience on multi-stack projects, with a strong testing culture (Vitest, Playwright), CI/CD and design systems.",
+    "p3": "I have been shipping AI in production since 2024: RAG assistants, embeddings, prompt engineering and Python microservices. I run several SaaS in production and publish trimly, an open-source tool on npm. 15 years in field sales beforehand give me a genuine business sense."
   },
 
   "skills": {
     "title": "Skills & Expertise",
     "frontend": {
       "title": "Frontend",
-      "text": "Vue 3, Nuxt 3/4, TypeScript, Tailwind CSS"
+      "text": "Vue 3, Nuxt 3, React / React Native, Next.js, TypeScript, Tailwind"
     },
     "backend": {
       "title": "Backend",
-      "text": "Node.js, Fastify, REST, GraphQL, MongoDB"
+      "text": "Node.js, NestJS, Fastify, Express, Laravel, GraphQL, MongoDB"
     },
     "testing": {
       "title": "Testing",
-      "text": "Vitest, Jest, Playwright"
+      "text": "Vitest, Jest, Playwright, TDD"
     },
     "cloud": {
-      "title": "Cloud",
-      "text": "Firebase, Firestore, Vercel, Docker"
+      "title": "Cloud & Mobile",
+      "text": "Firebase, Firestore, Vercel, Netlify, EAS, Docker"
     },
     "ai": {
-      "title": "AI / RAG",
-      "text": "LangChain, Pinecone, vector search"
+      "title": "AI / LLM",
+      "text": "OpenAI API, RAG / embeddings, prompt engineering"
     },
     "tools": {
-      "title": "Tools",
-      "text": "Git, GitLab CI, DevOps"
+      "title": "Quality & Tools",
+      "text": "Git, GitLab CI/CD, Storybook, a11y (WCAG), i18n"
     }
   },
   "projects": {
     "title": "Featured Projects",
-    "case_study": "View case study"
+    "case_study": "View case study",
+    "visit": "Visit website",
+    "featured": "Featured"
   },
   "experience": {
     "title": "Experience Timeline"
@@ -101,6 +103,7 @@
     "solution": "Solution",
     "impact": "Impact",
     "techStack": "Tech Stack",
+    "visit": "Visit website",
     "close": "Close"
   },
 

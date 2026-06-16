@@ -36,11 +36,11 @@ module.exports = {
     },
 
     {
-      pattern: /from-(blue|purple|green|orange|yellow|pink)-(400|500|600)/,
+      pattern: /from-(blue|purple|green|orange|yellow|pink|red|indigo)-(400|500|600)/,
     },
 
     {
-      pattern: /to-(blue|purple|green|orange|yellow|pink)-(400|500|600)/,
+      pattern: /to-(blue|purple|green|orange|yellow|pink|red|indigo)-(400|500|600)/,
     },
   ],
 

@@ -26,9 +26,24 @@ const projects = getProjects();
           class="rounded-2xl overflow-hidden transition-shadow apple-shadow bg-white border border-lightBorder hover:shadow-lg dark:bg-darkGray dark:border-darkGray"
         >
           <div
-            class="h-40 bg-[#F1F1F3] dark:bg-darkGray flex items-center justify-center p-6 border-b border-black/5 dark:border-white/10"
+            class="relative h-40 flex items-center justify-center p-6 border-b border-black/5 dark:border-white/10"
+            :class="p.logo ? 'bg-[#F1F1F3] dark:bg-darkGray' : `bg-gradient-to-br ${p.gradient}`"
           >
-            <img :src="p.logo" alt="" class="max-h-full max-w-full object-contain drop-shadow-sm" />
+            <span
+              v-if="p.featured"
+              class="absolute top-3 left-3 px-2 py-1 rounded-md text-[11px] font-semibold bg-black/70 text-white backdrop-blur"
+            >
+              {{ $t('projects.featured') }}
+            </span>
+
+            <img
+              v-if="p.logo"
+              :src="p.logo"
+              alt=""
+              class="max-h-full max-w-full object-contain drop-shadow-sm"
+            />
+            <i v-else-if="p.icon" :class="p.icon" class="text-white text-6xl opacity-95"></i>
+            <span v-else class="text-white text-5xl font-bold">{{ p.name.charAt(0) }}</span>
           </div>
 
           <div class="p-6">
@@ -50,13 +65,26 @@ const projects = getProjects();
               </span>
             </div>
 
-            <button
-              @click="openProject(p)"
-              class="text-iosBlue text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-intenseBlue"
-            >
-              {{ $t('projects.case_study') }}
-              <i class="fa-solid fa-arrow-right ml-1"></i>
-            </button>
+            <div class="flex items-center gap-4">
+              <button
+                @click="openProject(p)"
+                class="text-iosBlue text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-intenseBlue"
+              >
+                {{ $t('projects.case_study') }}
+                <i class="fa-solid fa-arrow-right ml-1"></i>
+              </button>
+
+              <a
+                v-if="p.url"
+                :href="p.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-iosBlue text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-intenseBlue"
+              >
+                {{ $t('projects.visit') }}
+                <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+              </a>
+            </div>
           </div>
         </article>
       </div>

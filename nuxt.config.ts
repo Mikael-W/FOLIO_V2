@@ -31,23 +31,24 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Portfolio de Mikaël Wawrziczny – Senior Web Engineer freelance expert Vue 3, Nuxt 3, Node.js, TypeScript et IA.',
+            'Portfolio de Mikaël Wawrziczny – Senior Fullstack Engineer freelance expert Node.js, Vue 3, Nuxt 3, React, TypeScript et IA.',
         },
         { name: 'robots', content: 'index, follow' },
         { name: 'author', content: 'Mikaël Wawrziczny' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: 'Mikaël Wawrziczny – Senior Web Engineer' },
+        { property: 'og:title', content: 'Mikaël Wawrziczny – Senior Fullstack Engineer' },
         {
           property: 'og:description',
-          content: 'Développeur freelance senior spécialisé Vue.js, Nuxt.js, Node.js, TypeScript, GraphQL et IA.',
+          content:
+            'Développeur fullstack freelance senior : Node.js, Vue.js, Nuxt.js, React, NestJS, TypeScript, GraphQL et IA.',
         },
         { property: 'og:url', content: 'https://mikaelw.com' },
         { property: 'og:image', content: 'https://mikaelw.com/og-image.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Mikaël Wawrziczny – Senior Web Engineer' },
+        { name: 'twitter:title', content: 'Mikaël Wawrziczny – Senior Fullstack Engineer' },
         {
           name: 'twitter:description',
-          content: 'Développeur freelance senior expert Vue, Nuxt, Node.js, TypeScript, GraphQL, Firebase et IA.',
+          content: 'Développeur fullstack freelance senior expert Node.js, Vue, Nuxt, React, TypeScript, GraphQL et IA.',
         },
         { name: 'twitter:image', content: 'https://mikaelw.com/og-image.png' },
       ],
