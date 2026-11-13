@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --c-paper: 238 240 242;
+  --c-surface: 247 248 249;
+  --c-card: 255 255 255;
+  --c-ink: 14 17 22;
+  --c-muted: 74 81 91;
+  --c-line: 201 206 212;
+  --c-hatch: 227 230 234;
+  --c-signal: 255 79 26;
+  --c-on-signal: 14 17 22;
+  --c-footer: 14 17 22;
+  --c-footer-text: 201 206 212;
+}
+
+.dark {
+  --c-paper: 14 17 22;
+  --c-surface: 21 25 32;
+  --c-card: 27 32 39;
+  --c-ink: 238 240 242;
+  --c-muted: 163 170 180;
+  --c-line: 46 53 63;
+  --c-hatch: 27 32 39;
+  --c-signal: 255 79 26;
+  --c-on-signal: 14 17 22;
+  --c-footer: 7 8 9;
+  --c-footer-text: 201 206 212;
+}
+
+@layer base {
+  body {
+    @apply bg-paper font-sans text-ink;
+  }
+}
+
+@layer components {
+  .placeholder-hatch {
+    background: repeating-linear-gradient(135deg, rgb(var(--c-hatch)) 0 10px, rgb(var(--c-paper)) 10px 20px);
+  }
+}
+
 .test-bg {
   @apply bg-red-500 text-white p-4;
 }

@@ -12,7 +12,23 @@ module.exports = {
 
   theme: {
     extend: {
+      fontFamily: {
+        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+      },
       colors: {
+        paper: 'rgb(var(--c-paper) / <alpha-value>)',
+        surface: 'rgb(var(--c-surface) / <alpha-value>)',
+        card: 'rgb(var(--c-card) / <alpha-value>)',
+        ink: 'rgb(var(--c-ink) / <alpha-value>)',
+        muted: 'rgb(var(--c-muted) / <alpha-value>)',
+        line: 'rgb(var(--c-line) / <alpha-value>)',
+        hatch: 'rgb(var(--c-hatch) / <alpha-value>)',
+        signal: 'rgb(var(--c-signal) / <alpha-value>)',
+        'on-signal': 'rgb(var(--c-on-signal) / <alpha-value>)',
+        footer: 'rgb(var(--c-footer) / <alpha-value>)',
+        'footer-text': 'rgb(var(--c-footer-text) / <alpha-value>)',
         iosBlue: '#3B85A6',
         lightWhite: '#F5F5F7',
         lightBorder: '#E5E5EA',
