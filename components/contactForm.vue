@@ -61,19 +61,17 @@ async function submit() {
           <div class="flex flex-wrap gap-2.5">
             <BaseButton
               data-test="linkedin"
-              variant="outline"
+              variant="on-signal-outline"
               large
               :href="contact.linkedin"
-              class="border-on-signal text-on-signal"
             >
               {{ $t('contact.linkedin') }}
             </BaseButton>
             <BaseButton
               data-test="github"
-              variant="outline"
+              variant="on-signal-outline"
               large
               :href="contact.github"
-              class="border-on-signal text-on-signal"
             >
               {{ $t('contact.github') }}
             </BaseButton>

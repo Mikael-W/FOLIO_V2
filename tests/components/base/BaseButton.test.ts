@@ -81,4 +81,36 @@ describe('BaseButton', () => {
       });
     });
   });
+  describe('Given the on-signal variant', () => {
+    describe('When rendered', () => {
+      test('Then it keeps a dark background and a light text whatever the theme', () => {
+        // Arrange
+        const props = { variant: 'on-signal' as const };
+
+        // Act
+        const wrapper = shallowMount(BaseButton, { props });
+
+        // Assert
+        expect(wrapper.classes()).toContain('bg-on-signal');
+        expect(wrapper.classes()).toContain('text-on-signal-inverse');
+      });
+    });
+  });
+
+  describe('Given the on-signal-outline variant', () => {
+    describe('When rendered', () => {
+      test('Then its border and text use the on-signal color and never the ink color', () => {
+        // Arrange
+        const props = { variant: 'on-signal-outline' as const };
+
+        // Act
+        const wrapper = shallowMount(BaseButton, { props });
+
+        // Assert
+        expect(wrapper.classes()).toContain('border-on-signal');
+        expect(wrapper.classes()).toContain('text-on-signal');
+        expect(wrapper.classes()).not.toContain('border-ink');
+      });
+    });
+  });
 });

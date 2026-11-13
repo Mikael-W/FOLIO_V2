@@ -1,5 +1,5 @@
 import { nextTick, ref, watch } from 'vue';
-import { useColorMode } from '@vueuse/core';
+import { useColorMode } from '#imports';
 import { useI18n } from 'vue-i18n';
 import { useAIAction } from '@/composables/useAIAction';
 import type { AIResponse, ChatMessage, DisplayedChatMessage } from '@/types/chat';

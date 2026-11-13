@@ -1,14 +1,13 @@
 import { computed } from 'vue';
-import { useColorMode, usePreferredDark } from '@vueuse/core';
+import { useColorMode } from '#imports';
 
 export function useTheme() {
   const colorMode = useColorMode();
-  const preferredDark = usePreferredDark();
 
-  const isDark = computed(() => (colorMode.value === 'auto' ? preferredDark.value : colorMode.value === 'dark'));
+  const isDark = computed(() => colorMode.value === 'dark');
 
   function toggleTheme() {
-    colorMode.value = isDark.value ? 'light' : 'dark';
+    colorMode.preference = isDark.value ? 'light' : 'dark';
   }
 
   return { isDark, toggleTheme };

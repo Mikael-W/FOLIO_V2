@@ -27,6 +27,7 @@ module.exports = {
         hatch: 'rgb(var(--c-hatch) / <alpha-value>)',
         signal: 'rgb(var(--c-signal) / <alpha-value>)',
         'on-signal': 'rgb(var(--c-on-signal) / <alpha-value>)',
+        'on-signal-inverse': 'rgb(var(--c-on-signal-inverse) / <alpha-value>)',
         footer: 'rgb(var(--c-footer) / <alpha-value>)',
         'footer-text': 'rgb(var(--c-footer-text) / <alpha-value>)',
         iosBlue: '#3B85A6',

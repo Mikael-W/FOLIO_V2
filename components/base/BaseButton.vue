@@ -1,5 +1,5 @@
 <script setup lang="ts">
-type ButtonVariant = 'ink' | 'signal' | 'outline';
+type ButtonVariant = 'ink' | 'signal' | 'outline' | 'on-signal' | 'on-signal-outline';
 
 const props = withDefaults(
   defineProps<{
@@ -14,14 +14,16 @@ const props = withDefaults(
 );
 
 const variantClasses: Record<ButtonVariant, string> = {
-  ink: 'bg-ink text-paper',
-  signal: 'bg-signal text-on-signal',
-  outline: 'border-2 border-ink text-ink',
+  ink: 'bg-ink text-paper focus-visible:outline-ink',
+  signal: 'bg-signal text-on-signal focus-visible:outline-ink',
+  outline: 'border-2 border-ink text-ink focus-visible:outline-ink',
+  'on-signal': 'bg-on-signal text-on-signal-inverse focus-visible:outline-on-signal',
+  'on-signal-outline': 'border-2 border-on-signal text-on-signal focus-visible:outline-on-signal',
 };
 
 const classes = computed(() => [
   'inline-flex items-center justify-center gap-2.5 px-5 text-[15px] font-semibold no-underline',
-  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink',
+  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
   'disabled:cursor-not-allowed disabled:opacity-60',
   props.large ? 'min-h-[52px]' : 'min-h-[48px]',
   variantClasses[props.variant],

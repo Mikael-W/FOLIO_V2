@@ -61,8 +61,8 @@ const factKeys = ['base', 'mode', 'missions', 'certification', 'front', 'back', 
           {{ $t('hero.availability_text') }}
         </p>
         <div class="flex flex-wrap gap-2.5">
-          <BaseButton variant="ink" href="#contact" arrow>{{ $t('hero.cta_contact') }}</BaseButton>
-          <BaseButton variant="outline" :href="cvUrl" download class="border-on-signal text-on-signal">
+          <BaseButton variant="on-signal" href="#contact" arrow>{{ $t('hero.cta_contact') }}</BaseButton>
+          <BaseButton variant="on-signal-outline" :href="cvUrl" download>
             {{ $t('hero.cta_cv') }}
           </BaseButton>
         </div>

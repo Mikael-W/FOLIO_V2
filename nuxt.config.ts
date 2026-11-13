@@ -14,6 +14,12 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   modules: ['nuxt-simple-sitemap', '@nuxtjs/color-mode'],
 
+  colorMode: {
+    preference: 'system',
+    fallback: 'light',
+    classSuffix: '',
+  },
+
   postcss: {
     plugins: {
       tailwindcss: {},

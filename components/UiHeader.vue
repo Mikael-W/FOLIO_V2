@@ -16,6 +16,7 @@ const navigationLinks = [
 ] as const;
 
 const supportedLocales: SupportedLocale[] = ['fr', 'en'];
+const languageNames: Record<SupportedLocale, string> = { fr: 'Français', en: 'English' };
 
 const { locale } = useI18n();
 const { isDark, toggleTheme } = useTheme();
@@ -102,6 +103,8 @@ onMounted(() => {
               type="button"
               data-test="language-button"
               :aria-pressed="locale === supportedLocale"
+              :aria-label="languageNames[supportedLocale]"
+              :lang="supportedLocale"
               class="min-h-[44px] min-w-[44px] font-mono text-[13px] uppercase focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-signal"
               :class="locale === supportedLocale ? 'bg-ink text-paper' : 'bg-transparent text-ink'"
               @click="setLocale(supportedLocale)"

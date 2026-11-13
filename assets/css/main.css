@@ -12,6 +12,7 @@
   --c-hatch: 227 230 234;
   --c-signal: 255 79 26;
   --c-on-signal: 14 17 22;
+  --c-on-signal-inverse: 255 255 255;
   --c-footer: 14 17 22;
   --c-footer-text: 201 206 212;
 }
@@ -26,6 +27,7 @@
   --c-hatch: 27 32 39;
   --c-signal: 255 79 26;
   --c-on-signal: 14 17 22;
+  --c-on-signal-inverse: 255 255 255;
   --c-footer: 7 8 9;
   --c-footer-text: 201 206 212;
 }

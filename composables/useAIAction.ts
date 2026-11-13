@@ -1,5 +1,5 @@
 import type { AIAction } from '@/types/chat';
-import { useColorMode } from '@vueuse/core';
+import { useColorMode } from '#imports';
 import { useI18n } from 'vue-i18n';
 
 export function useAIAction() {
@@ -26,7 +26,7 @@ export function useAIAction() {
     switch (action.type) {
       case 'switchTheme': {
         const theme = normalizeThemePayload(action.payload);
-        if (theme) colorMode.value = theme;
+        if (theme) colorMode.preference = theme;
         break;
       }
 
