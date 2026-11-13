@@ -83,7 +83,7 @@ describe('POST /api/chat', () => {
     });
 
     describe('When no model is configured', () => {
-      test('Then gpt-4o-mini is used by default', async () => {
+      test('Then gpt-6-luna is used by default', async () => {
         // Arrange
         arrangeBody({ messages: [{ role: 'user', content: 'Salut' }], locale: 'fr' });
         createCompletion.mockResolvedValue(completionWith('{"reply":"ok"}'));
@@ -93,7 +93,7 @@ describe('POST /api/chat', () => {
         await handler(event);
 
         // Assert
-        expect(createCompletion.mock.calls[0][0].model).toBe('gpt-4o-mini');
+        expect(createCompletion.mock.calls[0][0].model).toBe('gpt-6-luna');
       });
     });
 

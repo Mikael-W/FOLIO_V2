@@ -101,6 +101,6 @@ pnpm build
 | Variable            | Required | Default       | Purpose                                                                                  |
 | ------------------- | -------- | ------------- | ---------------------------------------------------------------------------------------- |
 | `OPENAI_API_KEY`    | yes      | —             | OpenAI key used by `/api/chat`.                                                          |
-| `OPENAI_CHAT_MODEL` | no       | `gpt-4o-mini` | Chat model. `gpt-4o-mini` is deprecated (shutdown 14 Jan 2027): set a replacement here. |
+| `OPENAI_CHAT_MODEL` | no       | `gpt-6-luna`  | Chat model. The OpenAI project behind the key must allow it (Limits → Model usage).       |
 
 A changed variable on Vercel only applies after a redeploy. When OpenAI returns 401 the key is revoked or invalid; 403 means the OpenAI project does not allow the model (Settings → Project → Limits → Model usage). The client then shows `ai_chat.error`.

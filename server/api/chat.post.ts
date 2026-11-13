@@ -65,7 +65,7 @@ export default defineEventHandler(async (event) => {
     apiKey: process.env.OPENAI_API_KEY,
   });
 
-  const model = process.env.OPENAI_CHAT_MODEL || 'gpt-4o-mini';
+  const model = process.env.OPENAI_CHAT_MODEL || 'gpt-6-luna';
 
   let completion: OpenAI.Chat.Completions.ChatCompletion;
   try {
