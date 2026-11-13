@@ -8,8 +8,9 @@ const props = withDefaults(
     download?: boolean;
     arrow?: boolean;
     large?: boolean;
+    type?: 'button' | 'submit';
   }>(),
-  { variant: 'ink', href: undefined, download: false, arrow: false, large: false },
+  { variant: 'ink', href: undefined, download: false, arrow: false, large: false, type: 'button' },
 );
 
 const variantClasses: Record<ButtonVariant, string> = {
@@ -34,7 +35,7 @@ const classes = computed(() => [
       <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" />
     </svg>
   </a>
-  <button v-else type="button" :class="classes">
+  <button v-else :type="type" :class="classes">
     <slot />
     <svg v-if="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" />

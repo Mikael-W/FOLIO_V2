@@ -1,10 +1,10 @@
 <template>
   <HeroSection />
   <AiChatBox />
-  <AboutMe />
+  <HighlightsBand />
+  <CaseStudies />
+  <ExperienceTimeline />
   <SkillsGrid />
   <ProjectSection />
-  <ExperienceTimeline />
   <ContactForm />
-  <ProjectModal />
 </template>

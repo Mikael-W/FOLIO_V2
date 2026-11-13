@@ -1,26 +1,41 @@
-export const skills = [
+export interface SkillColumn {
+  key: 'front' | 'back' | 'ai' | 'mobile' | 'quality';
+  items: string[];
+}
+
+export const skills: SkillColumn[] = [
   {
-    icon: 'fa-code',
-    key: 'frontend',
+    key: 'front',
+    items: [
+      'Vue 3 · Nuxt 3',
+      'React · Next.js',
+      'TypeScript',
+      'GraphQL · Apollo',
+      'Design system · Storybook',
+      'a11y WCAG / RGAA · i18n',
+    ],
   },
   {
-    icon: 'fa-server',
-    key: 'backend',
+    key: 'back',
+    items: [
+      'Node.js · Bun',
+      'NestJS · Fastify · Express',
+      'BFF · microservices',
+      'GraphQL · REST',
+      'MongoDB · SQL · Firestore',
+    ],
   },
   {
-    icon: 'fa-vial',
-    key: 'testing',
-  },
-  {
-    icon: 'fa-cloud',
-    key: 'cloud',
-  },
-  {
-    icon: 'fa-brain',
     key: 'ai',
+    items: [
+      'OpenAI API',
+      'RAG · embeddings',
+      'Recherche vectorielle',
+      'Agents autonomes',
+      'TTS · STT',
+      'Microservices Python',
+    ],
   },
-  {
-    icon: 'fa-tools',
-    key: 'tools',
-  },
-] as const;
+  { key: 'mobile', items: ['React Native · Expo', 'Flutter · Dart', 'EAS'] },
+  { key: 'quality', items: ['Vitest · Jest · TDD', 'Playwright', 'CI/CD GitLab', 'Docker', 'SSR · SEO'] },
+];
