@@ -20,7 +20,7 @@ const sideProjects = useBrain().getSideProjects();
             :href="project.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-ink underline decoration-1 underline-offset-4"
+            class="inline-flex min-h-[44px] items-center text-ink underline decoration-1 underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
           >
             {{ project.name }}
           </a>

@@ -102,7 +102,7 @@ onMounted(() => {
               type="button"
               data-test="language-button"
               :aria-pressed="locale === supportedLocale"
-              class="min-h-[40px] min-w-[44px] font-mono text-[13px] uppercase focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-signal"
+              class="min-h-[44px] min-w-[44px] font-mono text-[13px] uppercase focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-signal"
               :class="locale === supportedLocale ? 'bg-ink text-paper' : 'bg-transparent text-ink'"
               @click="setLocale(supportedLocale)"
             >
