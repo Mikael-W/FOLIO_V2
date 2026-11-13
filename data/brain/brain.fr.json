@@ -1,8 +1,8 @@
 {
   "profile": {
     "name": "Mikaël Wawrziczny alias Mika",
-    "title": "Senior Fullstack Engineer — Node.js / Vue 3, Référent technique",
-    "about": "Développeur fullstack freelance avec 8 ans d'expérience, fondateur du studio Joys Lab (SASU). Profil polyvalent : front Vue/Nuxt et React/React Native, mobile Flutter, back Node.js (Express, Fastify, NestJS) et Laravel, intégration IA (OpenAI, RAG). Sortie d'une mission de 30 mois chez Accor comme référent technique sur l'architecture front et la qualité de code. 15 ans de commercial terrain avant le développement, ce qui apporte un sens business rare, de la pédagogie et une vraie aisance en environnement grand compte.",
+    "title": "Senior Software & AI Engineer — Lead AI Engineer @ AI Sisters Lab",
+    "about": "Ingénieur logiciel & IA freelance, 8 ans d'expérience, fondateur du studio Joys Lab (SASU). Lead AI Engineer chez AI Sisters Lab (POC et MVP IA pour les DSI) et lead front sur la migration Vue 3 de WeSave. Fullstack TypeScript : Vue/Nuxt, React/React Native, Node.js/NestJS, LLM en production depuis 2024 (RAG, agents, sorties structurées). En cours de certification Claude Certified Architect – Professional (Anthropic). 15 ans de terrain commercial avant le développement : sens business, pédagogie, aisance grand compte.",
     "personal": {
       "maritalStatus": "Marié",
       "children": 4,
@@ -18,7 +18,6 @@
       "github": "https://github.com/Mikael-W"
     }
   },
-
   "availability": {
     "status": "Disponible",
     "freelanceSince": 2017,
@@ -26,19 +25,16 @@
     "hybridMinDays": 3,
     "travel": "Europe entière"
   },
-
   "rates": {
     "tjm": "450€ – 600€",
     "currency": "EUR",
     "dependsOn": "Mission, durée, stack technique"
   },
-
   "languages": {
     "french": "Langue maternelle",
     "english": "Courant (B2/C1)",
     "others": []
   },
-
   "skills": {
     "technical": {
       "frontend": [
@@ -70,8 +66,22 @@
         "Auth0",
         "Bun"
       ],
-      "mobile": ["React Native / Expo", "Flutter / Dart", "EAS"],
-      "devops_testing": ["Vitest", "Playwright", "Jest", "TDD", "CI/CD GitLab", "Docker", "Netlify", "Vercel", "EAS"],
+      "mobile": [
+        "React Native / Expo",
+        "Flutter / Dart",
+        "EAS"
+      ],
+      "devops_testing": [
+        "Vitest",
+        "Playwright",
+        "Jest",
+        "TDD",
+        "CI/CD GitLab",
+        "Docker",
+        "Netlify",
+        "Vercel",
+        "EAS"
+      ],
       "ai": [
         "OpenAI API",
         "Prompt engineering",
@@ -82,7 +92,12 @@
         "TTS / STT OpenAI",
         "Agents autonomes"
       ],
-      "quality": ["Accessibilité (a11y, WCAG/RGAA)", "i18n (vue-i18n)", "SSR/CSR", "SEO"]
+      "quality": [
+        "Accessibilité (a11y, WCAG/RGAA)",
+        "i18n (vue-i18n)",
+        "SSR/CSR",
+        "SEO"
+      ]
     },
     "softSkills": [
       "Communication",
@@ -94,7 +109,6 @@
       "Leadership technique"
     ]
   },
-
   "education": [
     {
       "school": "RNCP Niveau 5",
@@ -112,7 +126,6 @@
       "year": "2005 - 2020"
     }
   ],
-
   "hobbies": [
     {
       "name": "Jiu-Jitsu Brésilien",
@@ -128,51 +141,88 @@
       "details": "Fan de shonen, seinen et animation japonaise"
     }
   ],
-
   "sideProjects": [
     {
       "name": "trimly",
       "description": "Outil open source (CLI TypeScript/Node) de suivi de consommation de tokens pour Claude Code. Packages @trimly/core & @trimly/cli publiés sur npm, sous licence Apache-2.0.",
-      "tech": ["TypeScript", "Node.js", "CLI", "npm", "Apache-2.0"],
+      "tech": [
+        "TypeScript",
+        "Node.js",
+        "CLI",
+        "npm",
+        "Apache-2.0"
+      ],
       "slug": "trimly"
     },
     {
       "name": "Forenlyst",
       "description": "SaaS de détection de deepfakes et de certification forensique : front Next.js, back NestJS avec microservices Python et signature cryptographique.",
-      "tech": ["Next.js", "NestJS", "Python", "microservices", "Crypto"],
+      "tech": [
+        "Next.js",
+        "NestJS",
+        "Python",
+        "microservices",
+        "Crypto"
+      ],
       "slug": "forenlyst"
     },
     {
       "name": "My Liste Chaude",
       "description": "Application mobile React Native / Expo (Firebase Auth/Firestore, géolocalisation, deep linking, import CSV/Excel, gamification XP/niveaux), pipeline EAS complet.",
-      "tech": ["React Native", "Expo", "Firebase", "EAS"],
+      "tech": [
+        "React Native",
+        "Expo",
+        "Firebase",
+        "EAS"
+      ],
       "slug": "my-liste-chaude"
     },
     {
       "name": "Chasse en Cours",
       "description": "Application mobile Flutter de sécurité pour chasseurs et promeneurs, publiée sur le Play Store. V2 en cours de développement.",
-      "tech": ["Flutter", "Dart", "Firebase", "Firestore"],
+      "tech": [
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "Firestore"
+      ],
       "slug": "chasse-en-cours"
     },
     {
       "name": "OSS Nation",
       "description": "Plateforme internationale pour stages & open mats JJB avec géolocalisation, analyse IA, filtres avancés et i18n.",
-      "tech": ["Nuxt 3", "Firebase", "Firestore", "Node.js", "OpenAI API"],
+      "tech": [
+        "Nuxt 3",
+        "Firebase",
+        "Firestore",
+        "Node.js",
+        "OpenAI API"
+      ],
       "slug": "oss-nation"
     },
     {
       "name": "DiscoverIt API",
       "description": "API mondiale d'événements culturels (géolocalisation, filtres, régions).",
-      "tech": ["Node.js", "Bun", "MongoDB", "API REST"],
+      "tech": [
+        "Node.js",
+        "Bun",
+        "MongoDB",
+        "API REST"
+      ],
       "slug": "discoverit"
     }
   ],
-
   "projects": [
     {
       "name": "trimly",
       "description": "Outil open source (CLI TypeScript/Node) de suivi de consommation de tokens pour Claude Code. Packages @trimly/core & @trimly/cli publiés sur npm, sous licence Apache-2.0.",
-      "stack": ["TypeScript", "Node.js", "CLI", "npm", "Apache-2.0"],
+      "stack": [
+        "TypeScript",
+        "Node.js",
+        "CLI",
+        "npm",
+        "Apache-2.0"
+      ],
       "logo": "",
       "icon": "fa-brands fa-npm",
       "gradient": "from-red-400 to-red-600",
@@ -190,7 +240,13 @@
     {
       "name": "Forenlyst",
       "description": "SaaS de détection de deepfakes et de certification forensique : front Next.js, back NestJS avec microservices Python et signature cryptographique.",
-      "stack": ["Next.js", "NestJS", "Python", "microservices", "Crypto"],
+      "stack": [
+        "Next.js",
+        "NestJS",
+        "Python",
+        "microservices",
+        "Crypto"
+      ],
       "logo": "/projects_logo/forenlyst.png",
       "icon": "fa-solid fa-shield-halved",
       "gradient": "from-indigo-400 to-indigo-600",
@@ -207,7 +263,14 @@
     {
       "name": "Portfolio — Mikaël Wawrziczny",
       "description": "Portfolio personnel réalisé en Nuxt 3, entièrement typé TypeScript, avec SEO avancé, i18n, mode sombre automatique, animations, assistant IA intégré et design system personnalisé.",
-      "stack": ["Nuxt 3", "TypeScript", "Tailwind CSS", "i18n", "SSR", "AI"],
+      "stack": [
+        "Nuxt 3",
+        "TypeScript",
+        "Tailwind CSS",
+        "i18n",
+        "SSR",
+        "AI"
+      ],
       "logo": "/projects_logo/logo-mw.png",
       "gradient": "from-orange-400 to-orange-600",
       "url": "https://github.com/Mikael-W/FOLIO_V2",
@@ -223,7 +286,12 @@
     {
       "name": "OSS Nation",
       "description": "Plateforme internationale d'événements JJB (stages & open mats) avec géolocalisation, analyse IA, filtres avancés et i18n.",
-      "stack": ["Nuxt 3", "Firebase", "OpenAI API", "Géolocalisation"],
+      "stack": [
+        "Nuxt 3",
+        "Firebase",
+        "OpenAI API",
+        "Géolocalisation"
+      ],
       "logo": "/projects_logo/oss-nation_logo.png",
       "gradient": "from-blue-400 to-blue-600",
       "url": "https://oss-nation.com/",
@@ -239,7 +307,13 @@
     {
       "name": "Chasse en Cours",
       "description": "Application mobile Flutter permettant aux chasseurs et aux promeneurs de déclarer une zone de chasse sur une carte, afin d’informer les personnes à proximité. V2 en cours de développement.",
-      "stack": ["Flutter", "Dart", "Firebase", "Firestore", "Google Maps"],
+      "stack": [
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "Firestore",
+        "Google Maps"
+      ],
       "logo": "/projects_logo/chasse_en_cours.png",
       "gradient": "from-yellow-400 to-yellow-600",
       "url": "https://play.google.com/store/apps/details?id=com.mw.chasse_en_cours&hl=fr",
@@ -255,7 +329,12 @@
     {
       "name": "Joys Agency",
       "description": "Site vitrine professionnel de Joys Agency, conçu pour renforcer l’image de marque, présenter les services et améliorer la visibilité en ligne.",
-      "stack": ["Nuxt 3", "Tailwind CSS", "SEO", "Composants réutilisables"],
+      "stack": [
+        "Nuxt 3",
+        "Tailwind CSS",
+        "SEO",
+        "Composants réutilisables"
+      ],
       "logo": "/projects_logo/joys_logo.png",
       "gradient": "from-pink-400 to-pink-600",
       "url": "https://www.joys-agency.com/",
@@ -269,8 +348,62 @@
       ]
     }
   ],
-
   "experience": [
+    {
+      "company": "AI Sisters Lab",
+      "role": "Lead AI Engineer",
+      "period": {
+        "start": "[ANNÉE]",
+        "end": "aujourd'hui",
+        "duration": "Mission en cours"
+      },
+      "stack": [
+        "LLM",
+        "Agents IA",
+        "RAG",
+        "POC",
+        "MVP"
+      ],
+      "highlights": [
+        "Conception et livraison des POC et MVP IA du Lab",
+        "Cadrage et faisabilité technique pour des DSI et équipes Innovation",
+        "Agents IA et intégration de LLM, jusqu'à l'industrialisation"
+      ],
+      "description": "Studio d'IA appliquée : POC, MVP et missions IA pour les DSI et équipes Innovation.",
+      "featured": true,
+      "displayName": "AI Sisters Lab",
+      "summary": "POC et MVP IA pour les DSI et équipes Innovation : cadrage, faisabilité technique, agents et LLM, jusqu'à l'industrialisation."
+    },
+    {
+      "company": "WeSave",
+      "role": "Lead front — migration Vue 3",
+      "period": {
+        "start": "2026",
+        "end": "aujourd'hui",
+        "duration": "Mission en cours"
+      },
+      "stack": [
+        "Vue 3",
+        "Pinia",
+        "Pinia Colada",
+        "Vite",
+        "Storybook",
+        "ECharts",
+        "PWA"
+      ],
+      "highlights": [
+        "Migration Vue 2 → Vue 3 d'une application de conseil financier multi-marques",
+        "Vuex → Pinia pour l'état client, Pinia Colada pour le cache serveur",
+        "Remplacement de vue-material par le design system wesave-components",
+        "Agents de code branchés sur Storybook via MCP pour respecter les vraies props du design system",
+        "Évaluation d'ECharts pour remplacer Highcharts, avec prise en compte du RGAA",
+        "Nouveau dashboard mobile en PWA Vue 3, architecture par domaines"
+      ],
+      "description": "Application de conseil financier multi-marques.",
+      "featured": true,
+      "displayName": "WeSave",
+      "summary": "Application de conseil financier multi-marques ; design system wesave-components, évaluation ECharts, dashboard mobile en PWA."
+    },
     {
       "company": "Joys Lab — SASU",
       "role": "Fondateur & Lead Developer",
@@ -279,7 +412,15 @@
         "end": "aujourd'hui",
         "duration": "Studio freelance"
       },
-      "stack": ["Nuxt 3", "Next.js", "React Native", "NestJS", "Node.js", "OpenAI API", "RAG"],
+      "stack": [
+        "Nuxt 3",
+        "Next.js",
+        "React Native",
+        "NestJS",
+        "Node.js",
+        "OpenAI API",
+        "RAG"
+      ],
       "highlights": [
         "Fondateur du studio de développement freelance (SASU)",
         "My Liste Chaude — app React Native / Expo (Firebase, géoloc, deep linking, import CSV/Excel, gamification), pipeline EAS complet",
@@ -288,7 +429,10 @@
         "trimly — outil open source publié sur npm (TypeScript / Node, Apache-2.0)",
         "Intégration OpenAI API en production depuis 2024 (RAG, embeddings, prompt engineering)"
       ],
-      "description": "Studio de développement freelance : SaaS, apps mobiles et intégration IA."
+      "description": "Studio de développement freelance : SaaS, apps mobiles et intégration IA.",
+      "featured": true,
+      "displayName": "Joys Lab",
+      "summary": "Studio freelance : SaaS, apps mobiles et intégration IA en production."
     },
     {
       "company": "Accor / all.accor.com",
@@ -298,7 +442,15 @@
         "end": "2025-12",
         "duration": "30 mois"
       },
-      "stack": ["Vue 3", "Nuxt 3", "Node.js", "TypeScript", "GraphQL", "Playwright", "Vitest"],
+      "stack": [
+        "Vue 3",
+        "Nuxt 3",
+        "Node.js",
+        "TypeScript",
+        "GraphQL",
+        "Playwright",
+        "Vitest"
+      ],
       "highlights": [
         "Refonte Vue 2 → Vue 3 / Nuxt 3 du couloir de réservation",
         "Développement d'un BFF Node.js dédié au couloir",
@@ -307,7 +459,10 @@
         "Stratégie de tests (Vitest + Playwright) et automatisation CI",
         "Référent technique sur l'architecture front et la qualité de code — équipe Convert (12 personnes), 17 langues / pays"
       ],
-      "description": "Mission longue en régie sur le couloir de réservation Accor, en environnement international."
+      "description": "Mission longue en régie sur le couloir de réservation Accor, en environnement international.",
+      "featured": true,
+      "displayName": "Accor",
+      "summary": "Référent technique front sur le couloir de réservation."
     },
     {
       "company": "Mon Commerce Interactif (MCI)",
@@ -317,14 +472,22 @@
         "end": "2023-09",
         "duration": "6 mois"
       },
-      "stack": ["Vue 3", "Nuxt 3", "Flutter", "Firebase"],
+      "stack": [
+        "Vue 3",
+        "Nuxt 3",
+        "Flutter",
+        "Firebase"
+      ],
       "highlights": [
         "Dashboard admin Vue / Nuxt 3 (menus, vins, clients, uploads, agents)",
         "App mobile Flutter (iOS + Android) : onboarding QR code, multi-profils",
         "Architecture Firebase : Auth, Firestore, Cloud Storage, règles de sécurité",
         "Refactor, industrialisation, CI"
       ],
-      "description": "Écosystème web + mobile pour commerçants (forfait — MVP)."
+      "description": "Écosystème web + mobile pour commerçants (forfait — MVP).",
+      "featured": true,
+      "displayName": "MCI",
+      "summary": "Dashboard Nuxt 3, app Flutter iOS + Android, architecture Firebase."
     },
     {
       "company": "Gritchen",
@@ -334,14 +497,24 @@
         "end": "2023-06",
         "duration": "6 mois"
       },
-      "stack": ["Vue 3", "Pinia", "TypeScript", "Laravel", "Node.js", "Fastify"],
+      "stack": [
+        "Vue 3",
+        "Pinia",
+        "TypeScript",
+        "Laravel",
+        "Node.js",
+        "Fastify"
+      ],
       "highlights": [
         "Plateforme insurtech — dashboards métier (contrats, sinistres, espace client)",
         "Front Vue 3 / Pinia typé, formulaires complexes multi-étapes",
         "Back Laravel + microservices Node.js / Fastify",
         "Architecture d'état Pinia et intégration API"
       ],
-      "description": "Plateforme insurtech (forfait — MVP)."
+      "description": "Plateforme insurtech (forfait — MVP).",
+      "featured": true,
+      "displayName": "Gritchen",
+      "summary": "Vue 3, Pinia et TypeScript ; Laravel, Node.js et Fastify."
     },
     {
       "company": "Chasse en Cours",
@@ -351,13 +524,19 @@
         "end": "2023",
         "duration": "Produit personnel"
       },
-      "stack": ["Flutter", "Dart", "Géolocalisation", "Carte temps réel"],
+      "stack": [
+        "Flutter",
+        "Dart",
+        "Géolocalisation",
+        "Carte temps réel"
+      ],
       "highlights": [
         "App communautaire de signalement de chasses (chasseurs / promeneurs), couverture France",
         "Géolocalisation, déclaration d'activité et affichage sur carte en temps réel",
         "Conception, développement et publication Play Store de bout en bout"
       ],
-      "description": "Produit personnel Flutter publié sur le Play Store, V2 en cours."
+      "description": "Produit personnel Flutter publié sur le Play Store, V2 en cours.",
+      "featured": false
     },
     {
       "company": "Place2Be",
@@ -367,13 +546,20 @@
         "end": "2022-12",
         "duration": "4 mois"
       },
-      "stack": ["Flutter", "TypeScript", "Node.js", "MongoDB", "DataTourisme"],
+      "stack": [
+        "Flutter",
+        "TypeScript",
+        "Node.js",
+        "MongoDB",
+        "DataTourisme"
+      ],
       "highlights": [
         "App mobile Flutter : événements géolocalisés autour de l'utilisateur",
         "Ingestion et gestion de 300 000 événements via l'API DataTourisme",
         "Backend TypeScript / Node.js, architecture API et sécurisation"
       ],
-      "description": "App mobile + backend événementiel (forfait — POC)."
+      "description": "App mobile + backend événementiel (forfait — POC).",
+      "featured": false
     },
     {
       "company": "NEUVA",
@@ -383,14 +569,22 @@
         "end": "2022-09",
         "duration": "15 mois"
       },
-      "stack": ["Vue", "Nuxt", "React", "Laravel", "Node.js", "Flutter"],
+      "stack": [
+        "Vue",
+        "Nuxt",
+        "React",
+        "Laravel",
+        "Node.js",
+        "Flutter"
+      ],
       "highlights": [
         "Tech lead sur un portefeuille de projets variés (web & mobile)",
         "Pilotage technique multi-stacks : Vue / Nuxt, React, PHP / Laravel, Node.js, Flutter",
         "Méthode SCRUM, architecture, spécifications techniques",
         "Refactor et industrialisation"
       ],
-      "description": "Tech lead multi-stacks en régie (mission longue)."
+      "description": "Tech lead multi-stacks en régie (mission longue).",
+      "featured": false
     },
     {
       "company": "Cactus Pharma",
@@ -400,12 +594,19 @@
         "end": "2021-06",
         "duration": "6 mois"
       },
-      "stack": ["Angular", "Electron", "Flutter", "Firebase", "SQLite"],
+      "stack": [
+        "Angular",
+        "Electron",
+        "Flutter",
+        "Firebase",
+        "SQLite"
+      ],
       "highlights": [
         "App desktop Angular / Electron pour la sérialisation de médicaments",
         "App mobile Flutter de fidélisation client (lecture tickets caisse + OCR)"
       ],
-      "description": "Outils pharma desktop & mobile (forfait — MVP)."
+      "description": "Outils pharma desktop & mobile (forfait — MVP).",
+      "featured": false
     },
     {
       "company": "Streamaker",
@@ -415,22 +616,25 @@
         "end": "2020-12",
         "duration": "4 mois"
       },
-      "stack": ["Vue 2", "Node.js", "Express"],
+      "stack": [
+        "Vue 2",
+        "Node.js",
+        "Express"
+      ],
       "highlights": [
         "Plateforme e-commerce de bandes son pour rappeurs (achat d'instrus, pose de voix)",
         "Front Vue 2 : catalogue, parcours d'achat, espace abonné",
         "Back Node.js / Express : API REST, gestion utilisateurs, sécurisation",
         "Système de monétisation et abonnements"
       ],
-      "description": "Plateforme e-commerce complète front + back (forfait — MVP)."
+      "description": "Plateforme e-commerce complète front + back (forfait — MVP).",
+      "featured": false
     }
   ],
-
   "cv": {
     "fr": "/CV_MW_FR.pdf",
     "en": "/CV_MW_EN.pdf"
   },
-
   "keywords": [
     "Fullstack senior",
     "Node.js",
@@ -459,7 +663,12 @@
   "actions": {
     "switchTheme": {
       "description": "Permet de passer le site en dark mode ou light mode.",
-      "examples": ["mets en dark mode", "active le mode sombre", "passe en mode clair", "désactive le dark mode"]
+      "examples": [
+        "mets en dark mode",
+        "active le mode sombre",
+        "passe en mode clair",
+        "désactive le dark mode"
+      ]
     },
     "downloadCV": {
       "description": "Permet de fournir un lien direct vers le CV français ou anglais.",
@@ -470,5 +679,86 @@
         "cv français stp"
       ]
     }
-  }
+  },
+  "certifications": [
+    {
+      "name": "Claude Certified Architect – Professional",
+      "issuer": "Anthropic",
+      "status": "in_progress",
+      "year": "2026",
+      "url": null,
+      "summary": "Certification avancée : architecture d'intégration, gouvernance et évaluation de solutions Claude à l'échelle entreprise."
+    }
+  ],
+  "highlights": [
+    {
+      "value": "8",
+      "unit": "ans",
+      "label": "de fullstack TypeScript, de l'interface au BFF"
+    },
+    {
+      "value": "2024",
+      "unit": "",
+      "label": "LLM en production depuis : RAG, agents, sorties structurées"
+    },
+    {
+      "value": "2",
+      "unit": "",
+      "label": "packages open source publiés sur npm"
+    },
+    {
+      "value": "15",
+      "unit": "ans",
+      "label": "de terrain commercial avant le code"
+    }
+  ],
+  "caseStudies": [
+    {
+      "slug": "wesave",
+      "title": "WeSave — migration Vue 3 & design system",
+      "tags": [
+        "Vue 3",
+        "Pinia",
+        "Pinia Colada",
+        "Storybook",
+        "MCP"
+      ],
+      "image": null,
+      "url": null,
+      "problem": "Une application de conseil financier multi-marques en Vue 2, bâtie sur un kit UI (vue-material) incompatible avec Vue 3.",
+      "solution": "Vuex → Pinia, Pinia Colada pour le cache serveur, remplacement des composants par le design system wesave-components.",
+      "impact": "Des agents de code branchés sur Storybook via MCP vérifient les vraies props du design system ; périmètre UI ré-estimé de 30 à 14 jours."
+    },
+    {
+      "slug": "forenlyst",
+      "title": "Forenlyst — authenticité des médias",
+      "tags": [
+        "Next.js",
+        "NestJS",
+        "Python",
+        "Microservices",
+        "Crypto"
+      ],
+      "image": null,
+      "url": "https://forenlyst.com/fr",
+      "problem": "La prolifération des deepfakes rend difficile la vérification de l'authenticité des contenus visuels.",
+      "solution": "Détection de deepfakes couplée à une certification forensique, résultats signés cryptographiquement.",
+      "impact": "Authentification fiable des médias et traçabilité des analyses, pour des usages professionnels et juridiques."
+    },
+    {
+      "slug": "trimly",
+      "title": "trimly — coût des agents IA",
+      "tags": [
+        "TypeScript",
+        "Node.js",
+        "CLI",
+        "npm"
+      ],
+      "image": null,
+      "url": "https://www.npmjs.com/package/@trimly/core",
+      "problem": "Difficile de suivre la consommation de tokens — donc les coûts — en usage quotidien de Claude Code.",
+      "solution": "CLI open source qui mesure, agrège et affiche la consommation en temps réel, plus une API réutilisable : @trimly/core.",
+      "impact": "Visibilité immédiate sur les coûts ; publié sur npm sous licence Apache-2.0."
+    }
+  ]
 }

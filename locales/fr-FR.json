@@ -9,17 +9,45 @@
     "toggle_dark": "Activer le mode sombre",
     "toggle_light": "Activer le mode clair",
     "menu_open": "Ouvrir le menu de navigation",
-    "menu_close": "Fermer le menu de navigation"
+    "menu_close": "Fermer le menu de navigation",
+    "assistant": "Assistant",
+    "cases": "Études de cas",
+    "journey": "Parcours",
+    "language": "Langue",
+    "main_aria": "Navigation principale"
   },
   "hero": {
     "alt_img": "Photo de Mikaël Wawrziczny",
-    "title": "Développeur Fullstack Senior Freelance",
-    "subtitle": "Node.js, Vue 3 & IA — Référent technique",
-    "description": "8 ans de développement, après 15 ans dans le commercial. Je conçois des applications fullstack performantes et scalables — front Vue/Nuxt & React/React Native, back Node.js, intégration IA — pour des grands comptes et des startups, en freelance via Joys Lab.",
     "download_cv": "Télécharger mon CV",
     "aria_download": "Télécharger mon CV en PDF",
     "contact_me": "Me contacter",
-    "aria_contact": "Aller à la section contact"
+    "aria_contact": "Aller à la section contact",
+    "label": "Senior · Lead AI Engineer @ AI Sisters Lab · Joys Lab SASU",
+    "title_line1": "Software",
+    "title_line2": "& AI Engineer.",
+    "lead": "Fullstack TypeScript depuis 8 ans. Je relie l'interface, le BFF et les modèles — et je reste responsable de ce qui part en production.",
+    "facts": {
+      "base": "Base",
+      "mode": "Mode",
+      "missions": "Missions",
+      "certification": "Certif.",
+      "front": "Front",
+      "back": "Back",
+      "ai": "IA"
+    },
+    "facts_values": {
+      "base": "Normandie, France",
+      "mode": "Full remote, Europe",
+      "missions": "AI Sisters Lab, WeSave",
+      "front": "Vue 3, Nuxt 3, React",
+      "back": "Node.js, NestJS, GraphQL",
+      "ai": "OpenAI, RAG, agents"
+    },
+    "availability_label": "Disponible",
+    "availability_text": "Missions front, fullstack ou IA.",
+    "cta_contact": "Écrire à Mika",
+    "cta_cv": "CV (PDF)",
+    "certification_in_progress": "en cours"
   },
   "ai_chat": {
     "title": "Assistant IA – Posez vos questions",
@@ -27,14 +55,31 @@
     "sending": "Envoi…",
     "typing": "L’assistant écrit…",
     "send_button": "Envoyer",
-
-    "greeting": "Bonjour 👋 Je suis l'IA de Mikaël. Posez-moi vos questions concernant son expérience, son parcours ou ses compétences techniques.",
-
+    "greeting": "Bonjour, je suis l'IA de Mikaël. Posez-moi vos questions sur son expérience, son parcours ou ses compétences techniques.",
     "actions": {
       "switchThemeDark": "Passer en mode sombre",
       "switchThemeLight": "Passer en mode clair",
       "switchLanguage": "Changer de langue",
       "downloadCV": "Télécharger le CV"
+    },
+    "intro_label": "Assistant IA",
+    "intro_title": "Posez vos questions à mon assistant.",
+    "intro_text": "Il connaît mon parcours, mes projets et ma stack, en français comme en anglais — et il peut agir sur le site pour vous.",
+    "window_title": "L'IA de Mikaël",
+    "status_online": "en ligne",
+    "input_label": "Votre question",
+    "conversation_aria": "Conversation avec l'assistant",
+    "error": "Désolé, l'assistant est momentanément indisponible. Réessayez dans un instant ou écrivez-moi via le formulaire de contact.",
+    "actions_list": {
+      "theme": "Changer le thème",
+      "language": "Passer en anglais",
+      "cv": "Envoyer le CV"
+    },
+    "suggestions": {
+      "wesave": "La migration WeSave ?",
+      "stack_ai": "Sa stack IA ?",
+      "availability": "Dispo pour une mission ?",
+      "english": "Switch to English"
     }
   },
   "about": {
@@ -62,19 +107,32 @@
       "text": "Firebase, Firestore, Vercel, Netlify, EAS, Docker"
     },
     "ai": {
-      "title": "IA / LLM",
+      "title": "IA",
       "text": "OpenAI API, RAG / embeddings, prompt engineering"
     },
     "tools": {
       "title": "Qualité & Outils",
       "text": "Git, GitLab CI/CD, Storybook, a11y (WCAG/RGAA), i18n"
+    },
+    "front": {
+      "title": "Front"
+    },
+    "back": {
+      "title": "Back"
+    },
+    "mobile": {
+      "title": "Mobile"
+    },
+    "quality": {
+      "title": "Qualité"
     }
   },
   "projects": {
     "title": "Projets mis en avant",
     "case_study": "Voir l'étude de cas",
     "visit": "Visiter le site",
-    "featured": "Mis en avant"
+    "featured": "Mis en avant",
+    "other_title": "Autres projets"
   },
   "experience": {
     "title": "Parcours professionnel"
@@ -89,7 +147,10 @@
     "send_button": "Envoyer le message",
     "sending": "Envoi en cours…",
     "success_title": "Message envoyé avec succès !",
-    "success_sub": "Je vous répondrai sous 24h."
+    "success_sub": "Je vous répondrai sous 24h.",
+    "band_title": "Parlons de votre prochain produit.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   },
   "modal": {
     "overview": "Aperçu",
@@ -102,6 +163,25 @@
     "close": "Fermer"
   },
   "legal": {
-    "rights": "Mikaël Wawrziczny — Tous droits réservés."
+    "rights": "Mikaël Wawrziczny — Tous droits réservés.",
+    "company": "Joys Lab SASU",
+    "location": "Normandie, France · full remote"
+  },
+  "highlights": {
+    "aria": "Repères"
+  },
+  "cases": {
+    "title": "Études de cas",
+    "meta": "03 / problème → solution → impact",
+    "problem": "Problème",
+    "solution": "Solution",
+    "impact": "Impact",
+    "visit": "Voir le projet",
+    "image_label": "capture"
+  },
+  "journey": {
+    "title": "Parcours",
+    "in_progress": "en cours",
+    "certification": "Certification"
   }
 }

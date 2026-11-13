@@ -9,44 +9,85 @@
     "toggle_dark": "Enable dark mode",
     "toggle_light": "Enable light mode",
     "menu_open": "Open navigation menu",
-    "menu_close": "Close navigation menu"
+    "menu_close": "Close navigation menu",
+    "assistant": "Assistant",
+    "cases": "Case studies",
+    "journey": "Journey",
+    "language": "Language",
+    "main_aria": "Main navigation"
   },
-
   "hero": {
     "alt_img": "Photo of Mikaël Wawrziczny",
-    "title": "Senior Freelance Fullstack Engineer",
-    "subtitle": "Node.js, Vue 3 & AI — Technical Lead",
-    "description": "8 years in development, after 15 years in sales. I build high-performance, scalable fullstack applications — Vue/Nuxt & React/React Native front-end, Node.js back-end, AI integration — for enterprises and startups, freelancing through Joys Lab.",
     "download_cv": "Download my CV",
     "aria_download": "Download my CV as PDF",
     "contact_me": "Contact me",
-    "aria_contact": "Go to the contact section"
+    "aria_contact": "Go to the contact section",
+    "label": "Senior · Lead AI Engineer @ AI Sisters Lab · Joys Lab SASU",
+    "title_line1": "Software",
+    "title_line2": "& AI Engineer.",
+    "lead": "TypeScript fullstack for 8 years. I connect the interface, the BFF and the models — and I stay accountable for what ships to production.",
+    "facts": {
+      "base": "Base",
+      "mode": "Mode",
+      "missions": "Missions",
+      "certification": "Certif.",
+      "front": "Front",
+      "back": "Back",
+      "ai": "AI"
+    },
+    "facts_values": {
+      "base": "Normandy, France",
+      "mode": "Full remote, Europe",
+      "missions": "AI Sisters Lab, WeSave",
+      "front": "Vue 3, Nuxt 3, React",
+      "back": "Node.js, NestJS, GraphQL",
+      "ai": "OpenAI, RAG, agents"
+    },
+    "availability_label": "Available",
+    "availability_text": "Front-end, fullstack or AI missions.",
+    "cta_contact": "Write to Mika",
+    "cta_cv": "CV (PDF)",
+    "certification_in_progress": "in progress"
   },
-
   "ai_chat": {
     "title": "AI Assistant – Ask your questions",
     "placeholder": "Ask your question…",
     "sending": "Sending…",
     "typing": "The assistant is typing…",
     "send_button": "Send",
-
-    "greeting": "Hello 👋 I'm Mikaël’s AI assistant. Ask me anything about his experience, background, or technical skills.",
-
+    "greeting": "Hello, I'm Mikaël's AI assistant. Ask me anything about his experience, background or technical skills.",
     "actions": {
       "switchThemeDark": "Switch to dark mode",
       "switchThemeLight": "Switch to light mode",
       "switchLanguage": "Change language",
       "downloadCV": "Download CV"
+    },
+    "intro_label": "AI assistant",
+    "intro_title": "Ask my assistant your questions.",
+    "intro_text": "It knows my background, my projects and my stack, in French and in English — and it can act on the site for you.",
+    "window_title": "Mikaël's AI",
+    "status_online": "online",
+    "input_label": "Your question",
+    "conversation_aria": "Conversation with the assistant",
+    "error": "Sorry, the assistant is temporarily unavailable. Try again in a moment or write to me through the contact form.",
+    "actions_list": {
+      "theme": "Change the theme",
+      "language": "Switch to French",
+      "cv": "Send the CV"
+    },
+    "suggestions": {
+      "wesave": "The WeSave migration?",
+      "stack_ai": "His AI stack?",
+      "availability": "Available for a mission?",
+      "english": "Passer en français"
     }
   },
-
   "about": {
     "title": "About me",
     "p1": "I am a Senior Fullstack Engineer and founder of the freelance studio Joys Lab (SASU). I just wrapped up a 30-month mission at Accor where I led the rewrite of the booking funnel (Vue 2 → Vue 3 / Nuxt 3) and built a dedicated Node.js BFF, as technical lead on front-end architecture and code quality.",
     "p2": "Versatile fullstack profile: Vue/Nuxt and React/React Native front-end, Flutter mobile, Node.js back-end (Express, Fastify, NestJS) and Laravel. I have tech-lead experience on multi-stack projects, with a strong testing culture (Vitest, Playwright), CI/CD and design systems.",
     "p3": "I have been shipping AI in production since 2024: RAG assistants, embeddings, prompt engineering and Python microservices. I run several SaaS in production and publish trimly, an open-source tool on npm. 15 years in field sales beforehand give me a genuine business sense."
   },
-
   "skills": {
     "title": "Skills & Expertise",
     "frontend": {
@@ -66,19 +107,32 @@
       "text": "Firebase, Firestore, Vercel, Netlify, EAS, Docker"
     },
     "ai": {
-      "title": "AI / LLM",
+      "title": "AI",
       "text": "OpenAI API, RAG / embeddings, prompt engineering"
     },
     "tools": {
       "title": "Quality & Tools",
       "text": "Git, GitLab CI/CD, Storybook, a11y (WCAG), i18n"
+    },
+    "front": {
+      "title": "Front"
+    },
+    "back": {
+      "title": "Back"
+    },
+    "mobile": {
+      "title": "Mobile"
+    },
+    "quality": {
+      "title": "Quality"
     }
   },
   "projects": {
     "title": "Featured Projects",
     "case_study": "View case study",
     "visit": "Visit website",
-    "featured": "Featured"
+    "featured": "Featured",
+    "other_title": "Other projects"
   },
   "experience": {
     "title": "Experience Timeline"
@@ -93,9 +147,11 @@
     "send_button": "Send Message",
     "sending": "Sending…",
     "success_title": "Message sent successfully!",
-    "success_sub": "I'll reply within 24 hours."
+    "success_sub": "I'll reply within 24 hours.",
+    "band_title": "Let's talk about your next product.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   },
-
   "modal": {
     "overview": "Overview",
     "problemsSolved": "Problems Solved",
@@ -106,8 +162,26 @@
     "visit": "Visit website",
     "close": "Close"
   },
-
   "legal": {
-    "rights": "Mikaël Wawrziczny — All rights reserved."
+    "rights": "Mikaël Wawrziczny — All rights reserved.",
+    "company": "Joys Lab SASU",
+    "location": "Normandy, France · full remote"
+  },
+  "highlights": {
+    "aria": "Key figures"
+  },
+  "cases": {
+    "title": "Case studies",
+    "meta": "03 / problem → solution → impact",
+    "problem": "Problem",
+    "solution": "Solution",
+    "impact": "Impact",
+    "visit": "See the project",
+    "image_label": "screenshot"
+  },
+  "journey": {
+    "title": "Journey",
+    "in_progress": "in progress",
+    "certification": "Certification"
   }
 }
