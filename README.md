@@ -24,12 +24,13 @@ It is both a portfolio and a technical demonstration intended for **Tech Leads, 
 
 ---
 
-### 🎨 **Modern, Apple-inspired UI**
+### 🎨 **Swiss grid design**
 
-- Smooth animations & polished layout
-- Light/Dark mode via VueUse
-- Accessible interactions with ARIA roles & screen-reader live regions
-- High-contrast, responsive, mobile-first design
+- Strict grid, Space Grotesk / Inter / IBM Plex Mono, one signal colour
+- Design tokens as CSS variables (`assets/css/main.css`), light and dark themes
+- Light/Dark mode via `@nuxtjs/color-mode` (system preference, no flash on load)
+- Accessible by default: real buttons and links, visible focus, 44px targets, screen-reader live regions
+- Reference mock-up: `design/grille-suisse/Swiss.dc.html`
 
 ---
 
@@ -74,12 +75,13 @@ It is both a portfolio and a technical demonstration intended for **Tech Leads, 
 | Framework | **Nuxt 3 (SSR + Nitro)** |
 | Language  | **TypeScript**           |
 | UI        | TailwindCSS              |
-| AI        | OpenAI (GPT-4o-mini)     |
+| AI        | OpenAI (`OPENAI_CHAT_MODEL`) |
 | Email     | Resend                   |
 | Security  | ReCAPTCHA v3             |
 | i18n      | Vue-i18n                 |
 | SEO       | Nuxt SchemaOrg + Sitemap |
-| Hosting   | Netlify                  |
+| Tests     | Vitest + @nuxt/test-utils |
+| Hosting   | Vercel                   |
 
 ---
 
@@ -87,6 +89,9 @@ It is both a portfolio and a technical demonstration intended for **Tech Leads, 
 
 ```bash
 pnpm install
+pnpm dev    # http://localhost:7777
+pnpm test
+pnpm build
 ```
 
 ---

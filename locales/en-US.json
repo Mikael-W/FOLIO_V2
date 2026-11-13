@@ -1,10 +1,7 @@
 {
   "nav": {
     "skip": "Skip to content",
-    "home": "Home",
-    "about": "About",
     "skills": "Skills",
-    "experience": "Experience",
     "projects": "Projects",
     "contact": "Contact",
     "toggle_dark": "Enable dark mode",
@@ -18,11 +15,6 @@
     "main_aria": "Main navigation"
   },
   "hero": {
-    "alt_img": "Photo of Mikaël Wawrziczny",
-    "download_cv": "Download my CV",
-    "aria_download": "Download my CV as PDF",
-    "contact_me": "Contact me",
-    "aria_contact": "Go to the contact section",
     "label": "Senior · Lead AI Engineer {'@'} AI Sisters Lab · Joys Lab SASU",
     "title_line1": "Software",
     "title_line2": "& AI Engineer.",
@@ -51,9 +43,7 @@
     "certification_in_progress": "in progress"
   },
   "ai_chat": {
-    "title": "AI Assistant – Ask your questions",
     "placeholder": "Ask your question…",
-    "sending": "Sending…",
     "typing": "The assistant is typing…",
     "send_button": "Send",
     "greeting": "Hello, I'm Mikaël's AI assistant. Ask me anything about his experience, background or technical skills.",
@@ -82,12 +72,6 @@
       "availability": "Available for a mission?",
       "english": "Passer en français"
     }
-  },
-  "about": {
-    "title": "About me",
-    "p1": "I am a Senior Fullstack Engineer and founder of the freelance studio Joys Lab (SASU). I just wrapped up a 30-month mission at Accor where I led the rewrite of the booking funnel (Vue 2 → Vue 3 / Nuxt 3) and built a dedicated Node.js BFF, as technical lead on front-end architecture and code quality.",
-    "p2": "Versatile fullstack profile: Vue/Nuxt and React/React Native front-end, Flutter mobile, Node.js back-end (Express, Fastify, NestJS) and Laravel. I have tech-lead experience on multi-stack projects, with a strong testing culture (Vitest, Playwright), CI/CD and design systems.",
-    "p3": "I have been shipping AI in production since 2024: RAG assistants, embeddings, prompt engineering and Python microservices. I run several SaaS in production and publish trimly, an open-source tool on npm. 15 years in field sales beforehand give me a genuine business sense."
   },
   "skills": {
     "title": "Skills & Expertise",
@@ -129,14 +113,7 @@
     }
   },
   "projects": {
-    "title": "Featured Projects",
-    "case_study": "View case study",
-    "visit": "Visit website",
-    "featured": "Featured",
     "other_title": "Other projects"
-  },
-  "experience": {
-    "title": "Experience Timeline"
   },
   "contact": {
     "title": "Send Me a Message",
@@ -153,18 +130,7 @@
     "linkedin": "LinkedIn",
     "github": "GitHub"
   },
-  "modal": {
-    "overview": "Overview",
-    "problemsSolved": "Problems Solved",
-    "problem": "Problem",
-    "solution": "Solution",
-    "impact": "Impact",
-    "techStack": "Tech Stack",
-    "visit": "Visit website",
-    "close": "Close"
-  },
   "legal": {
-    "rights": "Mikaël Wawrziczny — All rights reserved.",
     "company": "Joys Lab SASU",
     "location": "Normandy, France · full remote"
   },
@@ -182,7 +148,6 @@
   },
   "journey": {
     "title": "Journey",
-    "in_progress": "in progress",
-    "certification": "Certification"
+    "in_progress": "in progress"
   }
 }

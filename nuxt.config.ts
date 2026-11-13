@@ -37,24 +37,24 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Portfolio de Mikaël Wawrziczny – Senior Fullstack Engineer freelance expert Node.js, Vue 3, Nuxt 3, React, TypeScript et IA.',
+            'Portfolio de Mikaël Wawrziczny – Senior Software & AI Engineer freelance : TypeScript, Vue / Nuxt, Node.js et LLM en production. Lead AI Engineer chez AI Sisters Lab.',
         },
         { name: 'robots', content: 'index, follow' },
         { name: 'author', content: 'Mikaël Wawrziczny' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: 'Mikaël Wawrziczny – Senior Fullstack Engineer' },
+        { property: 'og:title', content: 'Mikaël Wawrziczny – Senior Software & AI Engineer' },
         {
           property: 'og:description',
           content:
-            'Développeur fullstack freelance senior : Node.js, Vue.js, Nuxt.js, React, NestJS, TypeScript, GraphQL et IA.',
+            'Senior Software & AI Engineer freelance : TypeScript, Vue / Nuxt, Node.js, NestJS et LLM en production (RAG, agents).',
         },
         { property: 'og:url', content: 'https://mikaelw.com' },
         { property: 'og:image', content: 'https://mikaelw.com/og-image.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Mikaël Wawrziczny – Senior Fullstack Engineer' },
+        { name: 'twitter:title', content: 'Mikaël Wawrziczny – Senior Software & AI Engineer' },
         {
           name: 'twitter:description',
-          content: 'Développeur fullstack freelance senior expert Node.js, Vue, Nuxt, React, TypeScript, GraphQL et IA.',
+          content: 'Senior Software & AI Engineer freelance : TypeScript, Vue / Nuxt, Node.js, NestJS et LLM en production (RAG, agents).',
         },
         { name: 'twitter:image', content: 'https://mikaelw.com/og-image.png' },
       ],
@@ -64,7 +64,6 @@ export default defineNuxtConfig({
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap',
         },
-        { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' },
       ],
     },
   },

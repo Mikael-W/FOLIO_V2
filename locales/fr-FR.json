@@ -1,10 +1,7 @@
 {
   "nav": {
     "skip": "Aller au contenu",
-    "home": "Accueil",
-    "about": "À propos",
     "skills": "Compétences",
-    "experience": "Expérience",
     "projects": "Projets",
     "contact": "Contact",
     "toggle_dark": "Activer le mode sombre",
@@ -18,11 +15,6 @@
     "main_aria": "Navigation principale"
   },
   "hero": {
-    "alt_img": "Photo de Mikaël Wawrziczny",
-    "download_cv": "Télécharger mon CV",
-    "aria_download": "Télécharger mon CV en PDF",
-    "contact_me": "Me contacter",
-    "aria_contact": "Aller à la section contact",
     "label": "Senior · Lead AI Engineer {'@'} AI Sisters Lab · Joys Lab SASU",
     "title_line1": "Software",
     "title_line2": "& AI Engineer.",
@@ -51,9 +43,7 @@
     "certification_in_progress": "en cours"
   },
   "ai_chat": {
-    "title": "Assistant IA – Posez vos questions",
     "placeholder": "Posez votre question…",
-    "sending": "Envoi…",
     "typing": "L’assistant écrit…",
     "send_button": "Envoyer",
     "greeting": "Bonjour, je suis l'IA de Mikaël. Posez-moi vos questions sur son expérience, son parcours ou ses compétences techniques.",
@@ -82,12 +72,6 @@
       "availability": "Dispo pour une mission ?",
       "english": "Switch to English"
     }
-  },
-  "about": {
-    "title": "À propos de moi",
-    "p1": "Je suis Senior Fullstack Engineer et fondateur du studio freelance Joys Lab (SASU). Je sors d’une mission de 30 mois chez Accor où j’ai piloté la refonte du couloir de réservation (Vue 2 → Vue 3 / Nuxt 3) et développé un BFF Node.js dédié, en tant que référent technique sur l’architecture front et la qualité de code.",
-    "p2": "Profil fullstack polyvalent : front Vue/Nuxt et React/React Native, mobile Flutter, back Node.js (Express, Fastify, NestJS) et Laravel. J’ai une expérience de tech lead sur des projets multi-stacks, avec une forte culture des tests (Vitest, Playwright), de la CI/CD et du design system.",
-    "p3": "J’intègre l’IA en production depuis 2024 : assistants RAG, embeddings, prompt engineering et microservices Python. J’opère plusieurs SaaS en production et publie trimly, un outil open source sur npm. 15 ans de commercial terrain en amont m’apportent un vrai sens business."
   },
   "skills": {
     "title": "Compétences & Expertise",
@@ -129,14 +113,7 @@
     }
   },
   "projects": {
-    "title": "Projets mis en avant",
-    "case_study": "Voir l'étude de cas",
-    "visit": "Visiter le site",
-    "featured": "Mis en avant",
     "other_title": "Autres projets"
-  },
-  "experience": {
-    "title": "Parcours professionnel"
   },
   "contact": {
     "title": "Envoyer un message",
@@ -153,18 +130,7 @@
     "linkedin": "LinkedIn",
     "github": "GitHub"
   },
-  "modal": {
-    "overview": "Aperçu",
-    "problemsSolved": "Problèmes résolus",
-    "problem": "Problème",
-    "solution": "Solution",
-    "impact": "Impact",
-    "techStack": "Technologies utilisées",
-    "visit": "Visiter le site",
-    "close": "Fermer"
-  },
   "legal": {
-    "rights": "Mikaël Wawrziczny — Tous droits réservés.",
     "company": "Joys Lab SASU",
     "location": "Normandie, France · full remote"
   },
@@ -182,7 +148,6 @@
   },
   "journey": {
     "title": "Parcours",
-    "in_progress": "en cours",
-    "certification": "Certification"
+    "in_progress": "en cours"
   }
 }
