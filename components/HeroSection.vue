@@ -1,56 +1,71 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { computed } from 'vue';
+import { useBrain } from '@/composables/useBrain';
 import { useCV } from '@/composables/useCV';
 
-const visible = ref(false);
-onMounted(() => (visible.value = true));
+const { getCertifications } = useBrain();
+const { cvUrl } = useCV();
 
-const { cvUrl, fileName } = useCV();
+const certification = computed(() => getCertifications()[0]);
+const isCertificationInProgress = computed(() => certification.value?.status === 'in_progress');
+
+const factKeys = ['base', 'mode', 'missions', 'certification', 'front', 'back', 'ai'] as const;
 </script>
 
 <template>
   <section
-    class="pt-32 pb-20 px-6 bg-lightBg dark:bg-lightDark text-lightDark dark:text-lightWhite transition-all"
+    id="top"
     aria-labelledby="hero-title"
+    class="mx-auto max-w-[1280px] px-[clamp(20px,4vw,48px)] pb-20 pt-[clamp(48px,7vw,96px)]"
   >
-    <div
-      class="max-w-4xl mx-auto text-center transform transition-all duration-700"
-      :class="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'"
+    <p class="m-0 font-mono text-[13px] uppercase tracking-[0.08em] text-muted">{{ $t('hero.label') }}</p>
+
+    <h1
+      id="hero-title"
+      class="m-0 mt-6 font-display text-[clamp(64px,10.5vw,164px)] font-semibold leading-[0.9] tracking-[-0.045em] text-ink"
     >
-      <img
-        src="/assets/mw_img/mw_profil.png"
-        :alt="$t('hero.alt_img')"
-        class="w-40 h-40 rounded-full mx-auto object-cover shadow-xl mb-8 ring-2 ring-white dark:ring-black"
-      />
+      {{ $t('hero.title_line1') }}<br />{{ $t('hero.title_line2') }}
+    </h1>
 
-      <h1 id="hero-title" class="text-4xl md:text-5xl font-bold tracking-tight">
-        {{ $t('hero.title') }}
-      </h1>
-      <p class="text-lg md:text-xl mt-3 text-grayText dark:text-gray-300 font-light">
-        {{ $t('hero.subtitle') }}
+    <div
+      class="mt-16 grid gap-10 border-t-2 border-ink pt-8 [grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))]"
+    >
+      <p class="m-0 text-[22px] leading-[1.45] tracking-[-0.01em] text-ink [text-wrap:pretty]">
+        {{ $t('hero.lead') }}
       </p>
 
-      <p class="max-w-2xl mx-auto mt-6 text-grayText dark:text-gray-400 text-base md:text-lg leading-relaxed">
-        {{ $t('hero.description') }}
-      </p>
+      <dl class="m-0 grid content-start gap-x-5 gap-y-3 [grid-template-columns:88px_minmax(0,1fr)]">
+        <template v-for="factKey in factKeys" :key="factKey">
+          <dt class="pt-[3px] font-mono text-xs uppercase tracking-[0.06em] text-muted">
+            {{ $t(`hero.facts.${factKey}`) }}
+          </dt>
+          <dd v-if="factKey === 'certification' && certification" data-test="certification" class="m-0 text-base">
+            {{ certification.name }}
+            <span
+              v-if="isCertificationInProgress"
+              data-test="certification-badge"
+              class="ml-1 whitespace-nowrap bg-signal px-1.5 py-0.5 font-mono text-xs text-on-signal"
+            >
+              {{ $t('hero.certification_in_progress') }}
+            </span>
+          </dd>
+          <dd v-else-if="factKey !== 'certification'" class="m-0 text-base">
+            {{ $t(`hero.facts_values.${factKey}`) }}
+          </dd>
+        </template>
+      </dl>
 
-      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
-        <a
-          :href="cvUrl"
-          :download="fileName"
-          :aria-label="$t('hero.aria_download')"
-          class="px-8 py-3 bg-iosBlue text-white rounded-full font-medium shadow-sm transition-colors focus:ring-2 focus:ring-intenseBlue focus:ring-offset-2 dark:focus:ring-offset-black"
-        >
-          {{ $t('hero.download_cv') }}
-        </a>
-
-        <NuxtLink
-          to="/#contact"
-          :aria-label="$t('hero.aria_contact')"
-          class="px-8 py-3 bg-white dark:bg-darkGray text-lightDark dark:text-lightWhite rounded-full font-medium shadow-sm hover:bg-[#f0f0f0] dark:hover:bg-darkGray border border-[#d7d7d7] dark:border-darkGray transition-colors focus:ring-2 focus:ring-intenseBlue focus:ring-offset-2 dark:focus:ring-offset-black"
-        >
-          {{ $t('hero.contact_me') }}
-        </NuxtLink>
+      <div class="flex flex-col gap-4 self-start bg-signal p-7 text-on-signal">
+        <span class="font-mono text-xs uppercase tracking-[0.08em]">{{ $t('hero.availability_label') }}</span>
+        <p class="m-0 font-display text-2xl font-medium leading-[1.2] tracking-[-0.02em]">
+          {{ $t('hero.availability_text') }}
+        </p>
+        <div class="flex flex-wrap gap-2.5">
+          <BaseButton variant="ink" href="#contact" arrow>{{ $t('hero.cta_contact') }}</BaseButton>
+          <BaseButton variant="outline" :href="cvUrl" download class="border-on-signal text-on-signal">
+            {{ $t('hero.cta_cv') }}
+          </BaseButton>
+        </div>
       </div>
     </div>
   </section>
