@@ -2,7 +2,7 @@ import type { AIAction } from '@/types/chat';
 import { useColorMode } from '@vueuse/core';
 import { useI18n } from 'vue-i18n';
 
-export async function useAIAction() {
+export function useAIAction() {
   if (import.meta.server) {
     return { handleAIAction: () => {} };
   }
@@ -38,9 +38,8 @@ export async function useAIAction() {
       }
 
       case 'downloadCV': {
-        const file = action.payload === 'fr' ? '/CV_MW_FR.pdf' : action.payload === 'en' ? '/CV_MW_EN.pdf' : null;
-
-        if (file) window.open(file, '_blank');
+        const cvLocale = action.payload === 'fr' || action.payload === 'en' ? action.payload : locale.value;
+        window.open(cvLocale === 'en' ? '/CV_MW_EN.pdf' : '/CV_MW_FR.pdf', '_blank');
         break;
       }
     }

@@ -1,5 +1,5 @@
 import OpenAI from 'openai';
-import { defineEventHandler, readBody } from 'h3';
+import { createError, defineEventHandler, readBody } from 'h3';
 import type { ChatMessage, ChatRequestBody, AIResponse } from '~/types/chat';
 
 export default defineEventHandler(async (event) => {
@@ -10,9 +10,7 @@ export default defineEventHandler(async (event) => {
     content: String(msg.content).slice(0, 2000),
   }));
 
-  const lastMessage = incomingMessages.at(-1)?.content.toLowerCase() || '';
-
-  const requestedLang = lastMessage.includes('english') || lastMessage.includes('"payload":"en"') ? 'en' : 'fr';
+  const requestedLang = body.locale === 'en' ? 'en' : 'fr';
 
   const brain =
     requestedLang === 'en'
@@ -67,11 +65,20 @@ export default defineEventHandler(async (event) => {
     apiKey: process.env.OPENAI_API_KEY,
   });
 
-  const completion = await client.chat.completions.create({
-    model: 'gpt-4o-mini',
-    response_format: { type: 'json_object' },
-    messages: [{ role: 'system', content: systemPrompt }, ...incomingMessages],
-  });
+  const model = process.env.OPENAI_CHAT_MODEL || 'gpt-4o-mini';
+
+  let completion: OpenAI.Chat.Completions.ChatCompletion;
+  try {
+    completion = await client.chat.completions.create({
+      model,
+      response_format: { type: 'json_object' },
+      messages: [{ role: 'system', content: systemPrompt }, ...incomingMessages],
+    });
+  } catch (error) {
+    const { status, code } = error as { status?: number; code?: string };
+    console.error('[CHAT ERROR]', { status, code, model });
+    throw createError({ statusCode: 502, statusMessage: 'assistant_unavailable' });
+  }
 
   const raw = completion.choices[0]?.message?.content ?? '';
 

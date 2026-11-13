@@ -22,3 +22,7 @@ export interface ChatRequestBody {
   locale?: string;
   colorMode?: string;
 }
+
+export interface DisplayedChatMessage extends ChatMessage {
+  action?: AIAction;
+}
