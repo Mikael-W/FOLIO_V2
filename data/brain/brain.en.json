@@ -18,6 +18,21 @@
       "github": "https://github.com/Mikael-W"
     }
   },
+  "positioning": {
+    "headline": "Senior Software & AI Engineer: connects the interface, the BFF and the models, and stays accountable for what ships to production.",
+    "targetMissions": [
+      "Senior front-end missions (Vue / Nuxt, React)",
+      "TypeScript fullstack missions (Node.js, NestJS, BFF)",
+      "AI missions: POCs, MVPs, LLM integration, agents, RAG"
+    ],
+    "strengths": [
+      "Nearly 10 years of development, from e-commerce to AI",
+      "Large-account references: Accor, WeSave (Amundi group)",
+      "AI in production since 2024, Claude Certified Architect – Professional certification in progress",
+      "Quality: TDD, Vitest, Playwright, WCAG / RGAA accessibility",
+      "Product sense and comfort with large accounts from 15 years on the business side of digital and e-commerce"
+    ]
+  },
   "availability": {
     "status": "Available",
     "freelanceSince": 2017,
@@ -32,8 +47,7 @@
   },
   "languages": {
     "french": "Native",
-    "english": "Fluent (B2/C1)",
-    "others": []
+    "english": "Fluent (B2/C1)"
   },
   "skills": {
     "technical": {
@@ -227,9 +241,6 @@
         "npm",
         "Apache-2.0"
       ],
-      "logo": "",
-      "icon": "fa-brands fa-npm",
-      "gradient": "from-red-400 to-red-600",
       "url": "https://www.npmjs.com/package/@trimly/core",
       "featured": true,
       "slug": "trimly",
@@ -251,9 +262,6 @@
         "microservices",
         "Crypto"
       ],
-      "logo": "/projects_logo/forenlyst.png",
-      "icon": "fa-solid fa-shield-halved",
-      "gradient": "from-indigo-400 to-indigo-600",
       "url": "https://forenlyst.com/fr",
       "slug": "forenlyst",
       "problemsSolved": [
@@ -266,7 +274,7 @@
     },
     {
       "name": "Portfolio — Mikaël Wawrziczny",
-      "description": "Personal portfolio built with Nuxt 3, fully typed with TypeScript, featuring advanced SEO, i18n, automatic dark mode, animations, an integrated AI assistant and a custom design system.",
+      "description": "Personal portfolio in Nuxt 3 / TypeScript: Swiss grid design, FR / EN, light and dark themes, accessibility (WCAG / RGAA), built-in AI assistant that answers from this profile and acts on the site, llms.txt for AI agents, Vitest tests.",
       "stack": [
         "Nuxt 3",
         "TypeScript",
@@ -275,15 +283,13 @@
         "SSR",
         "AI"
       ],
-      "logo": "/projects_logo/logo-mw.png",
-      "gradient": "from-orange-400 to-orange-600",
-      "url": "https://github.com/Mikael-W/FOLIO_V2",
+      "url": "https://mikaelw.com",
       "slug": "portfolio",
       "problemsSolved": [
         {
-          "problem": "Senior freelancers often struggle to showcase a modern, fast, multilingual portfolio that truly reflects their skill level.",
-          "solution": "Creation of a highly optimized Nuxt 3 portfolio: hybrid SSR/CSR rendering, Apple-style design system, integrated AI chat, animated pages, scalable architecture, persistent dark/light mode.",
-          "impact": "Exceptional performance, increased recruiter conversion, direct demonstration of Nuxt 3 / TypeScript / AI expertise."
+          "problem": "Show a senior Software & AI profile in practice, not just describe it.",
+          "solution": "A clean, accessible Nuxt 3 portfolio with an AI assistant that answers about the background, switches language or theme and sends the CV, plus an llms.txt for AI agents.",
+          "impact": "A direct demonstration of front-end, AI and quality skills, readable by recruiters and AI agents alike."
         }
       ]
     },
@@ -296,8 +302,6 @@
         "OpenAI API",
         "Geolocation"
       ],
-      "logo": "/projects_logo/oss-nation_logo.png",
-      "gradient": "from-blue-400 to-blue-600",
       "url": "https://oss-nation.com/",
       "slug": "oss-nation",
       "problemsSolved": [
@@ -318,8 +322,6 @@
         "Firestore",
         "Google Maps"
       ],
-      "logo": "/projects_logo/chasse_en_cours.png",
-      "gradient": "from-yellow-400 to-yellow-600",
       "url": "https://play.google.com/store/apps/details?id=com.mw.chasse_en_cours&hl=fr",
       "slug": "chasse-en-cours",
       "problemsSolved": [
@@ -339,8 +341,6 @@
         "SEO",
         "Reusable Components"
       ],
-      "logo": "/projects_logo/joys_logo.png",
-      "gradient": "from-pink-400 to-pink-600",
       "url": "https://www.joys-agency.com/",
       "slug": "joys-agency",
       "problemsSolved": [
@@ -459,33 +459,31 @@
         "duration": "Freelance studio — fixed-price projects"
       },
       "stack": [
+        "TypeScript",
         "Nuxt 3",
+        "Vue 3",
         "Next.js",
-        "React Native",
         "NestJS",
         "Node.js",
-        "OpenAI API",
-        "RAG",
-        "Vue 3",
+        "React Native",
         "Flutter",
         "Firebase",
-        "Pinia",
-        "TypeScript",
-        "Laravel",
-        "Fastify",
-        "MongoDB",
-        "DataTourisme"
+        "OpenAI API",
+        "RAG"
       ],
       "highlights": [
-        "Founder of the freelance development studio (SASU)",
-        "My Liste Chaude — React Native / Expo app (Firebase, geolocation, deep linking, CSV/Excel import, gamification), full EAS pipeline",
-        "Forenlyst — deepfake detection & forensic certification (Next.js, NestJS + Python microservices, crypto signing)",
-        "SaaS in production: portfolio + AI assistant, OSS-Nation (BJJ platform + AI analysis)",
-        "trimly — open-source tool published on npm (TypeScript / Node, Apache-2.0)",
-        "OpenAI API in production since 2024 (RAG, embeddings, prompt engineering)",
-        "Mon Commerce Interactif (MCI) (2023) — Web + mobile ecosystem for retailers (fixed-price — MVP). Vue / Nuxt 3 admin dashboard (menus, wines, clients, uploads, agents) ; Flutter mobile app (iOS + Android): QR-code onboarding, multi-profile ; Firebase architecture: Auth, Firestore, Cloud Storage, security rules ; Refactor, industrialization, CI",
-        "Gritchen (2023) — Insurtech platform (fixed-price — MVP). Insurtech platform — business dashboards (contracts, claims, client area) ; Typed Vue 3 / Pinia front-end, complex multi-step forms ; Laravel back-end + Node.js / Fastify microservices ; Pinia state architecture and API integration",
-        "Place2Be (2022) — Mobile app + event back-end (fixed-price — POC). Flutter mobile app: geolocated events around the user ; Ingestion and management of 300,000 events from the DataTourisme API ; TypeScript / Node.js back-end, API architecture and security"
+        "Freelance development studio (SASU): SaaS, web and mobile apps, AI, delivered as fixed-price projects",
+        "Koifr — AI-powered iOS app recommending things to do nearby, live on the App Store",
+        "Forenlyst — deepfake detection and forensic certification (Next.js, NestJS, Python microservices, cryptographic signing)",
+        "OSS Nation — international BJJ platform with AI analysis (Nuxt 3, Firebase, OpenAI API)",
+        "trimly — open-source CLI tracking Claude Code token usage, published on npm (TypeScript, Apache-2.0)",
+        "My Liste Chaude — React Native / Expo app (Firebase, geolocation, deep linking, CSV/Excel import, gamification), EAS pipeline",
+        "Chasse en Cours — Flutter safety app for hunters and walkers, published on the Play Store",
+        "mikaelw.com portfolio — Nuxt 3, built-in AI assistant, llms.txt, accessibility, Vitest tests",
+        "MCI (2023, fixed-price MVP) — Nuxt 3 dashboard and Flutter iOS / Android app for retailers, Firebase architecture",
+        "Gritchen (2023, fixed-price MVP) — insurtech platform: Vue 3 / Pinia front end, Laravel back end and Node.js / Fastify microservices",
+        "Place2Be (2022, fixed-price POC) — Flutter app for geolocated events, 300,000 events via the DataTourisme API, Node.js back end",
+        "LLMs in production since 2024 (RAG, embeddings, prompt engineering, structured JSON outputs)"
       ],
       "description": "Freelance development studio: SaaS, mobile apps and AI integration, delivered as fixed-price projects.",
       "featured": true,
@@ -589,29 +587,44 @@
     "en": "/CV_MW_EN.pdf"
   },
   "keywords": [
-    "Senior fullstack",
+    "Senior Software & AI Engineer",
+    "TypeScript fullstack",
+    "AI Engineering",
+    "LLM",
+    "AI agents",
+    "RAG",
+    "OpenAI API",
+    "Anthropic API",
+    "Claude",
+    "Qwen",
+    "AWS Bedrock",
+    "Google Cloud",
+    "Vue 3",
+    "Nuxt 3",
+    "Pinia",
+    "React",
+    "Next.js",
+    "React Native",
+    "Flutter",
     "Node.js",
     "NestJS",
-    "Vue.js",
-    "Nuxt 3",
-    "React",
-    "React Native",
-    "Next.js",
-    "Laravel",
     "GraphQL",
     "BFF",
-    "Firebase",
-    "SSR",
-    "Playwright",
+    "Design system",
+    "Accessibility",
+    "WCAG",
+    "RGAA",
     "Vitest",
-    "TypeScript",
-    "OpenAI API",
-    "RAG",
-    "AI Engineering",
-    "trimly",
-    "Technical lead",
+    "Playwright",
+    "TDD",
     "Freelance",
-    "BJJ"
+    "Joys Lab",
+    "AI Sisters Lab",
+    "WeSave",
+    "Amundi",
+    "Accor",
+    "Koifr",
+    "trimly"
   ],
   "actions": {
     "switchTheme": {
@@ -630,6 +643,15 @@
         "send me your CV",
         "I want the English version of your CV",
         "French CV please"
+      ]
+    },
+    "switchLanguage": {
+      "description": "Switches the website to French or English.",
+      "examples": [
+        "switch to English",
+        "passe en français",
+        "show the site in French",
+        "english please"
       ]
     }
   },
@@ -714,5 +736,37 @@
       "solution": "Vue 3 / Nuxt 3 rebuild, dedicated Node.js BFF, GraphQL with caching and fragments, hybrid SSR/CSR.",
       "impact": "Vitest + Playwright tests automated in CI; front-end architecture lead for a team of 12."
     }
+  ],
+  "faq": [
+    {
+      "question": "Is he available?",
+      "answer": "He is open to new missions. For dates and format, the simplest is to contact him through the site's form or by email."
+    },
+    {
+      "question": "Does he work remotely?",
+      "answer": "He prefers full remote; hybrid is possible with at least 3 remote days per week. He can travel anywhere in Europe."
+    },
+    {
+      "question": "What is his rate?",
+      "answer": "His daily rate ranges from €450 to €600 depending on the mission, its length and the stack. Contact him for a precise quote."
+    },
+    {
+      "question": "How can I contact him?",
+      "answer": "Through the site's contact form, by email (mikaelw@gmail.com) or on LinkedIn."
+    },
+    {
+      "question": "What is his AI experience?",
+      "answer": "He has used generative AI since 2023 and integrated LLMs in production since 2024 (RAG, agents, structured outputs). He is Lead AI Engineer at AI Sisters Lab (AI POCs and MVPs) and is taking Anthropic's Claude Certified Architect – Professional certification."
+    },
+    {
+      "question": "Does he do accessibility?",
+      "answer": "Yes: accessibility (WCAG, RGAA, ARIA, keyboard navigation, screen readers) is part of his default practice."
+    }
+  ],
+  "assistantGuidance": [
+    "Talk about Mikaël in the third person, factual and concise.",
+    "Answer only from this profile; if something is not in it, say so and suggest contacting him.",
+    "Never state the contractual status of a mission (freelance, employee, consulting firm, umbrella company): suggest a direct conversation instead.",
+    "Offer the CV or the contact form when the question is about a mission."
   ]
 }

@@ -128,6 +128,8 @@ describe('POST /api/chat', () => {
         // Assert
         const systemPrompt = createCompletion.mock.calls[0][0].messages[0].content;
         expect(systemPrompt).toContain('ALWAYS answer in: English');
+        expect(systemPrompt).toContain('assistantGuidance');
+        expect(systemPrompt).toContain('faq');
       });
     });
   });

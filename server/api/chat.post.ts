@@ -48,6 +48,8 @@ export default defineEventHandler(async (event) => {
 
     You must ALWAYS answer in: ${requestedLang === 'en' ? 'English' : 'French'}.
 
+    Answer only from the knowledge base below. Follow its "assistantGuidance" rules, use its "faq" answers when a question matches, and use "positioning" to explain what missions fit.
+
     You must ALWAYS output a valid JSON object:
     {
       "reply": "<text>",
