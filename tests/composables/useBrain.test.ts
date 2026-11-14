@@ -82,7 +82,7 @@ describe('useBrain', () => {
         const slugs = sideProjects.map((project) => project.slug);
 
         // Assert
-        expect(slugs).toEqual(['trimly', 'forenlyst', 'my-liste-chaude', 'chasse-en-cours', 'oss-nation', 'discoverit']);
+        expect(slugs).toEqual(['koifr', 'trimly', 'forenlyst', 'my-liste-chaude', 'chasse-en-cours', 'oss-nation']);
         expect(sideProjects.find((project) => project.slug === 'oss-nation')?.url).toBe('https://oss-nation.com/');
       });
     });

@@ -143,6 +143,17 @@
   ],
   "sideProjects": [
     {
+      "name": "Koifr",
+      "description": "Koifr — que faire autour de vous : app iOS qui recommande événements, concerts, restaurants, randos et sorties à partir de demandes en langage naturel. En ligne sur l'App Store.",
+      "tech": [
+        "iOS",
+        "IA",
+        "Recherche en langage naturel",
+        "Géolocalisation"
+      ],
+      "slug": "koifr"
+    },
+    {
       "name": "trimly",
       "description": "Outil open source (CLI TypeScript/Node) de suivi de consommation de tokens pour Claude Code. Packages @trimly/core & @trimly/cli publiés sur npm, sous licence Apache-2.0.",
       "tech": [
@@ -199,17 +210,6 @@
         "OpenAI API"
       ],
       "slug": "oss-nation"
-    },
-    {
-      "name": "DiscoverIt API",
-      "description": "API mondiale d'événements culturels (géolocalisation, filtres, régions).",
-      "tech": [
-        "Node.js",
-        "Bun",
-        "MongoDB",
-        "API REST"
-      ],
-      "slug": "discoverit"
     }
   ],
   "projects": [
@@ -346,6 +346,18 @@
           "impact": "Amélioration immédiate de la crédibilité et de l’image de marque auprès des clients et partenaires."
         }
       ]
+    },
+    {
+      "name": "Koifr",
+      "description": "Koifr — que faire autour de vous : app iOS qui recommande événements, concerts, restaurants, randos et sorties à partir de demandes en langage naturel. En ligne sur l'App Store.",
+      "stack": [
+        "iOS",
+        "IA",
+        "Recherche en langage naturel",
+        "Géolocalisation"
+      ],
+      "url": "https://apps.apple.com/fr/app/koifr/id6787132127",
+      "slug": "koifr"
     }
   ],
   "experience": [
