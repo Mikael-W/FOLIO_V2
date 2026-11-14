@@ -26,7 +26,15 @@ const columns = ['problem', 'solution', 'impact'] as const;
     </div>
 
     <div class="mt-7">
-      <img v-if="caseStudy.image" :src="caseStudy.image" :alt="caseStudy.title" class="h-[280px] w-full object-cover" />
+      <img
+        v-if="caseStudy.image"
+        :src="caseStudy.image"
+        :alt="caseStudy.title"
+        width="1600"
+        height="900"
+        loading="lazy"
+        class="h-[280px] w-full border border-line object-cover object-top"
+      />
       <BaseImagePlaceholder v-else :label="`${$t('cases.image_label')} — ${shortTitle}`" />
     </div>
 

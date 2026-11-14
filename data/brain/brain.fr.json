@@ -723,7 +723,7 @@
         "POC",
         "MVP"
       ],
-      "image": null,
+      "image": "/cases/ai-sisters.webp",
       "url": null,
       "problem": "Des DSI et équipes Innovation qui veulent valider l'IA sur leurs propres cas d'usage, sans s'engager d'emblée dans un projet long.",
       "solution": "Cadrage et faisabilité technique, puis POC et MVP IA livrés par le Lab : agents, intégration de LLM, RAG.",
@@ -739,7 +739,7 @@
         "Storybook",
         "MCP"
       ],
-      "image": null,
+      "image": "/cases/wesave.webp",
       "url": null,
       "problem": "Une application de conseil financier multi-marques en Vue 2, bâtie sur un kit UI (vue-material) incompatible avec Vue 3.",
       "solution": "Vuex → Pinia, Pinia Colada pour le cache serveur, remplacement des composants par le design system wesave-components.",
@@ -755,7 +755,7 @@
         "GraphQL",
         "Playwright"
       ],
-      "image": null,
+      "image": "/cases/accor.webp",
       "url": null,
       "problem": "Moderniser le couloir de réservation Vue 2 d'un site servi en 17 langues et pays.",
       "solution": "Refonte Vue 3 / Nuxt 3, BFF Node.js dédié, GraphQL avec caching et fragments, SSR/CSR hybride.",
