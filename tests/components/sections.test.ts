@@ -50,7 +50,7 @@ describe('Page sections', () => {
 
           // Assert
           expect(wrapper.findAll('[data-test="highlight"]')).toHaveLength(4);
-          expect(wrapper.find('[data-test="highlight"]').text()).toContain('8');
+          expect(wrapper.find('[data-test="highlight"]').text()).toContain('10');
           expect(wrapper.find('[data-test="highlight"]').text()).toContain('ans');
         });
       });

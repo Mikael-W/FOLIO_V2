@@ -2,7 +2,7 @@
   "profile": {
     "name": "Mikaël Wawrziczny alias Mika",
     "title": "Senior Software & AI Engineer — Lead AI Engineer @ AI Sisters Lab",
-    "about": "Ingénieur logiciel & IA freelance, 8 ans d'expérience, fondateur du studio Joys Lab (SASU). Lead AI Engineer chez AI Sisters Lab (POC et MVP IA pour les DSI) et développeur front senior sur la migration Vue 3 de WeSave. Fullstack TypeScript : Vue/Nuxt, React/React Native, Node.js/NestJS, LLM en production depuis 2024 (RAG, agents, sorties structurées). En cours de certification Claude Certified Architect – Professional (Anthropic). Accessibilité intégrée par défaut (WCAG, RGAA). 15 ans de terrain commercial avant le développement : sens business, pédagogie, aisance grand compte.",
+    "about": "Ingénieur logiciel & IA freelance, près de 10 ans d'expérience (développeur depuis 2017, débuts dans l'e-commerce), fondateur du studio Joys Lab (SASU). Lead AI Engineer chez AI Sisters Lab (POC et MVP IA pour les DSI) et développeur front senior sur la migration Vue 3 de WeSave. Fullstack TypeScript : Vue/Nuxt, React/React Native, Node.js/NestJS, LLM en production depuis 2024 (RAG, agents, sorties structurées). En cours de certification Claude Certified Architect – Professional (Anthropic). Accessibilité intégrée par défaut (WCAG, RGAA). Avant le code, 15 ans côté business dans le digital et l'e-commerce : sens produit, pédagogie, aisance grand compte.",
     "personal": {
       "maritalStatus": "Marié",
       "children": 4,
@@ -105,7 +105,7 @@
       "Gestion d'équipes",
       "Organisation Agile",
       "Travail avec produit / QA / design",
-      "Sens business (15 ans commercial)",
+      "Sens business (15 ans de digital et d'e-commerce)",
       "Leadership technique"
     ]
   },
@@ -121,7 +121,7 @@
       "year": "2005"
     },
     {
-      "school": "Parcours commercial (15 ans terrain)",
+      "school": "Parcours business, digital & e-commerce (15 ans)",
       "degree": "Century 21, VRP I@D, responsable secteur digital chez Leboncoin (Agriaffaires & MachineryZone)",
       "year": "2005 - 2020"
     }
@@ -641,9 +641,9 @@
   ],
   "highlights": [
     {
-      "value": "8",
+      "value": "10",
       "unit": "ans",
-      "label": "de fullstack TypeScript, de l'interface au BFF"
+      "label": "ou presque : développeur depuis 2017, de l'e-commerce à l'IA"
     },
     {
       "value": "2024",
@@ -658,7 +658,7 @@
     {
       "value": "15",
       "unit": "ans",
-      "label": "de terrain commercial avant le code"
+      "label": "dans le digital et l'e-commerce, côté business avant le code"
     }
   ],
   "caseStudies": [

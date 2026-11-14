@@ -2,7 +2,7 @@
   "profile": {
     "name": "Mikaël Wawrziczny aka Mika",
     "title": "Senior Software & AI Engineer — Lead AI Engineer @ AI Sisters Lab",
-    "about": "Freelance software & AI engineer with 8 years of experience, founder of the Joys Lab studio (SASU). Lead AI Engineer at AI Sisters Lab (AI POCs and MVPs for IT departments) and senior front-end developer on WeSave's Vue 3 migration. TypeScript fullstack: Vue/Nuxt, React/React Native, Node.js/NestJS, LLMs in production since 2024 (RAG, agents, structured outputs). Currently pursuing the Claude Certified Architect – Professional certification (Anthropic). Accessibility built in by default (WCAG, RGAA). 15 years of field sales before development: business sense, teaching skills, comfort in large-account environments.",
+    "about": "Freelance software & AI engineer with nearly 10 years of experience (developer since 2017, starting in e-commerce), founder of the Joys Lab studio (SASU). Lead AI Engineer at AI Sisters Lab (AI POCs and MVPs for IT departments) and senior front-end developer on WeSave's Vue 3 migration. TypeScript fullstack: Vue/Nuxt, React/React Native, Node.js/NestJS, LLMs in production since 2024 (RAG, agents, structured outputs). Currently pursuing the Claude Certified Architect – Professional certification (Anthropic). Accessibility built in by default (WCAG, RGAA). Before code, 15 years on the business side of digital and e-commerce: product sense, teaching skills, comfort in large-account environments.",
     "personal": {
       "maritalStatus": "Married",
       "children": 4,
@@ -105,7 +105,7 @@
       "Team leadership",
       "Agile organisation",
       "Collaboration with product / QA / design",
-      "Business mindset (15 years in sales)",
+      "Business mindset (15 years in digital and e-commerce)",
       "Technical leadership"
     ]
   },
@@ -121,7 +121,7 @@
       "year": "2005"
     },
     {
-      "school": "Sales career (15 years in the field)",
+      "school": "Business, digital & e-commerce career (15 years)",
       "degree": "Century 21, I@D sales rep, digital sector manager at Leboncoin (Agriaffaires & MachineryZone)",
       "year": "2005 - 2020"
     }
@@ -641,9 +641,9 @@
   ],
   "highlights": [
     {
-      "value": "8",
+      "value": "10",
       "unit": "years",
-      "label": "of TypeScript fullstack, from the interface to the BFF"
+      "label": "or nearly: developer since 2017, from e-commerce to AI"
     },
     {
       "value": "2024",
@@ -658,7 +658,7 @@
     {
       "value": "15",
       "unit": "years",
-      "label": "of field sales before code"
+      "label": "in digital and e-commerce, on the business side before code"
     }
   ],
   "caseStudies": [
