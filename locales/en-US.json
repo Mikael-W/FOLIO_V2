@@ -73,7 +73,8 @@
       "stack_ai": "His AI stack?",
       "availability": "Available for a mission?",
       "english": "Passer en français"
-    }
+    },
+    "rate_limited": "You've asked a lot of questions at once. Please wait a minute and try again."
   },
   "skills": {
     "title": "Skills & Expertise",

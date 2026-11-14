@@ -73,7 +73,8 @@
       "stack_ai": "Sa stack IA ?",
       "availability": "Dispo pour une mission ?",
       "english": "Switch to English"
-    }
+    },
+    "rate_limited": "Vous avez posé beaucoup de questions d'un coup. Patientez une minute, puis réessayez."
   },
   "skills": {
     "title": "Compétences & Expertise",

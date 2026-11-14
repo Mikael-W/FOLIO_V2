@@ -131,6 +131,7 @@ function confirmationOf(action: AIAction): string | null {
           <label for="chat-input" class="sr-only">{{ $t('ai_chat.input_label') }}</label>
           <input
             id="chat-input"
+            maxlength="500"
             v-model="userInput"
             type="text"
             :placeholder="$t('ai_chat.placeholder')"

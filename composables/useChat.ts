@@ -51,8 +51,9 @@ export function useChat() {
       }
 
       if (content === userInput.value.trim()) userInput.value = '';
-    } catch {
-      messages.value.push({ role: 'assistant', content: t('ai_chat.error') });
+    } catch (error) {
+      const statusCode = (error as { statusCode?: number }).statusCode;
+      messages.value.push({ role: 'assistant', content: t(statusCode === 429 ? 'ai_chat.rate_limited' : 'ai_chat.error') });
     } finally {
       loading.value = false;
       await scrollToEnd();

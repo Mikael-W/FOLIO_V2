@@ -89,6 +89,34 @@ describe('AiChatBox', () => {
     });
   });
 
+  describe('Given the visitor is rate limited', () => {
+    describe('When sending', () => {
+      test('Then a specific message asks to wait', async () => {
+        // Arrange
+        fetchMock.mockRejectedValue(Object.assign(new Error('429'), { statusCode: 429 }));
+        const wrapper = mountChat();
+
+        // Act
+        await sendFromInput(wrapper, 'Bonjour');
+
+        // Assert
+        expect(wrapper.find('[role="log"]').text()).toContain('ai_chat.rate_limited');
+      });
+    });
+  });
+
+  describe('Given the message field', () => {
+    describe('When rendered', () => {
+      test('Then it caps the length of a question', () => {
+        // Arrange / Act
+        const wrapper = mountChat();
+
+        // Assert
+        expect(wrapper.find('input').attributes('maxlength')).toBe('500');
+      });
+    });
+  });
+
   describe('Given a downloadCV action', () => {
     describe('When the reply arrives', () => {
       test('Then a CV link for the current locale is rendered', async () => {
