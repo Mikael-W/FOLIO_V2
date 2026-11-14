@@ -34,16 +34,16 @@
     ]
   },
   "availability": {
-    "status": "Disponible",
+    "status": "En mission — ouvert aux opportunités ciblées",
     "freelanceSince": 2017,
     "remote": true,
     "hybridMinDays": 3,
     "travel": "Europe entière"
   },
   "rates": {
-    "tjm": "450€ – 600€",
+    "tjm": "À partir de 600 € / jour",
     "currency": "EUR",
-    "dependsOn": "Mission, durée, stack technique"
+    "dependsOn": "Selon la mission ; les opportunités sont étudiées au cas par cas"
   },
   "languages": {
     "french": "Langue maternelle",
@@ -740,7 +740,7 @@
   "faq": [
     {
       "question": "Est-il disponible ?",
-      "answer": "Il est ouvert aux nouvelles missions. Pour les dates et le format, le plus simple est de le contacter via le formulaire du site ou par email."
+      "answer": "Il est actuellement en mission. Il reste ouvert à des opportunités ciblées (IA, rôle senior, forte valeur) : le plus simple est de le contacter via le formulaire du site ou par email."
     },
     {
       "question": "Travaille-t-il à distance ?",
@@ -748,7 +748,7 @@
     },
     {
       "question": "Quel est son tarif ?",
-      "answer": "Son TJM se situe entre 450 € et 600 € selon la mission, la durée et la stack. Pour un chiffrage précis, il faut le contacter."
+      "answer": "Son TJM démarre à 600 € et dépend de la mission. Comme il est déjà en mission, il n'étudie que des opportunités à forte valeur : contactez-le pour en parler."
     },
     {
       "question": "Comment le contacter ?",

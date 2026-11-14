@@ -38,8 +38,8 @@
       "ai": "OpenAI, Anthropic, Qwen, RAG, agents",
       "a11y": "WCAG, RGAA, ARIA"
     },
-    "availability_label": "Disponible",
-    "availability_text": "Missions front, fullstack ou IA.",
+    "availability_label": "Ouvert aux opportunités",
+    "availability_text": "Missions IA, front ou fullstack à forte valeur.",
     "cta_contact": "Écrire à Mika",
     "cta_cv": "CV (PDF)",
     "certification_in_progress": "en cours"

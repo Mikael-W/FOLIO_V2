@@ -34,16 +34,16 @@
     ]
   },
   "availability": {
-    "status": "Available",
+    "status": "On a mission — open to selected opportunities",
     "freelanceSince": 2017,
     "remote": true,
     "hybridMinDays": 3,
     "travel": "Entire Europe"
   },
   "rates": {
-    "tjm": "450€ – 600€",
+    "tjm": "From €600 per day",
     "currency": "EUR",
-    "dependsOn": "Mission scope, duration, technical stack"
+    "dependsOn": "Depends on the mission; opportunities are considered case by case"
   },
   "languages": {
     "french": "Native",
@@ -740,7 +740,7 @@
   "faq": [
     {
       "question": "Is he available?",
-      "answer": "He is open to new missions. For dates and format, the simplest is to contact him through the site's form or by email."
+      "answer": "He is currently on a mission. He remains open to selected opportunities (AI, senior role, high value): the simplest is to contact him through the site's form or by email."
     },
     {
       "question": "Does he work remotely?",
@@ -748,7 +748,7 @@
     },
     {
       "question": "What is his rate?",
-      "answer": "His daily rate ranges from €450 to €600 depending on the mission, its length and the stack. Contact him for a precise quote."
+      "answer": "His daily rate starts at €600 and depends on the mission. As he is already on a mission, he only considers high-value opportunities: contact him to discuss."
     },
     {
       "question": "How can I contact him?",
