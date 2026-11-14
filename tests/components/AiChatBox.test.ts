@@ -89,6 +89,33 @@ describe('AiChatBox', () => {
     });
   });
 
+  describe('Given a long conversation', () => {
+    describe('When a reply arrives', () => {
+      test('Then the log scrolls down on send, then to the start of the new reply', async () => {
+        // Arrange
+        const scrollTo = vi.fn();
+        const descriptor = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'offsetTop');
+        Object.defineProperty(HTMLElement.prototype, 'offsetTop', {
+          configurable: true,
+          get(this: HTMLElement) {
+            return this.dataset.messageRole === 'assistant' ? 300 : 0;
+          },
+        });
+        HTMLElement.prototype.scrollTo = scrollTo as unknown as HTMLElement['scrollTo'];
+        fetchMock.mockResolvedValue({ reply: 'Une longue réponse', action: { type: null, payload: null } });
+        const wrapper = mountChat();
+
+        // Act
+        await sendFromInput(wrapper, 'Parle-moi de WeSave');
+
+        // Assert
+        expect(scrollTo.mock.calls.length).toBeGreaterThanOrEqual(2);
+        expect(scrollTo.mock.calls.at(-1)?.[0]).toMatchObject({ top: 276 });
+        if (descriptor) Object.defineProperty(HTMLElement.prototype, 'offsetTop', descriptor);
+      });
+    });
+  });
+
   describe('Given the visitor is rate limited', () => {
     describe('When sending', () => {
       test('Then a specific message asks to wait', async () => {

@@ -71,16 +71,17 @@ function confirmationOf(action: AIAction): string | null {
           role="log"
           aria-live="polite"
           :aria-label="$t('ai_chat.conversation_aria')"
-          class="flex max-h-[480px] min-h-[340px] flex-col gap-4 overflow-y-auto px-5 py-6"
+          class="relative flex max-h-[min(560px,65vh)] min-h-[340px] flex-col gap-4 overflow-y-auto overscroll-contain px-5 py-6"
         >
           <template v-for="(message, index) in messages" :key="index">
             <div
               v-if="message.role === 'user'"
+              data-message-role="user"
               class="max-w-[80%] self-end bg-ink px-4 py-3.5 text-base leading-[1.55] text-paper whitespace-pre-wrap"
             >
               {{ message.content }}
             </div>
-            <div v-else class="flex max-w-[85%] flex-col gap-2.5 self-start">
+            <div v-else data-message-role="assistant" class="flex max-w-[85%] flex-col gap-2.5 self-start">
               <div
                 v-if="message.content"
                 class="bg-paper px-4 py-3.5 text-base leading-[1.55] text-ink [&_a]:underline [&_p]:m-0"

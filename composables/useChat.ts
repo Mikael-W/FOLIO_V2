@@ -25,9 +25,28 @@ export function useChat() {
     return messages.value.map(({ role, content }) => ({ role, content }));
   }
 
+  const MESSAGE_TOP_OFFSET = 24;
+
+  function scrollBehavior(): ScrollBehavior {
+    const prefersReducedMotion =
+      typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    return prefersReducedMotion ? 'auto' : 'smooth';
+  }
+
   async function scrollToEnd() {
     await nextTick();
-    chatContainer.value?.scrollTo({ top: chatContainer.value.scrollHeight, behavior: 'smooth' });
+    const container = chatContainer.value;
+    container?.scrollTo({ top: container.scrollHeight, behavior: scrollBehavior() });
+  }
+
+  async function scrollToLatestReply() {
+    await nextTick();
+    const container = chatContainer.value;
+    if (!container) return;
+    const replies = container.querySelectorAll<HTMLElement>('[data-message-role="assistant"]');
+    const latest = replies[replies.length - 1];
+    if (!latest) return scrollToEnd();
+    container.scrollTo({ top: Math.max(latest.offsetTop - MESSAGE_TOP_OFFSET, 0), behavior: scrollBehavior() });
   }
 
   async function sendMessage(rawContent: string = userInput.value) {
@@ -36,6 +55,7 @@ export function useChat() {
 
     messages.value.push({ role: 'user', content });
     loading.value = true;
+    await scrollToEnd();
 
     try {
       const response = await $fetch<AIResponse>('/api/chat', {
@@ -56,7 +76,7 @@ export function useChat() {
       messages.value.push({ role: 'assistant', content: t(statusCode === 429 ? 'ai_chat.rate_limited' : 'ai_chat.error') });
     } finally {
       loading.value = false;
-      await scrollToEnd();
+      await scrollToLatestReply();
     }
   }
 
