@@ -84,13 +84,17 @@
       ],
       "ai": [
         "OpenAI API",
+        "Anthropic API (Claude)",
         "Prompt engineering",
         "RAG / embeddings",
         "Python microservices",
         "Vector search",
         "Intelligent chatbots",
         "OpenAI TTS / STT",
-        "Autonomous agents"
+        "Autonomous agents",
+        "Qwen",
+        "AWS Bedrock",
+        "Google Cloud Platform"
       ],
       "quality": [
         "Accessibility (a11y, WCAG/RGAA)",

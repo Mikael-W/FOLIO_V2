@@ -19,7 +19,9 @@ export const skills: SkillColumn[] = [
   {
     key: 'ai',
     items: [
-      'OpenAI API',
+      'OpenAI API · Anthropic API',
+      'Qwen',
+      'AWS Bedrock · Google Cloud Platform',
       'RAG · embeddings',
       { fr: 'Recherche vectorielle', en: 'Vector search' },
       { fr: 'Agents autonomes', en: 'Autonomous agents' },

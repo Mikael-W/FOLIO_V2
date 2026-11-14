@@ -35,7 +35,7 @@
       "missions": "AI Sisters Lab, WeSave",
       "front": "Vue 3, Nuxt 3, React",
       "back": "Node.js, NestJS, GraphQL",
-      "ai": "OpenAI, RAG, agents",
+      "ai": "OpenAI, Anthropic, Qwen, RAG, agents",
       "a11y": "WCAG, RGAA, ARIA"
     },
     "availability_label": "Available",
