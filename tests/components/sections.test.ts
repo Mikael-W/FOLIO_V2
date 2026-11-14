@@ -149,8 +149,9 @@ describe('Page sections', () => {
 
           // Assert
           expect(wrapper.attributes('id')).toBe('projets');
-          expect(wrapper.findAll('[data-test="project-row"]')).toHaveLength(4);
-          expect(wrapper.text()).not.toContain('trimly');
+          expect(wrapper.findAll('[data-test="project-row"]')).toHaveLength(6);
+          expect(wrapper.text()).toContain('trimly');
+          expect(wrapper.text()).not.toContain('WeSave');
           const link = wrapper.find('a[href="https://oss-nation.com/"]');
           expect(link.attributes('rel')).toContain('noopener');
         });

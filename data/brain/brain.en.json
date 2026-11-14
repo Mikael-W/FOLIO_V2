@@ -714,6 +714,22 @@
   ],
   "caseStudies": [
     {
+      "slug": "ai-sisters",
+      "title": "AI Sisters Lab — AI POCs and MVPs",
+      "tags": [
+        "LLM",
+        "AI agents",
+        "RAG",
+        "POC",
+        "MVP"
+      ],
+      "image": null,
+      "url": null,
+      "problem": "IT departments and innovation teams who want to validate AI on their own use cases without committing to a long project upfront.",
+      "solution": "Scoping and technical feasibility, then AI POCs and MVPs delivered by the Lab: agents, LLM integration, RAG.",
+      "impact": "AI use cases proven on real work, with a clear path to production."
+    },
+    {
       "slug": "wesave",
       "title": "WeSave — Vue 3 migration & design system",
       "tags": [
@@ -730,35 +746,20 @@
       "impact": "Code agents connected to Storybook via MCP check the design system's real props; UI scope re-estimated from 30 to 14 days."
     },
     {
-      "slug": "forenlyst",
-      "title": "Forenlyst — media authenticity",
+      "slug": "accor",
+      "title": "Accor — booking funnel",
       "tags": [
-        "Next.js",
-        "NestJS",
-        "Python",
-        "Microservices",
-        "Crypto"
+        "Vue 3",
+        "Nuxt 3",
+        "Node.js BFF",
+        "GraphQL",
+        "Playwright"
       ],
       "image": null,
-      "url": "https://forenlyst.com/fr",
-      "problem": "The spread of deepfakes makes it hard to verify the authenticity of visual content.",
-      "solution": "Deepfake detection combined with forensic certification, results cryptographically signed.",
-      "impact": "Reliable media authentication and traceable analyses, for professional and legal use."
-    },
-    {
-      "slug": "trimly",
-      "title": "trimly — AI agent costs",
-      "tags": [
-        "TypeScript",
-        "Node.js",
-        "CLI",
-        "npm"
-      ],
-      "image": null,
-      "url": "https://www.npmjs.com/package/@trimly/core",
-      "problem": "Hard to track token consumption — and therefore costs — in day-to-day Claude Code use.",
-      "solution": "Open source CLI that measures, aggregates and displays consumption in real time, plus a reusable API: @trimly/core.",
-      "impact": "Immediate cost visibility; published on npm under the Apache-2.0 licence."
+      "url": null,
+      "problem": "Modernise the Vue 2 booking funnel of a site served in 17 languages and countries.",
+      "solution": "Vue 3 / Nuxt 3 rebuild, dedicated Node.js BFF, GraphQL with caching and fragments, hybrid SSR/CSR.",
+      "impact": "Vitest + Playwright tests automated in CI; front-end architecture lead for a team of 12."
     }
   ]
 }

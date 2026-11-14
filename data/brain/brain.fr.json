@@ -714,6 +714,22 @@
   ],
   "caseStudies": [
     {
+      "slug": "ai-sisters",
+      "title": "AI Sisters Lab — POC et MVP IA",
+      "tags": [
+        "LLM",
+        "Agents IA",
+        "RAG",
+        "POC",
+        "MVP"
+      ],
+      "image": null,
+      "url": null,
+      "problem": "Des DSI et équipes Innovation qui veulent valider l'IA sur leurs propres cas d'usage, sans s'engager d'emblée dans un projet long.",
+      "solution": "Cadrage et faisabilité technique, puis POC et MVP IA livrés par le Lab : agents, intégration de LLM, RAG.",
+      "impact": "Des cas d'usage IA éprouvés sur du concret, avec un chemin clair jusqu'à l'industrialisation."
+    },
+    {
       "slug": "wesave",
       "title": "WeSave — migration Vue 3 & design system",
       "tags": [
@@ -730,35 +746,20 @@
       "impact": "Des agents de code branchés sur Storybook via MCP vérifient les vraies props du design system ; périmètre UI ré-estimé de 30 à 14 jours."
     },
     {
-      "slug": "forenlyst",
-      "title": "Forenlyst — authenticité des médias",
+      "slug": "accor",
+      "title": "Accor — couloir de réservation",
       "tags": [
-        "Next.js",
-        "NestJS",
-        "Python",
-        "Microservices",
-        "Crypto"
+        "Vue 3",
+        "Nuxt 3",
+        "BFF Node.js",
+        "GraphQL",
+        "Playwright"
       ],
       "image": null,
-      "url": "https://forenlyst.com/fr",
-      "problem": "La prolifération des deepfakes rend difficile la vérification de l'authenticité des contenus visuels.",
-      "solution": "Détection de deepfakes couplée à une certification forensique, résultats signés cryptographiquement.",
-      "impact": "Authentification fiable des médias et traçabilité des analyses, pour des usages professionnels et juridiques."
-    },
-    {
-      "slug": "trimly",
-      "title": "trimly — coût des agents IA",
-      "tags": [
-        "TypeScript",
-        "Node.js",
-        "CLI",
-        "npm"
-      ],
-      "image": null,
-      "url": "https://www.npmjs.com/package/@trimly/core",
-      "problem": "Difficile de suivre la consommation de tokens — donc les coûts — en usage quotidien de Claude Code.",
-      "solution": "CLI open source qui mesure, agrège et affiche la consommation en temps réel, plus une API réutilisable : @trimly/core.",
-      "impact": "Visibilité immédiate sur les coûts ; publié sur npm sous licence Apache-2.0."
+      "url": null,
+      "problem": "Moderniser le couloir de réservation Vue 2 d'un site servi en 17 langues et pays.",
+      "solution": "Refonte Vue 3 / Nuxt 3, BFF Node.js dédié, GraphQL avec caching et fragments, SSR/CSR hybride.",
+      "impact": "Tests Vitest + Playwright automatisés en CI ; référent architecture front pour une équipe de 12."
     }
   ]
 }

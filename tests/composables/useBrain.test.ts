@@ -22,7 +22,7 @@ describe('useBrain', () => {
           .map((caseStudy) => caseStudy.slug);
 
         // Assert
-        expect(slugs).toEqual(['wesave', 'forenlyst', 'trimly']);
+        expect(slugs).toEqual(['ai-sisters', 'wesave', 'accor']);
       });
     });
 
@@ -84,7 +84,7 @@ describe('useBrain', () => {
         const slugs = sideProjects.map((project) => project.slug);
 
         // Assert
-        expect(slugs).toEqual(['my-liste-chaude', 'chasse-en-cours', 'oss-nation', 'discoverit']);
+        expect(slugs).toEqual(['trimly', 'forenlyst', 'my-liste-chaude', 'chasse-en-cours', 'oss-nation', 'discoverit']);
         expect(sideProjects.find((project) => project.slug === 'oss-nation')?.url).toBe('https://oss-nation.com/');
       });
     });
@@ -97,7 +97,7 @@ describe('useBrain', () => {
         arrangeLocale('en');
 
         // Act
-        const [wesave] = useBrain().getCaseStudies();
+        const [, wesave] = useBrain().getCaseStudies();
 
         // Assert
         expect(wesave.title).toContain('Vue 3 migration');
