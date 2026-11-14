@@ -5,6 +5,9 @@ export default defineNuxtConfig({
 
   nitro: {
     compatibilityDate: '2025-12-03',
+    prerender: {
+      routes: ['/llms.txt'],
+    },
   },
 
   build: {
@@ -60,6 +63,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'alternate', type: 'text/markdown', href: '/llms.txt', title: 'LLM-friendly profile' },
         {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap',
