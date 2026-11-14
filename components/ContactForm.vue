@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useReCaptcha } from 'vue-recaptcha-v3';
 import { useBrain } from '@/composables/useBrain';
 import { useContact } from '@/composables/useContact';
@@ -9,7 +9,8 @@ const message = ref('');
 
 const { loading, success, error, sendContactForm } = useContact();
 const recaptcha = useReCaptcha();
-const { contact } = useBrain().getProfile();
+const { getProfile } = useBrain();
+const contact = computed(() => getProfile().contact);
 
 const fieldClasses =
   'w-full border-2 border-ink bg-transparent px-4 text-base text-ink placeholder:text-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink';

@@ -1,5 +1,17 @@
 <script setup lang="ts">
-import { skills } from '@/constants/skills';
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { resolveSkillItem, skills } from '@/constants/skills';
+
+const { locale } = useI18n();
+
+const columns = computed(() => {
+  const currentLocale = locale.value === 'en' ? 'en' : 'fr';
+  return skills.map((column) => ({
+    key: column.key,
+    items: column.items.map((item) => resolveSkillItem(item, currentLocale)),
+  }));
+});
 </script>
 
 <template>
@@ -9,8 +21,8 @@ import { skills } from '@/constants/skills';
     class="mx-auto max-w-[1280px] px-[clamp(20px,4vw,48px)] pb-10 pt-28"
   >
     <BaseSectionTitle id="skills-title" :title="$t('skills.title')" />
-    <div class="mt-12 grid gap-8 [grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr))]">
-      <div v-for="column in skills" :key="column.key" class="border-t-2 border-ink pt-4">
+    <div class="mt-12 grid gap-8 [grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr))]">
+      <div v-for="column in columns" :key="column.key" class="border-t-2 border-ink pt-4">
         <h3 class="m-0 font-display text-[22px] font-semibold tracking-[-0.02em] text-ink">
           {{ $t(`skills.${column.key}.title`) }}
         </h3>

@@ -26,7 +26,8 @@
       "certification": "Certif.",
       "front": "Front",
       "back": "Back",
-      "ai": "IA"
+      "ai": "IA",
+      "a11y": "A11y"
     },
     "facts_values": {
       "base": "Normandie, France",
@@ -34,7 +35,8 @@
       "missions": "AI Sisters Lab, WeSave",
       "front": "Vue 3, Nuxt 3, React",
       "back": "Node.js, NestJS, GraphQL",
-      "ai": "OpenAI, RAG, agents"
+      "ai": "OpenAI, RAG, agents",
+      "a11y": "WCAG, RGAA, ARIA"
     },
     "availability_label": "Disponible",
     "availability_text": "Missions front, fullstack ou IA.",
@@ -75,29 +77,9 @@
   },
   "skills": {
     "title": "Compétences & Expertise",
-    "frontend": {
-      "title": "Frontend",
-      "text": "Vue 3, Nuxt 3, React / React Native, Next.js, TypeScript, Tailwind"
-    },
-    "backend": {
-      "title": "Backend",
-      "text": "Node.js, NestJS, Fastify, Express, Laravel, GraphQL, MongoDB"
-    },
-    "testing": {
-      "title": "Tests",
-      "text": "Vitest, Jest, Playwright, TDD"
-    },
-    "cloud": {
-      "title": "Cloud & Mobile",
-      "text": "Firebase, Firestore, Vercel, Netlify, EAS, Docker"
-    },
     "ai": {
       "title": "IA",
       "text": "OpenAI API, RAG / embeddings, prompt engineering"
-    },
-    "tools": {
-      "title": "Qualité & Outils",
-      "text": "Git, GitLab CI/CD, Storybook, a11y (WCAG/RGAA), i18n"
     },
     "front": {
       "title": "Front"
@@ -110,6 +92,9 @@
     },
     "quality": {
       "title": "Qualité"
+    },
+    "a11y": {
+      "title": "Accessibilité"
     }
   },
   "projects": {

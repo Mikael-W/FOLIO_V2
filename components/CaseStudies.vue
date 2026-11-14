@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useBrain } from '@/composables/useBrain';
 
-const caseStudies = useBrain().getCaseStudies();
+const { getCaseStudies } = useBrain();
+const caseStudies = computed(() => getCaseStudies());
 </script>
 
 <template>

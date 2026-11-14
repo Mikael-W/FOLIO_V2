@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useBrain } from '@/composables/useBrain';
 
-const sideProjects = useBrain().getSideProjects();
+const { getSideProjects } = useBrain();
+const sideProjects = computed(() => getSideProjects());
 </script>
 
 <template>

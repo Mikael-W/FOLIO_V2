@@ -41,12 +41,13 @@ describe('HeroSection', () => {
     });
 
     describe('When rendered', () => {
-      test('Then the fact sheet lists seven facts', () => {
+      test('Then the fact sheet lists eight facts, accessibility included', () => {
         // Arrange / Act
         const wrapper = mountHero();
 
         // Assert
-        expect(wrapper.findAll('dt')).toHaveLength(7);
+        expect(wrapper.findAll('dt')).toHaveLength(8);
+        expect(wrapper.text()).toContain('hero.facts.a11y');
       });
     });
 

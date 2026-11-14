@@ -9,7 +9,7 @@ const { cvUrl } = useCV();
 const certification = computed(() => getCertifications()[0]);
 const isCertificationInProgress = computed(() => certification.value?.status === 'in_progress');
 
-const factKeys = ['base', 'mode', 'missions', 'certification', 'front', 'back', 'ai'] as const;
+const factKeys = ['base', 'mode', 'missions', 'certification', 'front', 'back', 'ai', 'a11y'] as const;
 </script>
 
 <template>

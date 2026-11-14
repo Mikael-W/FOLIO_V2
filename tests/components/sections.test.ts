@@ -30,10 +30,13 @@ const caseStudy: BrainCaseStudy = {
   impact: "L'impact",
 };
 
+const locale = ref<'fr' | 'en'>('fr');
+
 describe('Page sections', () => {
   beforeEach(() => {
+    locale.value = 'fr';
     vi.mocked(useI18n).mockReturnValue({
-      locale: ref('fr'),
+      locale,
       t: (key: string) => key,
     } as unknown as ReturnType<typeof useI18n>);
   });
@@ -49,6 +52,20 @@ describe('Page sections', () => {
           expect(wrapper.findAll('[data-test="highlight"]')).toHaveLength(4);
           expect(wrapper.find('[data-test="highlight"]').text()).toContain('8');
           expect(wrapper.find('[data-test="highlight"]').text()).toContain('ans');
+        });
+      });
+
+      describe('When the locale switches to English', () => {
+        test('Then the figures are re-rendered in English', async () => {
+          // Arrange
+          const wrapper = shallowMount(HighlightsBand, { global });
+
+          // Act
+          locale.value = 'en';
+          await wrapper.vm.$nextTick();
+
+          // Assert
+          expect(wrapper.find('[data-test="highlight"]').text()).toContain('years');
         });
       });
     });
@@ -127,14 +144,29 @@ describe('Page sections', () => {
   describe('SkillsGrid', () => {
     describe('Given the skills constants', () => {
       describe('When rendered', () => {
-        test('Then five columns are rendered, each with its list', () => {
+        test('Then six columns are rendered, including accessibility', () => {
           // Arrange / Act
           const wrapper = shallowMount(SkillsGrid, { global });
 
           // Assert
           expect(wrapper.attributes('id')).toBe('competences');
-          expect(wrapper.findAll('h3')).toHaveLength(5);
-          expect(wrapper.text()).toContain('Vue 3');
+          expect(wrapper.findAll('h3')).toHaveLength(6);
+          expect(wrapper.text()).toContain('skills.a11y.title');
+          expect(wrapper.text()).toContain('WCAG');
+        });
+
+        test('Then translated items follow the locale', async () => {
+          // Arrange
+          const wrapper = shallowMount(SkillsGrid, { global });
+          expect(wrapper.text()).toContain('Recherche vectorielle');
+
+          // Act
+          locale.value = 'en';
+          await wrapper.vm.$nextTick();
+
+          // Assert
+          expect(wrapper.text()).toContain('Vector search');
+          expect(wrapper.text()).not.toContain('Recherche vectorielle');
         });
       });
     });
@@ -247,6 +279,27 @@ describe('Page sections', () => {
 
           // Assert
           expect(wrapper.find('[role="status"]').text()).toContain('contact.success_title');
+        });
+      });
+    });
+  });
+
+  describe('Locale switch', () => {
+    describe('Given the page in French', () => {
+      describe('When the locale switches to English', () => {
+        test('Then case studies and other projects are re-rendered in English', async () => {
+          // Arrange
+          const cases = shallowMount(CaseStudies, { global });
+          const projects = shallowMount(ProjectSection, { global });
+
+          // Act
+          locale.value = 'en';
+          await cases.vm.$nextTick();
+
+          // Assert
+          const titles = cases.findAllComponents(CaseStudyCard).map((card) => card.props('caseStudy').title);
+          expect(titles[0]).toBe('WeSave — Vue 3 migration & design system');
+          expect(projects.text()).toContain('what to do around you');
         });
       });
     });

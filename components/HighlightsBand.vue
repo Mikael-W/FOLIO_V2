@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useBrain } from '@/composables/useBrain';
 
-const highlights = useBrain().getHighlights();
+const { getHighlights } = useBrain();
+const highlights = computed(() => getHighlights());
 </script>
 
 <template>
