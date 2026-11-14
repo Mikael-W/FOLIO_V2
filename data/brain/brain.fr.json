@@ -2,7 +2,7 @@
   "profile": {
     "name": "Mikaël Wawrziczny alias Mika",
     "title": "Senior Software & AI Engineer — Lead AI Engineer @ AI Sisters Lab",
-    "about": "Ingénieur logiciel & IA freelance, 8 ans d'expérience, fondateur du studio Joys Lab (SASU). Lead AI Engineer chez AI Sisters Lab (POC et MVP IA pour les DSI) et lead front sur la migration Vue 3 de WeSave. Fullstack TypeScript : Vue/Nuxt, React/React Native, Node.js/NestJS, LLM en production depuis 2024 (RAG, agents, sorties structurées). En cours de certification Claude Certified Architect – Professional (Anthropic). 15 ans de terrain commercial avant le développement : sens business, pédagogie, aisance grand compte.",
+    "about": "Ingénieur logiciel & IA freelance, 8 ans d'expérience, fondateur du studio Joys Lab (SASU). Lead AI Engineer chez AI Sisters Lab (POC et MVP IA pour les DSI) et développeur front senior sur la migration Vue 3 de WeSave. Fullstack TypeScript : Vue/Nuxt, React/React Native, Node.js/NestJS, LLM en production depuis 2024 (RAG, agents, sorties structurées). En cours de certification Claude Certified Architect – Professional (Anthropic). 15 ans de terrain commercial avant le développement : sens business, pédagogie, aisance grand compte.",
     "personal": {
       "maritalStatus": "Marié",
       "children": 4,
@@ -351,7 +351,7 @@
   "experience": [
     {
       "company": "WeSave",
-      "role": "Lead front — migration Vue 3",
+      "role": "Développeur front senior — migration Vue 3",
       "period": {
         "start": "2026",
         "end": "aujourd'hui",
