@@ -370,7 +370,7 @@
       "role": "Développeur front senior — migration Vue 3",
       "period": {
         "start": "2026",
-        "end": "aujourd'hui",
+        "end": "en cours",
         "duration": "Mission en cours"
       },
       "stack": [
@@ -390,10 +390,10 @@
         "Évaluation d'ECharts pour remplacer Highcharts, avec prise en compte du RGAA",
         "Nouveau dashboard mobile en PWA Vue 3, architecture par domaines"
       ],
-      "description": "Application de conseil financier multi-marques.",
+      "description": "Filiale d'Amundi (groupe Crédit Agricole) : application de conseil financier multi-marques.",
       "featured": true,
-      "displayName": "WeSave",
-      "summary": "Application de conseil financier multi-marques ; design system wesave-components, évaluation ECharts, dashboard mobile en PWA."
+      "displayName": "WeSave · groupe Amundi",
+      "summary": "Filiale d'Amundi (groupe Crédit Agricole). Application de conseil financier multi-marques ; design system wesave-components, évaluation ECharts, dashboard mobile en PWA."
     },
     {
       "company": "AI Sisters Lab",
@@ -668,7 +668,7 @@
   "caseStudies": [
     {
       "slug": "wesave",
-      "title": "WeSave — migration Vue 3 & design system",
+      "title": "WeSave (groupe Amundi) — migration Vue 3 & design system",
       "tags": [
         "Vue 3",
         "Pinia",

@@ -298,7 +298,7 @@ describe('Page sections', () => {
 
           // Assert
           const titles = cases.findAllComponents(CaseStudyCard).map((card) => card.props('caseStudy').title);
-          expect(titles[0]).toBe('WeSave — Vue 3 migration & design system');
+          expect(titles[0]).toBe('WeSave (Amundi group) — Vue 3 migration & design system');
           expect(projects.text()).toContain('what to do around you');
         });
       });

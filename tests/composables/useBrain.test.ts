@@ -64,7 +64,7 @@ describe('useBrain', () => {
         // Assert
         expect(experiences.every((experience) => experience.featured)).toBe(true);
         expect(experiences.map((experience) => experience.displayName)).toEqual([
-          'WeSave',
+          'WeSave · groupe Amundi',
           'AI Sisters Lab',
           'Accor',
           'Joys Lab',

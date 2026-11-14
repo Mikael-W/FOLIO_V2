@@ -22,7 +22,7 @@ describe('useJourney', () => {
         // Assert
         expect(rows.map((row) => row.name)).toEqual([
           'Anthropic',
-          'WeSave',
+          'WeSave · groupe Amundi',
           'AI Sisters Lab',
           'Accor',
           'Joys Lab',

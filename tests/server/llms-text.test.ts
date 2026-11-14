@@ -25,7 +25,8 @@ describe('buildLlmsTxt', () => {
 
         // Assert
         expect(text).toContain('## Experience');
-        expect(text).toContain('**WeSave**');
+        expect(text).toContain('**WeSave · Amundi group**');
+        expect(text).toContain('2026 → ongoing');
         expect(text).toContain('**AI Sisters Lab**');
         expect(text).toContain('(2023 → 2025)');
         expect(text).toContain('## Case studies');
