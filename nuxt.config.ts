@@ -62,7 +62,9 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: 'https://mikaelw.com/og-image.png' },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: '48x48' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
         { rel: 'alternate', type: 'text/markdown', href: '/llms.txt', title: 'LLM-friendly profile' },
         {
           rel: 'stylesheet',
