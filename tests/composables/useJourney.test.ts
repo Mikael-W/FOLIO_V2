@@ -22,12 +22,10 @@ describe('useJourney', () => {
         // Assert
         expect(rows.map((row) => row.name)).toEqual([
           'Anthropic',
-          'AI Sisters Lab',
           'WeSave',
-          'Joys Lab',
+          'AI Sisters Lab',
           'Accor',
-          'MCI',
-          'Gritchen',
+          'Joys Lab',
         ]);
       });
 
@@ -45,7 +43,7 @@ describe('useJourney', () => {
         const joysLab = useJourney().rows.value.find((row) => row.name === 'Joys Lab');
 
         // Assert
-        expect(joysLab?.period).toBe("2024 → aujourd'hui");
+        expect(joysLab?.period).toBe("2022 → aujourd'hui");
       });
 
       test('Then dated missions show years only and collapse a single year', () => {
@@ -54,7 +52,6 @@ describe('useJourney', () => {
 
         // Assert
         expect(rows.find((row) => row.name === 'Accor')?.period).toBe('2023 → 2025');
-        expect(rows.find((row) => row.name === 'MCI')?.period).toBe('2023');
       });
     });
   });

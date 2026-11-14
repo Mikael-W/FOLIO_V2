@@ -117,7 +117,7 @@ describe('Page sections', () => {
 
           // Assert
           expect(wrapper.attributes('id')).toBe('parcours');
-          expect(wrapper.findAll('[data-test="journey-row"]')).toHaveLength(7);
+          expect(wrapper.findAll('[data-test="journey-row"]')).toHaveLength(5);
           expect(wrapper.text()).toContain('AI Sisters Lab');
         });
       });

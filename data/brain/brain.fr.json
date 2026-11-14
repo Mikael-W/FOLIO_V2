@@ -350,31 +350,6 @@
   ],
   "experience": [
     {
-      "company": "AI Sisters Lab",
-      "role": "Lead AI Engineer",
-      "period": {
-        "start": "[ANNÉE]",
-        "end": "aujourd'hui",
-        "duration": "Mission en cours"
-      },
-      "stack": [
-        "LLM",
-        "Agents IA",
-        "RAG",
-        "POC",
-        "MVP"
-      ],
-      "highlights": [
-        "Conception et livraison des POC et MVP IA du Lab",
-        "Cadrage et faisabilité technique pour des DSI et équipes Innovation",
-        "Agents IA et intégration de LLM, jusqu'à l'industrialisation"
-      ],
-      "description": "Studio d'IA appliquée : POC, MVP et missions IA pour les DSI et équipes Innovation.",
-      "featured": true,
-      "displayName": "AI Sisters Lab",
-      "summary": "POC et MVP IA pour les DSI et équipes Innovation : cadrage, faisabilité technique, agents et LLM, jusqu'à l'industrialisation."
-    },
-    {
       "company": "WeSave",
       "role": "Lead front — migration Vue 3",
       "period": {
@@ -405,34 +380,29 @@
       "summary": "Application de conseil financier multi-marques ; design system wesave-components, évaluation ECharts, dashboard mobile en PWA."
     },
     {
-      "company": "Joys Lab — SASU",
-      "role": "Fondateur & Lead Developer",
+      "company": "AI Sisters Lab",
+      "role": "Lead AI Engineer",
       "period": {
-        "start": "2024",
+        "start": "2026",
         "end": "aujourd'hui",
-        "duration": "Studio freelance"
+        "duration": "Client récurrent — projets au forfait"
       },
       "stack": [
-        "Nuxt 3",
-        "Next.js",
-        "React Native",
-        "NestJS",
-        "Node.js",
-        "OpenAI API",
-        "RAG"
+        "LLM",
+        "Agents IA",
+        "RAG",
+        "POC",
+        "MVP"
       ],
       "highlights": [
-        "Fondateur du studio de développement freelance (SASU)",
-        "My Liste Chaude — app React Native / Expo (Firebase, géoloc, deep linking, import CSV/Excel, gamification), pipeline EAS complet",
-        "Forenlyst — détection deepfake & certification forensique (Next.js, NestJS + microservices Python, signature crypto)",
-        "SaaS en production : portfolio + assistant IA, OSS-Nation (plateforme JJB + analyse IA)",
-        "trimly — outil open source publié sur npm (TypeScript / Node, Apache-2.0)",
-        "Intégration OpenAI API en production depuis 2024 (RAG, embeddings, prompt engineering)"
+        "Conception et livraison des POC et MVP IA du Lab",
+        "Cadrage et faisabilité technique pour des DSI et équipes Innovation",
+        "Agents IA et intégration de LLM, jusqu'à l'industrialisation"
       ],
-      "description": "Studio de développement freelance : SaaS, apps mobiles et intégration IA.",
+      "description": "Studio d'IA appliquée, client récurrent de Joys Lab : POC, MVP et missions IA au forfait pour des DSI et équipes Innovation.",
       "featured": true,
-      "displayName": "Joys Lab",
-      "summary": "Studio freelance : SaaS, apps mobiles et intégration IA en production."
+      "displayName": "AI Sisters Lab",
+      "summary": "Client récurrent, projets au forfait : POC et MVP IA pour des DSI et équipes Innovation — cadrage, agents et LLM, jusqu'à l'industrialisation."
     },
     {
       "company": "Accor / all.accor.com",
@@ -465,56 +435,46 @@
       "summary": "Référent technique front sur le couloir de réservation."
     },
     {
-      "company": "Mon Commerce Interactif (MCI)",
-      "role": "Full-Stack Engineer",
+      "company": "Joys Lab — SASU",
+      "role": "Fondateur & lead developer — projets au forfait",
       "period": {
-        "start": "2023-04",
-        "end": "2023-09",
-        "duration": "6 mois"
+        "start": "2022",
+        "end": "aujourd'hui",
+        "duration": "Studio freelance — projets au forfait"
       },
       "stack": [
-        "Vue 3",
         "Nuxt 3",
-        "Flutter",
-        "Firebase"
-      ],
-      "highlights": [
-        "Dashboard admin Vue / Nuxt 3 (menus, vins, clients, uploads, agents)",
-        "App mobile Flutter (iOS + Android) : onboarding QR code, multi-profils",
-        "Architecture Firebase : Auth, Firestore, Cloud Storage, règles de sécurité",
-        "Refactor, industrialisation, CI"
-      ],
-      "description": "Écosystème web + mobile pour commerçants (forfait — MVP).",
-      "featured": true,
-      "displayName": "MCI",
-      "summary": "Dashboard Nuxt 3, app Flutter iOS + Android, architecture Firebase."
-    },
-    {
-      "company": "Gritchen",
-      "role": "Full-Stack Engineer",
-      "period": {
-        "start": "2023-01",
-        "end": "2023-06",
-        "duration": "6 mois"
-      },
-      "stack": [
+        "Next.js",
+        "React Native",
+        "NestJS",
+        "Node.js",
+        "OpenAI API",
+        "RAG",
         "Vue 3",
+        "Flutter",
+        "Firebase",
         "Pinia",
         "TypeScript",
         "Laravel",
-        "Node.js",
-        "Fastify"
+        "Fastify",
+        "MongoDB",
+        "DataTourisme"
       ],
       "highlights": [
-        "Plateforme insurtech — dashboards métier (contrats, sinistres, espace client)",
-        "Front Vue 3 / Pinia typé, formulaires complexes multi-étapes",
-        "Back Laravel + microservices Node.js / Fastify",
-        "Architecture d'état Pinia et intégration API"
+        "Fondateur du studio de développement freelance (SASU)",
+        "My Liste Chaude — app React Native / Expo (Firebase, géoloc, deep linking, import CSV/Excel, gamification), pipeline EAS complet",
+        "Forenlyst — détection deepfake & certification forensique (Next.js, NestJS + microservices Python, signature crypto)",
+        "SaaS en production : portfolio + assistant IA, OSS-Nation (plateforme JJB + analyse IA)",
+        "trimly — outil open source publié sur npm (TypeScript / Node, Apache-2.0)",
+        "Intégration OpenAI API en production depuis 2024 (RAG, embeddings, prompt engineering)",
+        "Mon Commerce Interactif (MCI) (2023) — Écosystème web + mobile pour commerçants (forfait — MVP). Dashboard admin Vue / Nuxt 3 (menus, vins, clients, uploads, agents) ; App mobile Flutter (iOS + Android) : onboarding QR code, multi-profils ; Architecture Firebase : Auth, Firestore, Cloud Storage, règles de sécurité ; Refactor, industrialisation, CI",
+        "Gritchen (2023) — Plateforme insurtech (forfait — MVP). Plateforme insurtech — dashboards métier (contrats, sinistres, espace client) ; Front Vue 3 / Pinia typé, formulaires complexes multi-étapes ; Back Laravel + microservices Node.js / Fastify ; Architecture d'état Pinia et intégration API",
+        "Place2Be (2022) — App mobile + backend événementiel (forfait — POC). App mobile Flutter : événements géolocalisés autour de l'utilisateur ; Ingestion et gestion de 300 000 événements via l'API DataTourisme ; Backend TypeScript / Node.js, architecture API et sécurisation"
       ],
-      "description": "Plateforme insurtech (forfait — MVP).",
+      "description": "Studio de développement freelance : SaaS, apps mobiles et intégration IA, en projets au forfait.",
       "featured": true,
-      "displayName": "Gritchen",
-      "summary": "Vue 3, Pinia et TypeScript ; Laravel, Node.js et Fastify."
+      "displayName": "Joys Lab",
+      "summary": "Projets au forfait : SaaS, apps web et mobiles, IA — MCI, Gritchen, Place2Be, Forenlyst, OSS Nation."
     },
     {
       "company": "Chasse en Cours",
@@ -536,29 +496,6 @@
         "Conception, développement et publication Play Store de bout en bout"
       ],
       "description": "Produit personnel Flutter publié sur le Play Store, V2 en cours.",
-      "featured": false
-    },
-    {
-      "company": "Place2Be",
-      "role": "Mobile & Backend Engineer",
-      "period": {
-        "start": "2022-09",
-        "end": "2022-12",
-        "duration": "4 mois"
-      },
-      "stack": [
-        "Flutter",
-        "TypeScript",
-        "Node.js",
-        "MongoDB",
-        "DataTourisme"
-      ],
-      "highlights": [
-        "App mobile Flutter : événements géolocalisés autour de l'utilisateur",
-        "Ingestion et gestion de 300 000 événements via l'API DataTourisme",
-        "Backend TypeScript / Node.js, architecture API et sécurisation"
-      ],
-      "description": "App mobile + backend événementiel (forfait — POC).",
       "featured": false
     },
     {
@@ -714,22 +651,6 @@
   ],
   "caseStudies": [
     {
-      "slug": "ai-sisters",
-      "title": "AI Sisters Lab — POC et MVP IA",
-      "tags": [
-        "LLM",
-        "Agents IA",
-        "RAG",
-        "POC",
-        "MVP"
-      ],
-      "image": "/cases/ai-sisters.webp",
-      "url": null,
-      "problem": "Des DSI et équipes Innovation qui veulent valider l'IA sur leurs propres cas d'usage, sans s'engager d'emblée dans un projet long.",
-      "solution": "Cadrage et faisabilité technique, puis POC et MVP IA livrés par le Lab : agents, intégration de LLM, RAG.",
-      "impact": "Des cas d'usage IA éprouvés sur du concret, avec un chemin clair jusqu'à l'industrialisation."
-    },
-    {
       "slug": "wesave",
       "title": "WeSave — migration Vue 3 & design system",
       "tags": [
@@ -744,6 +665,22 @@
       "problem": "Une application de conseil financier multi-marques en Vue 2, bâtie sur un kit UI (vue-material) incompatible avec Vue 3.",
       "solution": "Vuex → Pinia, Pinia Colada pour le cache serveur, remplacement des composants par le design system wesave-components.",
       "impact": "Des agents de code branchés sur Storybook via MCP vérifient les vraies props du design system ; périmètre UI ré-estimé de 30 à 14 jours."
+    },
+    {
+      "slug": "ai-sisters",
+      "title": "AI Sisters Lab — POC et MVP IA",
+      "tags": [
+        "LLM",
+        "Agents IA",
+        "RAG",
+        "POC",
+        "MVP"
+      ],
+      "image": "/cases/ai-sisters.webp",
+      "url": null,
+      "problem": "Des DSI et équipes Innovation qui veulent valider l'IA sur leurs propres cas d'usage, sans s'engager d'emblée dans un projet long.",
+      "solution": "Cadrage et faisabilité technique, puis POC et MVP IA livrés au forfait : agents, intégration de LLM, RAG.",
+      "impact": "Des cas d'usage IA éprouvés sur du concret, avec un chemin clair jusqu'à l'industrialisation."
     },
     {
       "slug": "accor",

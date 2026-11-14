@@ -22,7 +22,7 @@ describe('useBrain', () => {
           .map((caseStudy) => caseStudy.slug);
 
         // Assert
-        expect(slugs).toEqual(['ai-sisters', 'wesave', 'accor']);
+        expect(slugs).toEqual(['wesave', 'ai-sisters', 'accor']);
       });
     });
 
@@ -64,12 +64,10 @@ describe('useBrain', () => {
         // Assert
         expect(experiences.every((experience) => experience.featured)).toBe(true);
         expect(experiences.map((experience) => experience.displayName)).toEqual([
-          'AI Sisters Lab',
           'WeSave',
-          'Joys Lab',
+          'AI Sisters Lab',
           'Accor',
-          'MCI',
-          'Gritchen',
+          'Joys Lab',
         ]);
       });
     });
@@ -97,7 +95,7 @@ describe('useBrain', () => {
         arrangeLocale('en');
 
         // Act
-        const [, wesave] = useBrain().getCaseStudies();
+        const [wesave] = useBrain().getCaseStudies();
 
         // Assert
         expect(wesave.title).toContain('Vue 3 migration');

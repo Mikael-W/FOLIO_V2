@@ -350,31 +350,6 @@
   ],
   "experience": [
     {
-      "company": "AI Sisters Lab",
-      "role": "Lead AI Engineer",
-      "period": {
-        "start": "[ANNÉE]",
-        "end": "present",
-        "duration": "Ongoing mission"
-      },
-      "stack": [
-        "LLM",
-        "AI agents",
-        "RAG",
-        "POC",
-        "MVP"
-      ],
-      "highlights": [
-        "Design and delivery of the Lab's AI POCs and MVPs",
-        "Scoping and technical feasibility for IT departments and Innovation teams",
-        "AI agents and LLM integration, through to industrialisation"
-      ],
-      "description": "Applied AI studio: POCs, MVPs and AI missions for IT departments and Innovation teams.",
-      "featured": true,
-      "displayName": "AI Sisters Lab",
-      "summary": "AI POCs and MVPs for IT departments and Innovation teams: scoping, technical feasibility, agents and LLMs, through to industrialisation."
-    },
-    {
       "company": "WeSave",
       "role": "Front-end lead — Vue 3 migration",
       "period": {
@@ -405,34 +380,29 @@
       "summary": "Multi-brand financial advisory application; wesave-components design system, ECharts evaluation, mobile PWA dashboard."
     },
     {
-      "company": "Joys Lab — SASU",
-      "role": "Founder & Lead Developer",
+      "company": "AI Sisters Lab",
+      "role": "Lead AI Engineer",
       "period": {
-        "start": "2024",
+        "start": "2026",
         "end": "present",
-        "duration": "Freelance studio"
+        "duration": "Recurring client — fixed-price projects"
       },
       "stack": [
-        "Nuxt 3",
-        "Next.js",
-        "React Native",
-        "NestJS",
-        "Node.js",
-        "OpenAI API",
-        "RAG"
+        "LLM",
+        "AI agents",
+        "RAG",
+        "POC",
+        "MVP"
       ],
       "highlights": [
-        "Founder of the freelance development studio (SASU)",
-        "My Liste Chaude — React Native / Expo app (Firebase, geolocation, deep linking, CSV/Excel import, gamification), full EAS pipeline",
-        "Forenlyst — deepfake detection & forensic certification (Next.js, NestJS + Python microservices, crypto signing)",
-        "SaaS in production: portfolio + AI assistant, OSS-Nation (BJJ platform + AI analysis)",
-        "trimly — open-source tool published on npm (TypeScript / Node, Apache-2.0)",
-        "OpenAI API in production since 2024 (RAG, embeddings, prompt engineering)"
+        "Design and delivery of the Lab's AI POCs and MVPs",
+        "Scoping and technical feasibility for IT departments and Innovation teams",
+        "AI agents and LLM integration, through to industrialisation"
       ],
-      "description": "Freelance development studio: SaaS, mobile apps and AI integration.",
+      "description": "Applied AI studio, recurring Joys Lab client: fixed-price AI POCs, MVPs and missions for IT departments and Innovation teams.",
       "featured": true,
-      "displayName": "Joys Lab",
-      "summary": "Freelance studio: SaaS, mobile apps and AI integration in production."
+      "displayName": "AI Sisters Lab",
+      "summary": "Recurring client, fixed-price projects: AI POCs and MVPs for IT departments and Innovation teams — scoping, agents and LLMs, through to production."
     },
     {
       "company": "Accor / all.accor.com",
@@ -465,56 +435,46 @@
       "summary": "Front-end technical lead on the booking funnel."
     },
     {
-      "company": "Mon Commerce Interactif (MCI)",
-      "role": "Full-Stack Engineer",
+      "company": "Joys Lab — SASU",
+      "role": "Founder & Lead Developer — fixed-price projects",
       "period": {
-        "start": "2023-04",
-        "end": "2023-09",
-        "duration": "6 months"
+        "start": "2022",
+        "end": "present",
+        "duration": "Freelance studio — fixed-price projects"
       },
       "stack": [
-        "Vue 3",
         "Nuxt 3",
-        "Flutter",
-        "Firebase"
-      ],
-      "highlights": [
-        "Vue / Nuxt 3 admin dashboard (menus, wines, clients, uploads, agents)",
-        "Flutter mobile app (iOS + Android): QR-code onboarding, multi-profile",
-        "Firebase architecture: Auth, Firestore, Cloud Storage, security rules",
-        "Refactor, industrialization, CI"
-      ],
-      "description": "Web + mobile ecosystem for retailers (fixed-price — MVP).",
-      "featured": true,
-      "displayName": "MCI",
-      "summary": "Nuxt 3 dashboard, Flutter iOS + Android app, Firebase architecture."
-    },
-    {
-      "company": "Gritchen",
-      "role": "Full-Stack Engineer",
-      "period": {
-        "start": "2023-01",
-        "end": "2023-06",
-        "duration": "6 months"
-      },
-      "stack": [
+        "Next.js",
+        "React Native",
+        "NestJS",
+        "Node.js",
+        "OpenAI API",
+        "RAG",
         "Vue 3",
+        "Flutter",
+        "Firebase",
         "Pinia",
         "TypeScript",
         "Laravel",
-        "Node.js",
-        "Fastify"
+        "Fastify",
+        "MongoDB",
+        "DataTourisme"
       ],
       "highlights": [
-        "Insurtech platform — business dashboards (contracts, claims, client area)",
-        "Typed Vue 3 / Pinia front-end, complex multi-step forms",
-        "Laravel back-end + Node.js / Fastify microservices",
-        "Pinia state architecture and API integration"
+        "Founder of the freelance development studio (SASU)",
+        "My Liste Chaude — React Native / Expo app (Firebase, geolocation, deep linking, CSV/Excel import, gamification), full EAS pipeline",
+        "Forenlyst — deepfake detection & forensic certification (Next.js, NestJS + Python microservices, crypto signing)",
+        "SaaS in production: portfolio + AI assistant, OSS-Nation (BJJ platform + AI analysis)",
+        "trimly — open-source tool published on npm (TypeScript / Node, Apache-2.0)",
+        "OpenAI API in production since 2024 (RAG, embeddings, prompt engineering)",
+        "Mon Commerce Interactif (MCI) (2023) — Web + mobile ecosystem for retailers (fixed-price — MVP). Vue / Nuxt 3 admin dashboard (menus, wines, clients, uploads, agents) ; Flutter mobile app (iOS + Android): QR-code onboarding, multi-profile ; Firebase architecture: Auth, Firestore, Cloud Storage, security rules ; Refactor, industrialization, CI",
+        "Gritchen (2023) — Insurtech platform (fixed-price — MVP). Insurtech platform — business dashboards (contracts, claims, client area) ; Typed Vue 3 / Pinia front-end, complex multi-step forms ; Laravel back-end + Node.js / Fastify microservices ; Pinia state architecture and API integration",
+        "Place2Be (2022) — Mobile app + event back-end (fixed-price — POC). Flutter mobile app: geolocated events around the user ; Ingestion and management of 300,000 events from the DataTourisme API ; TypeScript / Node.js back-end, API architecture and security"
       ],
-      "description": "Insurtech platform (fixed-price — MVP).",
+      "description": "Freelance development studio: SaaS, mobile apps and AI integration, delivered as fixed-price projects.",
       "featured": true,
-      "displayName": "Gritchen",
-      "summary": "Vue 3, Pinia and TypeScript; Laravel, Node.js and Fastify."
+      "displayName": "Joys Lab",
+      "summary": "Fixed-price projects: SaaS, web and mobile apps, AI — MCI, Gritchen, Place2Be, Forenlyst, OSS Nation."
     },
     {
       "company": "Chasse en Cours",
@@ -536,29 +496,6 @@
         "End-to-end design, development and Play Store publishing"
       ],
       "description": "Personal Flutter product published on the Play Store, V2 in progress.",
-      "featured": false
-    },
-    {
-      "company": "Place2Be",
-      "role": "Mobile & Backend Engineer",
-      "period": {
-        "start": "2022-09",
-        "end": "2022-12",
-        "duration": "4 months"
-      },
-      "stack": [
-        "Flutter",
-        "TypeScript",
-        "Node.js",
-        "MongoDB",
-        "DataTourisme"
-      ],
-      "highlights": [
-        "Flutter mobile app: geolocated events around the user",
-        "Ingestion and management of 300,000 events from the DataTourisme API",
-        "TypeScript / Node.js back-end, API architecture and security"
-      ],
-      "description": "Mobile app + event back-end (fixed-price — POC).",
       "featured": false
     },
     {
@@ -714,22 +651,6 @@
   ],
   "caseStudies": [
     {
-      "slug": "ai-sisters",
-      "title": "AI Sisters Lab — AI POCs and MVPs",
-      "tags": [
-        "LLM",
-        "AI agents",
-        "RAG",
-        "POC",
-        "MVP"
-      ],
-      "image": "/cases/ai-sisters.webp",
-      "url": null,
-      "problem": "IT departments and innovation teams who want to validate AI on their own use cases without committing to a long project upfront.",
-      "solution": "Scoping and technical feasibility, then AI POCs and MVPs delivered by the Lab: agents, LLM integration, RAG.",
-      "impact": "AI use cases proven on real work, with a clear path to production."
-    },
-    {
       "slug": "wesave",
       "title": "WeSave — Vue 3 migration & design system",
       "tags": [
@@ -744,6 +665,22 @@
       "problem": "A multi-brand financial advisory application on Vue 2, built on a UI kit (vue-material) incompatible with Vue 3.",
       "solution": "Vuex → Pinia, Pinia Colada for server cache, components replaced by the wesave-components design system.",
       "impact": "Code agents connected to Storybook via MCP check the design system's real props; UI scope re-estimated from 30 to 14 days."
+    },
+    {
+      "slug": "ai-sisters",
+      "title": "AI Sisters Lab — AI POCs and MVPs",
+      "tags": [
+        "LLM",
+        "AI agents",
+        "RAG",
+        "POC",
+        "MVP"
+      ],
+      "image": "/cases/ai-sisters.webp",
+      "url": null,
+      "problem": "IT departments and innovation teams who want to validate AI on their own use cases without committing to a long project upfront.",
+      "solution": "Scoping and technical feasibility, then fixed-price AI POCs and MVPs: agents, LLM integration, RAG.",
+      "impact": "AI use cases proven on real work, with a clear path to production."
     },
     {
       "slug": "accor",
